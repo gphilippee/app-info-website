@@ -210,10 +210,12 @@ DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE IF NOT EXISTS `utilisateur`
 (
     `id`               int(11)       NOT NULL AUTO_INCREMENT,
-    `nom`              varchar(255),
-    `prenom`           varchar(255),
-    `date_naissance`   date,
-    `numero_telephone` varchar(10),
+    `nom`              varchar(255) NOT NULL,
+    `prenom`           varchar(255) NOT NULL,
+    `date_naissance`   date NOT NULL,
+    `numero_telephone` varchar(10) NOT NULL,
+    `taille` int(11) NOT NULL,
+    `poids` int(11) NOT NULL,
     `type`             varchar(255)  NOT NULL,
     `login`            varchar(255)  NOT NULL,
     `mot_de_passe`     varchar(2000) NOT NULL,
@@ -227,22 +229,22 @@ CREATE TABLE IF NOT EXISTS `utilisateur`
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `date_naissance`, `numero_telephone`, `type`, `login`, `mot_de_passe`,
+INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `date_naissance`, `numero_telephone`,`taille`,`poids`,`type`, `login`, `mot_de_passe`,
                            `adresse_mail`)
-VALUES (1, 'philippe', 'guillaume', '1999-07-25', '0619637985', 'admin', 'g.philippe', 'motdepasse',
+VALUES (1, 'philippe', 'guillaume', '1999-07-25', '0619637985','70','170', 'admin', 'g.philippe', 'motdepasse',
         'guillaume.philippe2000@gmail.com'),
-       (2, 'liu', 'lionel', '1999-01-01', '0606060606', 'admin', 'l.liu', 'lionelisep', 'l.lionel0104@gmail.com'),
-       (3, 'parayre', 'benjamin', '1999-01-01', '0707070707', 'admin', 'b.parayre', 'benji',
+       (2, 'liu', 'lionel', '1999-01-01', '0606060606','70','170', 'admin', 'l.liu', 'lionelisep', 'l.lionel0104@gmail.com'),
+       (3, 'parayre', 'benjamin', '1999-01-01', '0707070707','70','170', 'admin', 'b.parayre', 'benji',
         'parayre.benjamin1@gmail.com'),
-       (4, 'le garlantezec', 'thomas', '1999-01-01', '0607070707', 'admin', 't.garlantezec', 'legarlantezec',
+       (4, 'le garlantezec', 'thomas', '1999-01-01', '0607070707','70','170', 'admin', 't.garlantezec', 'legarlantezec',
         'thomas.legarlantezec@gmail.com'),
-       (5, 'fournet', 'benjamin', '1999-01-01', '0606070707', 'admin', 'b.fournet', 'fournet99',
+       (5, 'fournet', 'benjamin', '1999-01-01', '0606070707','70','170', 'admin', 'b.fournet', 'fournet99',
         'benjamin.fournet99@gmail.com'),
-       (6, 'dupont', 'jean', '1990-01-01', '0612345678', 'candidat', 'j.dupont', 'dupont90', 'm.dupont@gmail.com'),
-       (7, 'dupont', 'michel', '1970-01-01', '0687654321', 'candidat', 'm.dupont', 'dupont90', 'j.dupont@gmail.com'),
-       (8, 'auguste', 'louis', '1970-01-01', '0687654312', 'gestionnaire', 'l.auguste', 'leau', 'l.auguste@gmail.com'),
-       (9, 'eau', 'pierre', '1970-01-01', '0612345687', 'gestionnaire', 'p.eau', 'pierre99', 'pierre.eau@gmail.com'),
-       (10, 'apple', 'google', '1970-01-01', '0681234567', 'gestionnaire', 'g.apple', 'microsoft', 'g.apple@gmail.com');
+       (6, 'dupont', 'jean', '1990-01-01', '0612345678','70','170', 'candidat', 'j.dupont', 'dupont90', 'm.dupont@gmail.com'),
+       (7, 'dupont', 'michel', '1970-01-01', '0687654321','70','170', 'candidat', 'm.dupont', 'dupont90', 'j.dupont@gmail.com'),
+       (8, 'auguste', 'louis', '1970-01-01', '0687654312','70','170', 'gestionnaire', 'l.auguste', 'leau', 'l.auguste@gmail.com'),
+       (9, 'eau', 'pierre', '1970-01-01', '0612345687','70','170', 'gestionnaire', 'p.eau', 'pierre99', 'pierre.eau@gmail.com'),
+       (10, 'apple', 'google', '1970-01-01', '0681234567','70','170', 'gestionnaire', 'g.apple', 'microsoft', 'g.apple@gmail.com');
 
 --
 -- Structure de la table `donneesfixes`
