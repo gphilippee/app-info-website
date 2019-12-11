@@ -2,7 +2,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="vues/<?php echo $css?>.css">
     <link rel="stylesheet" type="text/css" href="vues/header/CSSheader.css">
-    <link rel="stylesheet" type="text/css" href="vues/header/CSSnav.css">
+    <link rel="stylesheet" type="text/css" href="vues/accueil/CSSnav.css">
     <meta charset="utf-8">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">

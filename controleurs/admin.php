@@ -258,37 +258,6 @@ switch ($function) {
         $css = "resultat/CSSlisteUtilisateurs";
         break;
 
-    case 'faq':
-        $title = "Modifier FAQ";
-        $vue = "faq/faqAdmin";
-        $css = "faq/CSSfaq";
-        $faq = "faq";
-        $alerte = false;
-        $donneesfaq = recupereTous($bdd, $faq);
-        // Cette partie du code est appelée si le formulaire a été posté
-        if (isset($_POST['ajoutQuestion']) and isset($_POST['ajoutReponse'])) {
-            if ($_POST['ajoutQuestion'] == "" or $_POST['ajoutReponse'] == "") {
-                $alerte = "Aucune saisie";
-            } else {
-                $values = [
-                    'question' => htmlspecialchars($_POST['ajoutQuestion']),
-                    'reponse' => htmlspecialchars($_POST['ajoutReponse'])
-                ];
-                // Appel à la BDD à travers une fonction du modèle.
-                $retour = ajouterQuestionReponse($bdd, $values);
-                if ($retour) {
-                    $alerte = "Ajout réussie";
-                    header('Refresh: 0.5,index.php?cible=admin&fonction=faq');  // refresh dans 0.5sec
-                } else {
-                    $alerte = "L'ajout dans la FAQ n'a pas fonctionné";
-                }
-
-            }
-
-
-        }
-        break;
-
     case 'alerteTemperature':
         $title = "Alertes des Capteurs de températures";
         $vue = "alerte/alerteTemperature";
@@ -403,6 +372,7 @@ switch ($function) {
         }
         break;
 
+
     case 'modifQSN':
         $title = "Modifier le contenu de Qui sommes-nous";
         $vue = "backoffice/quisommesnousAdmin";
@@ -420,6 +390,89 @@ switch ($function) {
                     header('Refresh: 0.5, index.php?cible=admin&fonction=modifQSN');    //refresh dans 0.5sec
                 } else {
                     $alerte = "La modification du contenu Qui sommes-nous n'a pas fonctionné";
+                }
+            }
+        }
+        break;
+
+    /**
+     *  FAQ
+     */
+    case 'faq':
+        $title = "Modifier FAQ";
+        $vue = "faq/faqAdmin";
+        $css = "faq/CSSfaq";
+        $faq = recupereTous($bdd, "faq");
+        break;
+
+    //permet d'ajouter une question de la FAQ
+    case 'ajoutFAQ':
+        $vue="faq/ajoutFAQ";
+        $css="faq/CSSfaq";
+        // Cette partie du code est appelée si le formulaire a été posté
+        if (isset($_POST['ajoutQuestion']) and isset($_POST['ajoutReponse'])) {
+            if ($_POST['ajoutQuestion'] == "" or $_POST['ajoutReponse'] == "") {
+                $alerte = "Aucune saisie";
+            } else {
+                $values = [
+                    'question' => htmlspecialchars($_POST['ajoutQuestion']),
+                    'reponse' => htmlspecialchars($_POST['ajoutReponse'])
+                ];
+                // Appel à la BDD à travers une fonction du modèle.
+                $retour = addQuestion($bdd, $values);
+                if ($retour) {
+                    $alerte = "Ajout réussie";
+                    header('Refresh: 0.5,index.php?cible=admin&fonction=faq');  // refresh dans 0.5sec
+                } else {
+                    $alerte = "L'ajout dans la FAQ n'a pas fonctionné";
+                }
+            }
+        }
+        break;
+
+    //permet de supprimer une question de la FAQ
+    case 'supprimerFAQ':
+        $vue="faq/supprimerFAQ";
+        $css="faq/CSSfaq";
+        // Cette partie du code est appelée si le formulaire a été posté
+        if (isset($_POST['id'])) {
+            if (empty($_POST["id"])) {
+                $alerte = "Aucune saisie";
+            } else {
+                // Appel à la BDD à travers une fonction du modèle.
+                $retour = deleteQuestion($bdd, htmlspecialchars($_POST['id']));
+                if ($retour) {
+                    $alerte = "Suppression réussie";
+                    header('Refresh: 0.5,index.php?cible=admin&fonction=faq');  // refresh dans 0.5sec
+                } else {
+                    $alerte = "La suppression dans la FAQ n'a pas fonctionné";
+                }
+            }
+        }
+        break;
+
+    //permet de modifier une question de la FAQ
+    case 'updateFAQ':
+        $vue="faq/updateFAQ";
+        $css="faq/CSSfaq";
+        $faq = recupereQuestion($bdd, $_GET['id']);
+        // Cette partie du code est appelée si le formulaire a été posté
+        if (isset($_POST['question']) && isset($_POST['reponse'])) {
+            if (empty($_POST['question']) OR empty($_POST['reponse'])) {
+                $alerte = "Aucune saisie";
+            } else {
+                // Appel à la BDD à travers une fonction du modèle.
+                $values = [
+                    'id' => htmlspecialchars($_POST['id']),
+                    'question' => htmlspecialchars($_POST['question']),
+                    'reponse' => htmlspecialchars($_POST['reponse'])
+                ];
+                $retour = modifyQuestion($bdd, $values);
+                if ($retour) {
+                    $alerte = "La modification a réussie";
+                    header('Refresh: 0.5,index.php?cible=admin&fonction=faq');  // refresh dans 0.5sec
+                } else {
+                    $alerte = "La modification dans la FAQ n'a pas fonctionné";
                 }
             }
         }

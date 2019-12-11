@@ -36,7 +36,7 @@ function ajouteUtilisateur(PDO $bdd, array $utilisateur) {
  * Ajoute une nouvelle question dans la base de données
  * @param array $question
  */
-function ajouterQuestionReponse(PDO $bdd, array $question)
+function addQuestion(PDO $bdd, array $question)
 {
     $query = 'INSERT INTO faq (contenuQuestion,contenuReponse) VALUES (:question, :reponse)';
     $donnees = $bdd->prepare($query);
@@ -44,6 +44,41 @@ function ajouterQuestionReponse(PDO $bdd, array $question)
     $donnees->bindParam(":reponse", $question['reponse'],PDO::PARAM_STR);
     return $donnees->execute();
 
+}
+
+/**
+ * Supprimer une question dans la base de données
+ * @param $id
+ */
+function deleteQuestion(PDO $bdd, $id){
+    $query = 'DELETE FROM faq WHERE idQA = :id ';
+    $donnees = $bdd->prepare($query);
+    $donnees->bindValue(":id", $id);
+    return $donnees->execute();
+}
+
+/**
+ * Modifier une question
+ * @param array $question
+ */
+function modifyQuestion(PDO $bdd, array $question){
+    $query = 'UPDATE faq SET contenuQuestion = :question, contenuReponse = :reponse WHERE idQA = :id ';
+    $donnees = $bdd->prepare($query);
+    $donnees->bindParam(":id", $question['id'], PDO::PARAM_STR);
+    $donnees->bindParam(":question", $question['question'], PDO::PARAM_STR);
+    $donnees->bindParam(":reponse", $question['reponse'],PDO::PARAM_STR);
+    return $donnees->execute();
+}
+
+/**
+ * Recupere la question et la reponse en fonction de l'id
+ * @param $id
+ */
+function recupereQuestion(PDO $bdd, $id){
+    $query=$bdd->prepare('SELECT * FROM faq WHERE idQA = :id ');
+    $query->bindValue(':id',$id);
+    $query->execute();
+    return $query->fetch();
 }
 
 /**

@@ -1,38 +1,31 @@
 <div id="contenuAccueil">
-<div id="vide"></div>
-<div id="contenuFaq">
-    <h1>FAQ</h1>
-    <?php
-    foreach ($donneesfaq as $element) { ?>
-        <!--bloc questionReponse-->
-        <div class="blocQuestionReponse">
-            <div class="blocQuestion">
-                <?php echo $element['contenuQuestion']; ?>
-            </div>
-            <div class="blocReponse">
-                <?php echo $element['contenuReponse']; ?>
-            </div>
-        </div>
-    <?php } ?>
-</div>
-<!--ajouter une question-->
-<div id="faq">
-    <div id="parametrer">
-        <form method="POST" action="">
-            <div class="label">
-                <label for="ajoutQuestion">Veuillez saisir la question </label>
-                <label for="ajoutReponse">Veuillez saisir la réponse </label>
-            </div>
-            <div class="input">
-                <textarea name="ajoutQuestion" class="ajoutQuestion" rows="5" cols="60"></textarea>
-                <textarea name="ajoutReponse" class="ajoutReponse" rows="5" cols="60"></textarea>
-            </div>
-            <input type="submit" value="PUBLIER">
-        </form>
+    <div id="vide"></div>
+    <div id="contenuFaq">
+        <h1>FAQ</h1>
+        <a href="index.php?cible=admin&fonction=ajoutFAQ" >Ajouter</a>
+        <table>
+            <thead>
+            <tr>
+                <th>Question</th>
+                <th>Reponse</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            foreach ($faq as $element) { ?>
+                <tr>
+                    <td><?php echo $element['contenuQuestion']; ?></td>
+                    <td><?php echo $element['contenuReponse']; ?></td>
+                    <td>
+                        <a href="index.php?cible=admin&fonction=updateFAQ&id=<?php echo $element['idQA']; ?>" title='Update Record'><img class="stylo" src="pictures/pencil.png" height="32" width="32" alt="modifier"></a>
+                        <a href="index.php?cible=admin&fonction=supprimerFAQ&id=<?php echo $element['idQA']; ?>" title='Delete Record'><img class="trash" src="pictures/trash.png" height="32" width="32" alt="supprimer"></a>
+                    </td>
+                </tr>
+            <?php } ?>
+            </tbody>
+        </table>
     </div>
-</div>
-<div id="vide"></div>
-<div id="vide"></div>
 </div>
 </div>
 
