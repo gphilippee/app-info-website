@@ -258,6 +258,10 @@ switch ($function) {
         $css = "resultat/CSSlisteUtilisateurs";
         break;
 
+        /**
+        * Alerte
+        */
+        
     case 'alerteTemperature':
         $title = "Alertes des Capteurs de températures";
         $vue = "alerte/alerteTemperature";
@@ -269,13 +273,17 @@ switch ($function) {
         $vue = "alerte/alerteCardiaque";
         $css = "alerte/CSSalertes";
         break;
-
+        
     case 'alerteSonore':
         $title = "Alertes des Capteurs sonores";
         $vue = "alerte/alerteSonore";
         $css = "alerte/CSSalertes";
         break;
 
+        /**
+        * Actionneur
+        */
+        
     case 'actionneurLumineux':
         $title = "Actionneur Lumineux";
         $vue = "actionneur/actionneurLumineux";
