@@ -3,13 +3,20 @@
  * Vue : modifier une question de la FAQ
  */
 ?>
-<form action="" method="post">
-        <label for="question">Question</label>
-        <textarea name="question"><?php echo $faq['contenuQuestion']; ?></textarea>
-        <label for="reponse">Reponse</label>
-        <textarea name="reponse"><?php echo $faq['contenuReponse']; ?></textarea>
-    <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>"/>
-    <input type="submit" value="Submit">
-    <a href="index.php?cible=admin&fonction=faq">Cancel</a>
-</form>
+<div id="contenuAccueil">
+    <h1 class="addFAQ">Modifier une question</h1>
+    <div id="blocAjout">
+        <form class="formAdd" action="" method="post">
+            <label for="question">Veuillez modifier la question</label>
+            <textarea name="question" rows="5" cols="60"><?php echo $faq['contenuQuestion']; ?></textarea>
+            <label for="reponse">Veuillez modifier la reponse</label>
+            <textarea name="reponse" rows="5" cols="60"><?php echo $faq['contenuReponse']; ?></textarea>
+            <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>"/>
+            <div class="blocBTN">
+            <input type="submit" value="Valider">
+            <a class="styleBTN addBTN" href="index.php?cible=admin&fonction=faq">Annuler</a>
+            </div>
+        </form>
+    </div>
+</div>
 </div>

@@ -3,16 +3,19 @@
  * Vue : supprimer une question de la FAQ
  */
 ?>
-<div>
-<form action="" method="POST">
-    <div>
-        <input type="hidden" name="id" value="<?php echo htmlspecialchars($_GET["id"]); ?>"/>
-        <p>Are you sure you want to delete this record?</p><br>
-        <p>
-            <input type="submit" value="Yes">
-            <a href="index.php?cible=admin&fonction=faq">No</a>
-        </p>
+<div id="contenuAccueil">
+    <h1 class="suppFAQ">Supprimer une question</h1>
+    <div id="blocSupprimer">
+        <form class="formSupprimer"action="" method="POST">
+            <div>
+                <input type="hidden" name="id" value="<?php echo htmlspecialchars($_GET["id"]); ?>"/>
+                <label>Êtes-vous sure de vouloir supprimer cette question ?</label>
+                <p>
+                    <input type="submit" value="Oui">
+                    <a class="styleBTN" href="index.php?cible=admin&fonction=faq">Non</a>
+                </p>
+            </div>
+        </form>
     </div>
-</form>
 </div>
 </div>

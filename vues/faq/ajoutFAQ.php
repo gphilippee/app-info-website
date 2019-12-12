@@ -3,18 +3,18 @@
  * Vue : ajouter une question à la FAQ
  */
 ?>
-<div id="faq">
-    <form method="POST" action="">
-        <div class="label">
+<div id="contenuAccueil">
+    <h1 class="addFAQ">Ajouter une question</h1>
+    <div id="blocAjout">
+        <form class="formAdd" method="POST" action="">
             <label for="ajoutQuestion">Veuillez saisir la question </label>
+            <textarea name="ajoutQuestion" rows="5" cols="120"></textarea>
             <label for="ajoutReponse">Veuillez saisir la réponse </label>
-        </div>
-        <div class="input">
-            <textarea name="ajoutQuestion" class="ajoutQuestion" rows="5" cols="60"></textarea>
-            <textarea name="ajoutReponse" class="ajoutReponse" rows="5" cols="60"></textarea>
-        </div>
-        <input type="submit" value="PUBLIER">
-        <a href="index.php?cible=admin&fonction=faq">Cancel</a>
-    </form>
-</div>
+            <textarea name="ajoutReponse" rows="5" cols="120"></textarea>
+            <div class="blocBTN">
+            <input type="submit" value="Publier">
+            <a class="styleBTN addBTN" href="index.php?cible=admin&fonction=faq">Annuler</a>
+            </div>
+        </form>
+    </div>
 </div>
