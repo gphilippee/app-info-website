@@ -244,13 +244,6 @@ switch ($function) {
         }
         break;
 
-    case 'listeUtilisateurs' :
-        $title = "Liste des Utilisateurs";
-        $donneesListeUtilisateurs = recupereTous($bdd, "utilisateur");
-        $vue = "resultat/listeUtilisateurs";
-        $css = "resultat/CSSlisteUtilisateurs";
-        break;
-
     case 'donneesUtilisateurs' :
         $title = "Données des Utilisateurs";
         $donneesUtilisateurs = recupereDonneesUtilisateurs($bdd);
@@ -484,6 +477,31 @@ switch ($function) {
                 }
             }
         }
+        break;
+
+    /**
+     *  Utilisateur
+     */
+    case 'listeUtilisateurs' :
+        $title = "Liste des Utilisateurs";
+        $donneesListeUtilisateurs = recupereTous($bdd, "utilisateur");
+        $vue = "user/user";
+        $css = "user/CSSuser";
+        break;
+
+    case 'ajoutUSER':
+        $vue="user/addUSER";
+        $css="user/CSSuser";
+        break;
+
+    case 'updateUSER':
+        $vue="user/updateUSER";
+        $css="user/CSSuser";
+        break;
+
+    case 'deleteUSER':
+        $vue="user/deleteUSER";
+        $css="user/CSSuser";
         break;
 
     default:
