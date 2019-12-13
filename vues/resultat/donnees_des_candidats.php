@@ -1,49 +1,28 @@
-<div>
-    <div id="vide"></div>
+<div id="contenuAccueil">
     <h1>Données des Utilisateurs</h1>
-    <div id="contenuListeUttilisateurs">
-        <div class="blocListeUtilisateurs">
-            <div class="blocId">
-                <p style="font-weight: bold">ID</p>
+    <div class="blocTable">
+        <div class="overflow">
+            <table id="myTable" class="tableauFAQ">
+                <tr>
+                    <th onclick="sortTable(0)">ID</th>
+                    <th onclick="sortTable(1)">Nom</th>
+                    <th onclick="sortTable(2)">Prenom</th>
+                    <th onclick="sortTable(3)">Resultat</th>
+                    <th onclick="sortTable(4)">Date</th>
+                </tr>
+
                 <?php
                 foreach ($donneesUtilisateurs as $element) { ?>
-                    <P><?php echo $element['id']; ?></P>
+                    <tr>
+                        <td><?php echo $element['id']; ?></td>
+                        <td><?php echo $element['nom']; ?></td>
+                        <td><?php echo $element['prenom']; ?></td>
+                        <td><?php echo $element['valeur']; ?></td>
+                        <td><?php echo $element['instant']; ?></td>
+                    </tr>
                 <?php } ?>
-            </div>
-            <div class="blocNom">
-                <p style="font-weight: bold">NOM</p>
-                <?php
-                foreach ($donneesUtilisateurs as $element) { ?>
-                    <P><?php echo $element['nom']; ?></P>
-                <?php } ?>
-            </div>
-
-            <div class="blocPrenom">
-                <p style="font-weight: bold">PRENOM</p>
-                <?php
-                foreach ($donneesUtilisateurs as $element) { ?>
-                    <P><?php echo $element['prenom']; ?></P>
-                <?php } ?>
-            </div>
-
-            <div class="blocResultat">
-                <p style="font-weight: bold">RESULTAT</p>
-                <?php
-                foreach ($donneesUtilisateurs as $element) { ?>
-                    <P><?php echo $element['valeur']; ?></P>
-                <?php } ?>
-            </div>
-
-            <div class="blocDate">
-                <p style="font-weight: bold">DATE</p>
-                <?php
-                foreach ($donneesUtilisateurs as $element) { ?>
-                    <P><?php echo $element['instant']; ?></P>
-                <?php } ?>
-            </div>
-
-
-        </div>  <!--bloc questionReponse-->
+            </table>
+        </div>
     </div>
 </div>
 </div>
