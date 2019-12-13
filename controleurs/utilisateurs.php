@@ -76,7 +76,7 @@ switch ($function) {
                         'password' => htmlspecialchars($_POST['connex_mdp'])
                     ];
                     $connexion = bddContient($bdd, $values);
-                    if ($connexion['mot_de_passe'] == htmlspecialchars($_POST['connex_mdp'])) {
+                    if ($connexion['mot_de_passe'] == HachagePassword(htmlspecialchars($_POST['connex_mdp']))) {
                         $_SESSION['connecter'] = _DECONNEXION;
                         $_SESSION['type'] = $connexion['type'];
                         $_SESSION['nom'] = $connexion['nom'];
@@ -158,7 +158,7 @@ switch ($function) {
                         'password' => htmlspecialchars($_POST['connex_mdp'])
                     ];
                     $connexion = bddContient($bdd, $values);
-                    if ($connexion['mot_de_passe'] == htmlspecialchars($_POST['connex_mdp'])) {
+                    if ($connexion['mot_de_passe'] == HachagePassword(htmlspecialchars($_POST['connex_mdp']))) {
                         $_SESSION['connecter'] = _DECONNEXION;
                         $_SESSION['type'] = $connexion['type'];
                         $_SESSION['nom'] = $connexion['nom'];
