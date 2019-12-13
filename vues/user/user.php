@@ -1,49 +1,55 @@
 <div id="contenuAccueil">
-    <h1>Liste des utilisateurs</h1>
+    <h1>Utilisateur</h1>
     <input type="text" id="myInput" onkeyup="triFunction()" placeholder="Search for names..">
-    <div id="contenuListeUttilisateurs">
-        <div class="blocListeUtilisateurs">
-            <a href="index.php?cible=admin&fonction=ajoutUSER"><img src="pictures/plus.png"></a>
-            <table id="myTable">
+    <div class="blocTable">
+        <a class="ajoutBTN" href="index.php?cible=admin&fonction=ajoutUSER"><img src="pictures/plus.png" height="32" width="32" alt="ajouter"></a>
+        <div class="overflow">
+        <table id="myTable" class="tableauFAQ">
+            <thead>
+            <tr>
+                <th onclick="sortTable(0)">Identifiant</th>
+                <th onclick="sortTable(1)">Nom</th>
+                <th onclick="sortTable(2)">Prenom</th>
+                <th onclick="sortTable(3)">Date de naissance</th>
+                <th onclick="sortTable(4)">Telephone</th>
+                <th onclick="sortTable(5)">Taille</th>
+                <th onclick="sortTable(6)">Poids</th>
+                <th onclick="sortTable(7)">Email</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            foreach ($user as $element) { ?>
                 <tr>
-                    <!--<th onclick="sortTable(0)">Id</th>-->
-                    <th onclick="sortTable(0)">Nom</i></th>
-                    <th onclick="sortTable(1)">Prénom</th>
-                    <th onclick="sortTable(2)">Identifiant</th>
-                    <th onclick="sortTable(3)">Adresse email</th>
-                    <th onclick="sortTable(4)">Date naissance</th>
-                    <th onclick="sortTable(5)">N° téléphone</th>
-                    <th>Action</th>
-
+                    <td><?php echo $element['login']; ?></td>
+                    <td><?php echo $element['nom']; ?></td>
+                    <td><?php echo $element['prenom']; ?></td>
+                    <td><?php echo $element['date_naissance']; ?></td>
+                    <td><?php echo $element['numero_telephone']; ?></td>
+                    <td><?php echo $element['taille']; ?></td>
+                    <td><?php echo $element['poids']; ?></td>
+                    <td><?php echo $element['adresse_mail']; ?></td>
+                    <td>
+                        <div id="blocAction">
+                            <a href="index.php?cible=admin&fonction=updateUSER&id=<?php echo $element['id']; ?>"
+                               title='Update Record'><img class="stylo" src="pictures/pencil.png" height="32" width="32"
+                                                          alt="modifier"></a>
+                            <a href="index.php?cible=admin&fonction=deleteUSER&id=<?php echo $element['id']; ?>"
+                               title='Delete Record'><img class="trash" src="pictures/trash.png" height="32" width="32"
+                                                          alt="supprimer"></a>
+                        </div>
+                    </td>
                 </tr>
-                <?php
-                foreach ($donneesListeUtilisateurs as $element) { ?>
-                    <tr>
-                        <td><?php echo $element['nom']; ?></td>
-                        <td><?php echo $element['prenom']; ?></td>
-                        <td><?php echo $element['login']; ?></td>
-                        <td><?php echo $element['adresse_mail']; ?></td>
-                        <td><?php echo $element['date_naissance']; ?></td>
-                        <td><?php echo $element['numero_telephone']; ?></td>
-                        <td>
-                            <div id="blocAction">
-                                <a href="index.php?cible=admin&fonction=updateUSER&id=<?php echo $element['id']; ?>"
-                                   title='Update Record'><img class="stylo" src="pictures/pencil.png" height="32" width="32"
-                                                              alt="modifier"></a>
-                                <a href="index.php?cible=admin&fonction=deleteUSER&id=<?php echo $element['id']; ?>"
-                                   title='Delete Record'><img class="trash" src="pictures/trash.png" height="32" width="32"
-                                                              alt="supprimer"></a>
-                            </div>
-                        </td>
-
-                    </tr>
-                <?php } ?>
-            </table>
-
-        </div>  <!--bloc questionReponse-->
+            <?php } ?>
+            </tbody>
+        </table>
+        </div>
     </div>
 </div>
 </div>
+
+
 
 <script>
     function triFunction() {
