@@ -89,10 +89,10 @@ switch ($function) {
         $css = "user/CSSuser";
         break;
 
-        /**
-        * Alerte
-        */
-        
+    /**
+     * Alerte
+     */
+
     case 'alerteTemperature':
         $title = "Alertes des Capteurs de températures";
         $vue = "alerte/alerteTemperature";
@@ -104,17 +104,17 @@ switch ($function) {
         $vue = "alerte/alerteCardiaque";
         $css = "alerte/CSSalertes";
         break;
-        
+
     case 'alerteSonore':
         $title = "Alertes des Capteurs sonores";
         $vue = "alerte/alerteSonore";
         $css = "alerte/CSSalertes";
         break;
 
-        /**
-        * Actionneur
-        */
-        
+    /**
+     * Actionneur
+     */
+
     case 'actionneurLumineux':
         $title = "Actionneur Lumineux";
         $vue = "actionneur/actionneurLumineux";
@@ -247,8 +247,8 @@ switch ($function) {
 
     //permet d'ajouter une question de la FAQ
     case 'ajoutFAQ':
-        $vue="faq/ajoutFAQ";
-        $css="faq/CSSfaq";
+        $vue = "faq/ajoutFAQ";
+        $css = "faq/CSSfaq";
         // Cette partie du code est appelée si le formulaire a été posté
         if (isset($_POST['ajoutQuestion']) and isset($_POST['ajoutReponse'])) {
             if ($_POST['ajoutQuestion'] == "" or $_POST['ajoutReponse'] == "") {
@@ -272,8 +272,8 @@ switch ($function) {
 
     //permet de supprimer une question de la FAQ
     case 'supprimerFAQ':
-        $vue="faq/supprimerFAQ";
-        $css="faq/CSSfaq";
+        $vue = "faq/supprimerFAQ";
+        $css = "faq/CSSfaq";
         // Cette partie du code est appelée si le formulaire a été posté
         if (isset($_POST['id'])) {
             if (empty($_POST["id"])) {
@@ -293,8 +293,8 @@ switch ($function) {
 
     //permet de modifier une question de la FAQ
     case 'updateFAQ':
-        $vue="faq/updateFAQ";
-        $css="faq/CSSfaq";
+        $vue = "faq/updateFAQ";
+        $css = "faq/CSSfaq";
         $faq = recupereQuestion($bdd, $_GET['id']);
         // Cette partie du code est appelée si le formulaire a été posté
         if (isset($_POST['question']) && isset($_POST['reponse'])) {
@@ -329,12 +329,14 @@ switch ($function) {
         break;
 
     case 'ajoutUSER':
-        $vue="user/ajoutUSER";
-        $css="user/CSSuser";
+        $vue = "user/ajoutUSER";
+        $css = "user/CSSuser";
         // Cette partie du code est appelée si le formulaire a été posté
         if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['date']) && isset($_POST['telephone']) && isset($_POST['taille']) && isset($_POST['poids']) && isset($_POST['type']) && isset($_POST['login']) && isset($_POST['email'])) {
             if (empty($_POST['nom']) OR empty($_POST['prenom']) OR empty($_POST['date']) OR empty($_POST['telephone']) OR empty($_POST['taille']) OR empty($_POST['poids']) OR empty($_POST['type']) OR empty($_POST['login']) OR empty($_POST['email'])) {
                 $alerte = "Aucune saisie";
+            } elseif (!filter_var(htmlspecialchars($_POST['email']), FILTER_VALIDATE_EMAIL)) {
+                $alerte = "Adresse email invalide";
             } else {
                 $values = [
                     'nom' => htmlspecialchars($_POST['nom']),
@@ -361,13 +363,15 @@ switch ($function) {
         break;
 
     case 'updateUSER':
-        $vue="user/updateUSER";
-        $css="user/CSSuser";
+        $vue = "user/updateUSER";
+        $css = "user/CSSuser";
         $user = recupereUser($bdd, $_GET['id']);
         // Cette partie du code est appelée si le formulaire a été posté
         if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['date']) && isset($_POST['telephone']) && isset($_POST['taille']) && isset($_POST['poids']) && isset($_POST['type']) && isset($_POST['login']) && isset($_POST['email'])) {
             if (empty($_POST['nom']) OR empty($_POST['prenom']) OR empty($_POST['date']) OR empty($_POST['telephone']) OR empty($_POST['taille']) OR empty($_POST['poids']) OR empty($_POST['type']) OR empty($_POST['login']) OR empty($_POST['email'])) {
                 $alerte = "Aucune saisie";
+            } elseif (!filter_var(htmlspecialchars($_POST['email']), FILTER_VALIDATE_EMAIL)) {
+                $alerte = "Adresse email invalide";
             } else {
                 // Appel à la BDD à travers une fonction du modèle.
                 $values = [
@@ -394,8 +398,8 @@ switch ($function) {
         break;
 
     case 'deleteUSER':
-        $vue="user/deleteUSER";
-        $css="user/CSSuser";
+        $vue = "user/deleteUSER";
+        $css = "user/CSSuser";
         // Cette partie du code est appelée si le formulaire a été posté
         if (isset($_POST['id'])) {
             if (empty($_POST["id"])) {
