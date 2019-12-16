@@ -3,7 +3,7 @@
 
     </div>
 <?php
-require("nousContacter.php");
+require(__DIR__.'/../header/nousContacter.php');
 ?>
 <div class="contact">
     <div id="parametrer">
@@ -30,5 +30,4 @@ require("nousContacter.php");
 </div>
 
 <div id="vide"> </div>
-</div>
 </div>

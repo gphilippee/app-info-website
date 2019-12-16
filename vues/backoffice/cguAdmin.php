@@ -1,5 +1,5 @@
 <?php
-require("cgu.php");
+require(__DIR__.'/../header/cgu.php');   //évite des bugs si on lance php depuis un autre dossier
 ?>
 <div id="contenuML">  <!--même mise en forme que les mentions légales-->
     <div id="parametrer">

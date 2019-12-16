@@ -3,7 +3,7 @@
 
     </div>
 <?php
-require("mentionLegale.php");
+require(__DIR__.'/../header/mentionLegale.php');
 ?>
 <div id="contenuML">
     <div id="parametrer">
@@ -23,5 +23,4 @@ require("mentionLegale.php");
     <div id="vide">
 
     </div>
-</div>
 </div>
