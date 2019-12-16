@@ -3,7 +3,7 @@
 
     </div>
 <?php
-require(__DIR__.'/../header/nousContacter.php');
+require("vues/header/nousContacter.php");
 ?>
 <div class="contact">
     <div id="parametrer">
@@ -30,4 +30,5 @@ require(__DIR__.'/../header/nousContacter.php');
 </div>
 
 <div id="vide"> </div>
+</div>
 </div>

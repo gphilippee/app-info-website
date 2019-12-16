@@ -3,7 +3,7 @@
 
     </div>
 <?php
-require(__DIR__.'/../header/mentionLegale.php');
+require("vues/header/mentionLegale.php");
 ?>
 <div id="contenuML">
     <div id="parametrer">
@@ -23,4 +23,5 @@ require(__DIR__.'/../header/mentionLegale.php');
     <div id="vide">
 
     </div>
+</div>
 </div>

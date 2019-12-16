@@ -14,6 +14,9 @@ header {
     left: 0px;
     z-index:3;
 }
+form{
+    margin: 0;
+}
 
 .logo {
     width: 200px;

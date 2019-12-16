@@ -1,6 +1,6 @@
 <div id="connexion">
     <h1 class="connex">Connexion</h1>
-    <form method="POST" action="">
+    <form method="POST" action="index.php">
         <label for="username"><?php echo _NOM_UTILISA; ?></label>
         <input type="text" id="username" name="connex_login" placeholder="username">
 
@@ -9,8 +9,9 @@
 
         <input type="checkbox" id="souvenir" value="Rester connecté"/>
         <label for="souvenir"><?php echo _SOUVENIR; ?></label></br>
-        <a href="index.php?cible=utilisateurs&fonction=contacter">Mot de passe oublié ?</a>
-        <input type="submit" value="SUBMIT" onclick="Message()">
+        <input type="hidden" name="cible" value="utilisateurs"/>
+        <input type="hidden" name="fonction" value="connexion"/>
+        <input type="submit" value="SUBMIT">
     </form>
 </div>
 <div id="espace">
