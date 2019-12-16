@@ -1,5 +1,5 @@
 <?php
-require("vues/header/cgu.php");
+require(__DIR__."/../header/cgu.php");
 ?>
 <div id="contenuML">  <!--même mise en forme que les mentions légales-->
     <div id="parametrer">
