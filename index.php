@@ -12,7 +12,7 @@ include("config.php");
  **/
 
 /**
- * Ceci est un test pour github
+ * Ceci est un test pour github semble pas marcher :(
  */
 // Activation des erreurs
 ini_set('display_errors', 1);
