@@ -9,7 +9,7 @@ include("config.php");
  * - Contrôleur : Crée les variables, élabore leurs contenus, identifie la vue et lui envoie les variables
  * - Modèle : contient les fonctions liées à la BDD et appelées par les contrôleurs
  * - Vue : contient ce qui doit être affiché
- * ici on dit lol!
+ * ici on dit lol! et toc!!!!
  **/
 
 /**
