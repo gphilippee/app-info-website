@@ -8,12 +8,8 @@ include("config.php");
  * - index.php : identifie le routeur à appeler en fonction de l'url
  * - Contrôleur : Crée les variables, élabore leurs contenus, identifie la vue et lui envoie les variables
  * - Modèle : contient les fonctions liées à la BDD et appelées par les contrôleurs
- * - Vue : contient ce qui doit être affiché lol
+ * - Vue : contient ce qui doit être affiché
  **/
-
-/**
- * Ceci est un test pour github semble pas marcher :( c'est triste mais ça va marcher. ça a marcher!!! maintenant on passe au second test
- */
 
 // Activation des erreurs
 ini_set('display_errors', 1);
