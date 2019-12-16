@@ -12,7 +12,7 @@
                 <label>Êtes-vous sure de vouloir supprimer cette utilisateur ?</label>
                 <p>
                     <input type="submit" value="Oui">
-                    <a class="styleBTN" href="index.php?cible=admin&fonction=user">Non</a>
+                    <a class="styleBTN" href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=user">Non</a>
                 </p>
             </div>
         </form>

@@ -49,7 +49,7 @@
 
             <div class="blocBTN">
                 <input type="submit" value="Valider">
-                <a class="styleBTN addBTN" href="index.php?cible=admin&fonction=user">Annuler</a>
+                <a class="styleBTN addBTN" href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=user">Annuler</a>
             </div>
         </form>
     </div>

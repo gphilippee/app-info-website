@@ -44,7 +44,7 @@
             <input type="hidden" name="type" value="candidat"/>
             <div class="blocBTN">
                 <input type="submit" value="Ajouter">
-                <a class="styleBTN addBTN" href="index.php?cible=admin&fonction=user">Annuler</a>
+                <a class="styleBTN addBTN" href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=user">Annuler</a>
             </div>
         </form>
     </div>

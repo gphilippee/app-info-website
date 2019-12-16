@@ -4,6 +4,7 @@
 <div id="allinone">
 <nav id="naviguation">
     <div id="margin"></div>
+    <h3 class="titre"><a href="index.php?cible=gestionnaire&fonction=user"><span class="ruban">GERER LES UTILISATEURS</span></a></h3>
     <h3 class="titre"><span class="ruban">ALERTE</span></h3>
     <ul>
         <li><a class="sous-titre" href="index.php?cible=gestionnaire&fonction=alerteTemperature">Alerte capteur température</a></li>
