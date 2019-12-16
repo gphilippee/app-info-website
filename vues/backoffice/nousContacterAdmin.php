@@ -3,7 +3,7 @@
 
     </div>
 <?php
-require("vues/header/nousContacter.php");
+require(__DIR__."/../header/nousContacter.php");
 ?>
 <div class="contact">
     <div id="parametrer">
