@@ -3,7 +3,7 @@
 
     </div>
 <?php
-require("mentionLegale.php");
+require("vues/header/mentionLegale.php");
 ?>
 <div id="contenuML">
     <div id="parametrer">

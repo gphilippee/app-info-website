@@ -18,10 +18,10 @@ if ($_SESSION['type'] == "admin") {
 
 
 // si la fonction n'est pas définie, on choisit d'afficher l'accueil
-if (!isset($_GET['fonction']) || empty($_GET['fonction'])) {
+if (!isset($_POST['fonction']) || empty($_POST['fonction'])) {
     $function = "accueil";
 } else {
-    $function = htmlspecialchars($_GET['fonction']);
+    $function = htmlspecialchars($_POST['fonction']);
 }
 $alerte = false;
 
