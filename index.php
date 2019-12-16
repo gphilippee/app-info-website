@@ -11,10 +11,6 @@ include("config.php");
  * - Vue : contient ce qui doit être affiché
  **/
 
-/**
- * Ceci est un test pour github semble pas marcher :( c'est triste mais ça va marcher. ça a marcher!!! maintenant on passe au second test
- */
-
 // Activation des erreurs
 ini_set('display_errors', 1);
 
