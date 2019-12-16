@@ -3,7 +3,7 @@
 
     </div>
 
-    <div id="contenuQSN">  <!--même mise en forme que les mentions légales-->
+    <div id="contenuQSN">  <!--même mise en forme que les mentions légales -->
         <div id="parametrer">
             <form method="POST" action="">
                 <div class="input">
