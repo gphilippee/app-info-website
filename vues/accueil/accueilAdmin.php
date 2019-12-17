@@ -3,7 +3,6 @@
 </div>
 <div id="allinone">
 <nav id="naviguation">
-    <div id="margin"></div>
     <form id="FORMfaqAdmin" action="index.php" method="post">
         <input type="hidden" name="cible" value="admin"/>
         <input type="hidden" name="fonction" value="faq"/>
