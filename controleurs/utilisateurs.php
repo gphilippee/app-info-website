@@ -180,6 +180,8 @@ switch ($function) {
                             $css = "accueil/CSSaccueil";
                             $vue = "accueil/accueilClient";
                             $title = "Accueil";
+                            $donneesFixes = "donneesfixes";   //petit 'f' pour fixes
+                            $donneesQSN = recupereTous($bdd, $donneesFixes);   //sinon dès qu'on se connecte en tant que candidat, le contenu de QSN bug
                         }
                     } else {
                         $alerte = "Login ou mot de passe incorrect";
