@@ -1,7 +1,7 @@
 <div id="contenuAccueil">
     <h1>FAQ</h1>
     <div class="blocTable">
-        <a href="index.php?cible=admin&fonction=ajoutFAQ"><img src="pictures/plus.png"></a>
+        <a href="index.php?cible=admin&fonction=ajoutFAQ"><img src="pictures/plus.png" height="32" width="32" alt="ajouter"></a>
         <table class="tableauFAQ">
             <thead>
             <tr>
