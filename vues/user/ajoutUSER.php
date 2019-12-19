@@ -21,6 +21,14 @@
                     <td><input type="text" name="prenom" value=""/></td>
                 </tr>
                 <tr>
+                    <td><label for="type">Type</label></td>
+                    <td><select name="type">
+                            <option value="1">Gestionnaire</option>
+                            <option value="2">Candidat</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
                     <td><label for="date">Date de naissance</label></td>
                     <td><input type="date" name="date" value=""/></td>
                 </tr>
@@ -41,10 +49,10 @@
                     <td><input type="text" name="email" value=""/></td>
                 </tr>
             </table>
-            <input type="hidden" name="type" value="candidat"/>
             <div class="blocBTN">
                 <input type="submit" value="Ajouter">
-                <a class="styleBTN addBTN" href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=user">Annuler</a>
+                <a class="styleBTN addBTN"
+                   href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=user">Annuler</a>
             </div>
         </form>
     </div>
