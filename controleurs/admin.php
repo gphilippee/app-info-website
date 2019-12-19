@@ -16,12 +16,11 @@ if ($_SESSION['type'] == "admin") {
     throw new Exception("Vous vous êtes égaré.");
 }
 
-
 // si la fonction n'est pas définie, on choisit d'afficher l'accueil
-if (!isset($_POST['fonction']) || empty($_POST['fonction'])) {
+if (!isset($_GET['fonction']) || empty($_GET['fonction'])) {
     $function = "accueil";
 } else {
-    $function = htmlspecialchars($_POST['fonction']);
+    $function = htmlspecialchars($_GET['fonction']);
 }
 $alerte = false;
 

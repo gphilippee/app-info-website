@@ -13,11 +13,12 @@ if (session_status() != 2) {
 }
 // on inclut le fichier modèle contenant les appels à la BDD
 include('./modele/requetes.utilisateurs.php');
+
 // si la fonction n'est pas définie, on choisit d'afficher l'accueil
-if (!isset($_POST['fonction']) || empty($_POST['fonction'])) {
+if (!isset($_GET['fonction']) || empty($_GET['fonction'])) {
     $function = "accueil";
 } else {
-    $function = htmlspecialchars($_POST['fonction']);
+    $function = htmlspecialchars($_GET['fonction']);
 }
 
 if (!isset($_SESSION['connecter']) || empty($_SESSION['connecter'])) {

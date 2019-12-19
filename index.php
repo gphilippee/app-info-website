@@ -20,9 +20,9 @@ include("controleurs/fonctions.php");
 include("vues/fonctions.php");
 
 // On identifie le contrôleur à appeler dont le nom est contenu dans cible passé en GET
-if(isset($_POST['cible']) && !empty($_POST['cible'])) {
+if(isset($_GET['cible']) && !empty($_GET['cible'])) {
     // Si la variable cible est passé en POST
-    $url = htmlspecialchars($_POST['cible']); //user, sensor, etc.
+    $url = htmlspecialchars($_GET['cible']); //user, sensor, etc.
 
 } else {
     // Si aucun contrôleur défini en GET, on bascule sur utilisateurs
