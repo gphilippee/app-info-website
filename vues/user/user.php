@@ -5,7 +5,6 @@
         <a class="ajoutBTN" href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=ajoutUSER"><img src="pictures/plus.png" height="32" width="32" alt="ajouter"></a>
         <div class="overflow">
         <table id="myTable" class="tableauFAQ">
-            <thead>
             <tr>
                 <th onclick="sortTable(0)">Identifiant</th>
                 <th onclick="sortTable(1)">Nom</th>
@@ -17,8 +16,6 @@
                 <th onclick="sortTable(7)">Email</th>
                 <th>Action</th>
             </tr>
-            </thead>
-            <tbody>
             <?php
             foreach ($user as $element) { ?>
                 <tr>
@@ -42,7 +39,6 @@
                     </td>
                 </tr>
             <?php } ?>
-            </tbody>
         </table>
         </div>
     </div>

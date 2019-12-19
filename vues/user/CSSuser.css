@@ -14,7 +14,7 @@ body {
     width: 100%;
 }
 
-h1,h3 {
+h1,.alert {
     text-align: center;
 }
 
@@ -73,7 +73,7 @@ thead th, thead td {
     background-color: #f2f2f2;
 }
 
-#myTable tbody th,#myTable tbody td {
+#myTable tbody th,#myTable tbody td, #myTable td{
     text-align: left;
     padding: 10px;
 }

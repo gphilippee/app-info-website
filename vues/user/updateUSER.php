@@ -57,7 +57,7 @@
                     </tr>
                 </table>
             <?php } else { ?>
-                <h3>Vous n'êtes pas autorisé à modifier un administrateur</h3>
+                <h3 class="alerte">Vous n'êtes pas autorisé à modifier un administrateur</h3>
             <?php } ?>
             <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>"/>
 
