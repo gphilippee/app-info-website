@@ -42,7 +42,7 @@ switch ($function) {
         $ancienMdp = bddPassword($bdd, $values);
         if (isset($_POST['ancienMdp']) && isset($_POST['nouveauMdp']) && isset($_POST['confirmationNouveauMdp'])) {
             if (($_POST['ancienMdp'] == $ancienMdp) && ($_POST['nouveauMdp'] == $_POST['confirmationNouveauMdp'])) {
-                modifierMdp($bdd, $_POST['nouveauMdp']);
+                modifierMdp($bdd, hachagePassword($_POST['nouveauMdp']));
             }
         }
         break;
