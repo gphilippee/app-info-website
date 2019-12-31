@@ -81,6 +81,43 @@ switch ($function) {
         $css = "user/CSSuser";
         break;
 
+    case 'modifierMdp':
+        $css = "profil/CSSchangement";
+        $vue = "profil/changementMdp";
+        $title = "Changement mot de passe";
+
+        $values = ['username' => $_SESSION['login']];
+        $ancienMdp = bddPassword($bdd, $values);
+        if (isset($_POST['ancienMdp']) && isset($_POST['nouveauMdp']) && isset($_POST['confirmationNouveauMdp'])) {
+            if (($_POST['ancienMdp'] == $ancienMdp) && ($_POST['nouveauMdp'] == $_POST['confirmationNouveauMdp'])) {
+                modifierMdp($bdd, $_POST['nouveauMdp']);
+            }
+        }
+        break;
+
+    case 'modifierNumeroTelephone':
+        $css = "profil/CSSchangement";
+        $vue = "profil/changementNumero";
+        $title = "Changement Numero";
+        $values = ['username' => $_SESSION['login']];
+        if (isset($_POST['nouveauNumero'])) {
+            modifierNumero($bdd, $_POST['nouveauNumero']);
+            $_SESSION['numero_telephone'] = htmlspecialchars($_POST['nouveauNumero']);//pour actualiser l'affichage de la page Mon profil
+
+        }
+        break;
+
+    case 'modifierEmail':
+        $css = "profil/CSSchangement";
+        $vue = "profil/changementEmail";
+        $title = "Changement Email";
+        $values = ['username' => $_SESSION['login']];
+        if (isset($_POST['nouvelEmail'])) {
+            modifierMail($bdd, $_POST['nouvelEmail']);
+            $_SESSION['email'] = htmlspecialchars($_POST['nouvelEmail']);
+        }
+        break;
+
     case 'ajoutUSER':
         $vue = "user/ajoutUSER";
         $css = "user/CSSuser";
