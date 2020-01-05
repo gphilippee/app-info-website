@@ -117,54 +117,62 @@ switch ($function) {
         break;
 
     case 'modifierMdp':
-        $css = "profil/CSSchangement";
+        $css = "profil/CSSprofil";
         $vue = "profil/changementMdp";
         $title = "Changement mot de passe";
 
         $values = ['username' => $_SESSION['login']];
         $ancienMdp = implode(recupereMdp($bdd, $values));
-        if (isset($_POST['ancienMdp']) && isset($_POST['nouveauMdp']) && isset($_POST['confirmationNouveauMdp'])) {
+        if (isset($_POST['ancienMdp']) && isset($_POST['nouveauMdp']) && isset($_POST['confirmationNouveauMdp']) && $_POST['ancienMdp'] != "" && $_POST['nouveauMdp'] != "" && $_POST['confirmationNouveauMdp'] != "") {
             $a = hachagePassword($_POST['ancienMdp']);
             $b = $a . $a;
             if (($b == $ancienMdp) && ($_POST['nouveauMdp'] == $_POST['confirmationNouveauMdp'])) {
                 modifierMdp($bdd, hachagePassword($_POST['nouveauMdp']));
+                $css = "profil/CSSprofil";
+                $vue = "profil/profil";
+                $title = "Profil";
                 $alerte = 'Mot de passe correctement changé';
             } else {
                 $alerte = 'Une ou plusieurs saisie(s) incorrecte(s)';
             }
         } else {
-            $alerte = 'Tous les champs doivent êtres renseignés';
+            $alerte = 'Tous les champs doivent êtres renseignés pour effectuer un changement';
         }
 
         break;
 
     case 'modifierNumeroTelephone':
-        $css = "profil/CSSchangement";
+        $css = "profil/CSSprofil";
         $vue = "profil/changementNumero";
         $title = "Changement Numero";
         $values = ['username' => $_SESSION['login']];
-        if (isset($_POST['nouveauNumero'])) {
+        if (isset($_POST['nouveauNumero']) && $_POST['nouveauNumero'] != "") {
             modifierNumero($bdd, $_POST['nouveauNumero']);
             $_SESSION['numero_telephone'] = htmlspecialchars($_POST['nouveauNumero']);//pour actualiser l'affichage de la page Mon profil
-            $alerte='Changement correctement effectué';
-        }
-        else{
-            $alerte= 'Le champ doit être renseigné';
+            $css = "profil/CSSprofil";
+            $vue = "profil/profil";
+            $title = "Profil";
+            $alerte = 'Changement correctement effectué';
+        } else {
+            $alerte = 'Le champ doit être renseigné pour effectuer un changement';
         }
         break;
 
     case 'modifierEmail':
-        $css = "profil/CSSchangement";
+        $css = "profil/CSSprofil";
         $vue = "profil/changementEmail";
         $title = "Changement Email";
         $values = ['username' => $_SESSION['login']];
-        if (isset($_POST['nouvelEmail'])) {
+        if (isset($_POST['nouvelEmail']) && $_POST['nouvelEmail'] != "") {
             modifierMail($bdd, $_POST['nouvelEmail']);
             $_SESSION['email'] = htmlspecialchars($_POST['nouvelEmail']);
-            $alerte='Changement correctement effectué';
-        }
-        else{
-            $alerte= 'Le champ doit être renseigné';
+            $css = "profil/CSSprofil";
+            $vue = "profil/profil";
+            $title = "Profil";
+            $alerte = 'Changement correctement effectué';
+
+        } else {
+            $alerte = 'Le champ doit être renseigné pour effectuer un changement';
         }
         break;
 

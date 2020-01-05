@@ -81,58 +81,6 @@ switch ($function) {
         $css = "user/CSSuser";
         break;
 
-    case 'modifierMdp':
-        $css = "profil/CSSchangement";
-        $vue = "profil/changementMdp";
-        $title = "Changement mot de passe";
-
-        $values = ['username' => $_SESSION['login']];
-        $ancienMdp = implode(recupereMdp($bdd, $values));
-        if (isset($_POST['ancienMdp']) && isset($_POST['nouveauMdp']) && isset($_POST['confirmationNouveauMdp'])) {
-            $a = hachagePassword($_POST['ancienMdp']);
-            $b = $a . $a;
-            if (($b == $ancienMdp) && ($_POST['nouveauMdp'] == $_POST['confirmationNouveauMdp'])) {
-                modifierMdp($bdd, hachagePassword($_POST['nouveauMdp']));
-                $alerte = 'Mot de passe correctement changé';
-            } else {
-                $alerte = 'Une ou plusieurs saisie(s) incorrecte(s)';
-            }
-        } else {
-            $alerte = 'Tous les champs doivent êtres renseignés';
-        }
-
-        break;
-
-    case 'modifierNumeroTelephone':
-        $css = "profil/CSSchangement";
-        $vue = "profil/changementNumero";
-        $title = "Changement Numero";
-        $values = ['username' => $_SESSION['login']];
-        if (isset($_POST['nouveauNumero'])) {
-            modifierNumero($bdd, $_POST['nouveauNumero']);
-            $_SESSION['numero_telephone'] = htmlspecialchars($_POST['nouveauNumero']);//pour actualiser l'affichage de la page Mon profil
-            $alerte='Changement correctement effectué';
-        }
-        else{
-            $alerte= 'Le champ doit être renseigné';
-        }
-        break;
-
-    case 'modifierEmail':
-        $css = "profil/CSSchangement";
-        $vue = "profil/changementEmail";
-        $title = "Changement Email";
-        $values = ['username' => $_SESSION['login']];
-        if (isset($_POST['nouvelEmail'])) {
-            modifierMail($bdd, $_POST['nouvelEmail']);
-            $_SESSION['email'] = htmlspecialchars($_POST['nouvelEmail']);
-            $alerte='Changement correctement effectué';
-        }
-        else{
-            $alerte= 'Le champ doit être renseigné';
-        }
-        break;
-
     case 'ajoutUSER':
         $vue = "user/ajoutUSER";
         $css = "user/CSSuser";
