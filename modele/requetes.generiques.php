@@ -124,6 +124,16 @@ function modifierNumero(PDO $bdd, string $nouveauNum)
 }
 
 /**
+ * Renvoie le mdp
+ * @param string $username
+ */
+function recupereMdp(PDO $bdd, array $utilisateur){
+    $query = $bdd->prepare('SELECT mot_de_passe FROM utilisateur WHERE login = :pseudo');
+    $query->bindValue(':pseudo', $utilisateur['username'], PDO::PARAM_STR);
+    $query->execute();
+    return $query->fetch();
+}
+/**
  * Hache un mot de passe
  * @param $mdp
  * @return string

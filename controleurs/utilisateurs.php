@@ -122,12 +122,20 @@ switch ($function) {
         $title = "Changement mot de passe";
 
         $values = ['username' => $_SESSION['login']];
-        $ancienMdp = bddPassword($bdd, $values);
+        $ancienMdp = implode(recupereMdp($bdd, $values));
         if (isset($_POST['ancienMdp']) && isset($_POST['nouveauMdp']) && isset($_POST['confirmationNouveauMdp'])) {
-            if (($_POST['ancienMdp'] == $ancienMdp) && ($_POST['nouveauMdp'] == $_POST['confirmationNouveauMdp'])) {
-                modifierMdp($bdd, $_POST['nouveauMdp']);
+            $a = hachagePassword($_POST['ancienMdp']);
+            $b = $a . $a;
+            if (($b == $ancienMdp) && ($_POST['nouveauMdp'] == $_POST['confirmationNouveauMdp'])) {
+                modifierMdp($bdd, hachagePassword($_POST['nouveauMdp']));
+                $alerte = 'Mot de passe correctement changé';
+            } else {
+                $alerte = 'Une ou plusieurs saisie(s) incorrecte(s)';
             }
+        } else {
+            $alerte = 'Tous les champs doivent êtres renseignés';
         }
+
         break;
 
     case 'modifierNumeroTelephone':
@@ -138,7 +146,10 @@ switch ($function) {
         if (isset($_POST['nouveauNumero'])) {
             modifierNumero($bdd, $_POST['nouveauNumero']);
             $_SESSION['numero_telephone'] = htmlspecialchars($_POST['nouveauNumero']);//pour actualiser l'affichage de la page Mon profil
-
+            $alerte='Changement correctement effectué';
+        }
+        else{
+            $alerte= 'Le champ doit être renseigné';
         }
         break;
 
@@ -150,6 +161,10 @@ switch ($function) {
         if (isset($_POST['nouvelEmail'])) {
             modifierMail($bdd, $_POST['nouvelEmail']);
             $_SESSION['email'] = htmlspecialchars($_POST['nouvelEmail']);
+            $alerte='Changement correctement effectué';
+        }
+        else{
+            $alerte= 'Le champ doit être renseigné';
         }
         break;
 
