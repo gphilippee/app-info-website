@@ -109,7 +109,7 @@ switch ($function) {
             }
         }
         break;
-
+//salut
     case 'contacter':
         $css = "header/CSSlegal";
         $vue = "header/nousContacter";
