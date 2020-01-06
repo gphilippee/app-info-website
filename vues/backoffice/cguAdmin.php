@@ -1,3 +1,7 @@
+<div>
+    <div id="vide">
+
+    </div>
 <?php
 require(__DIR__."/../header/cgu.php");
 ?>
@@ -14,5 +18,9 @@ require(__DIR__."/../header/cgu.php");
             </div>
             <input type="submit" value="Modifier les conditions générales d'utilisation">
         </form>
+    </div>
+</div>
+    <div id="vide">
+
     </div>
 </div>
