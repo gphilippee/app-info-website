@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 // Appel pour la traduction des pages
 include("config.php");
