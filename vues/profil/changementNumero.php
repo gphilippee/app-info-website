@@ -1,8 +1,7 @@
-<div class="blocChangement">
-    <fieldset class="fieldset" style="z-index:5">
+<body>
+<div class="Conteneur">
         <form method="post" action="">
-            <p><?php echo _NUMERO; ?></p><input type="text" name="nouveauNumero">
+            <p><span class="profil"><?php echo _NUMERO; ?></p><input type="text" name="nouveauNumero">
             <p><button type="submit" name="submit">Valider</button></p>
         </form>
-    </fieldset>
 </div>
