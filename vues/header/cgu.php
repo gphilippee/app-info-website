@@ -1,15 +1,14 @@
 <div id="vide"></div>
 <h1>Conditions Génerales d'utilisation</h1>
 
-<?php
-foreach ($donneesCGU as $element) { ?>
-    <div class="blocCGU">
-        <?php if($element['idFixe'] ==1){     //1 correspond à l'id des CGU
-            echo nl2br($element['donneeFixe']);
-        } ?>
-    </div>
-<?php } ?>
-
+<div class="blocCGU">
+    <?php
+    foreach ($donneesCGU as $element) { ?>
+            <?php if($element['idFixe'] ==1){     //1 correspond à l'id des CGU
+                echo nl2br($element['donneeFixe']);
+            } ?>
+    <?php } ?>
+</div>
 
 
 <script>

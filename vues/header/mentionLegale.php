@@ -1,16 +1,16 @@
 <div id="vide"></div>
 <h1>Mentions Légales</h1>
 
+<div class="blocML">
+    <?php
+        foreach ($donneesML as $element) { ?>
 
-<?php
-foreach ($donneesML as $element) { ?>
-    <div class="blocML">
-            <?php if($element['idFixe'] ==2){     //2 correspond à l'id des Mentions Légales
-                echo nl2br($element['donneeFixe']);
-            } ?>
-    </div>
-<?php } ?>
+                    <?php if($element['idFixe'] ==2){     //2 correspond à l'id des Mentions Légales
+                        echo nl2br($element['donneeFixe']);
+                    } ?>
 
+    <?php } ?>
+</div>
 <script>
 
     function Cobtn() {

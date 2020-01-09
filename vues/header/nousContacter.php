@@ -26,9 +26,7 @@
                 } ?>
             <?php } ?>
         </p>
-
     </div>
-
 </div>
 
 <script>
