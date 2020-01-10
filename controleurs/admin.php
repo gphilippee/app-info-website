@@ -416,15 +416,15 @@ switch ($function) {
         $message = "Erreur 404 : la page recherchée n'existe pas.";
 }
 
-include('vues/header/header.php');
+require('vues/header/header.php');
 if ($vue !== 'accueil/accueilAdmin') {
-    include('vues/accueil/accueilAdmin.php');
+    require('vues/accueil/accueilAdmin.php');
 }
-include('vues/' . $vue . '.php');
+require('vues/' . $vue . '.php');
 if ($vue == 'accueil/accueilAdmin') {
-    include('vues/header/footer.php');
+    require('vues/header/footer.php');
 } else {
-    include('vues/header/footerFixed.php');
+    require('vues/header/footerFixed.php');
 }
 
 
