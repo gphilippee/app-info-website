@@ -1,5 +1,5 @@
 <?php
-
+//LOL THOMAS
 /**
  * Le contrôleur :
  * - définit le contenu des variables à afficher
@@ -11,7 +11,7 @@
  */
 // on vérifie bien que le visiteur est un admin, puis on appelle le modèle qui fait appel aux requetes génériques
 if ($_SESSION['type'] == "admin") {
-    require('./modele/requetes.admin.php');
+    include('./modele/requetes.admin.php');
 } else {
     throw new Exception("Vous vous êtes égaré.");
 }
@@ -428,3 +428,5 @@ if ($vue == 'accueil/accueilAdmin') {
 }
 
 
+
+//ceceicejchfuiheuqdhcqdhckqehdkc

@@ -31,5 +31,5 @@ if ($_SESSION['lang'] == "fr") {
     $drapeau="pictures/drapeau_EN.png";
 }
 
-include($fichier_langage);
+require($fichier_langage);
 ?>
