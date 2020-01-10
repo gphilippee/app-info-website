@@ -21,7 +21,7 @@
                                     <a href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=updateActionneur&id=<?php echo $element['idCapteur'];?>"
                                        title='Update Record'><img class="stylo" src="pictures/pencil.png" height="32" width="32"
                                                                   alt="modifier"></a>
-                                    <a href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=deleteUSER"
+                                    <a href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=deleteActionneur&id=<?php echo $element['idCapteur'];?>"
                                        title='Delete Record'><img class="trash" src="pictures/trash.png" height="32" width="32"
                                                                   alt="supprimer"></a>
                                 </div>

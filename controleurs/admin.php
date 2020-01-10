@@ -119,6 +119,26 @@ switch ($function) {
         $valeursActionneurs = recupereTous($bdd, "capteur_actionneur");
         break;
 
+    case 'deleteActionneur':
+        $title ="Supprimer un capter";
+        $vue ="actionneur/deleteActionneur";
+        $css ="actionneur/CSSActionneur";
+        if (isset($_POST['id'])) {
+            if (empty($_POST["id"])) {
+                $alerte = "Aucune saisie";
+            } else {
+                // Appel à la BDD à travers une fonction du modèle.
+                $retour = deleteActionneur($bdd, htmlspecialchars($_POST['id']));
+                if ($retour) {
+                    $alerte = "Suppression réussie";
+                    header('Refresh: 0.5,index.php?cible=admin&fonction=actionneur');  // refresh dans 0.5sec
+                } else {
+                    $alerte = "La suppression dans la FAQ n'a pas fonctionné";
+                }
+            }
+        }
+        break;
+
     case 'modifCGU':
         $title = "Modifier les CGU";
         $vue = "backoffice/cguAdmin";

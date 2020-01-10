@@ -100,6 +100,13 @@ function recupActionneur(PDO $bdd, array $valeur){
     return $query->fetch();
 }
 
+function deleteActionneur(PDO $bdd, $id)
+{
+    $query = 'DELETE FROM capteur_actionneur WHERE idCapteur = :id ';
+    $donnees = $bdd->prepare($query);
+    $donnees->bindValue(":id", $id);
+    return $donnees->execute();
+}
 /**
  * Supprimer une question dans la base de données
  * @param $id
