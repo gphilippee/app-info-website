@@ -1,5 +1,5 @@
 <?php
-//LOL THOMAS
+
 /**
  * Le contrôleur :
  * - définit le contenu des variables à afficher
@@ -426,7 +426,3 @@ if ($vue == 'accueil/accueilAdmin') {
 } else {
     require('vues/header/footerFixed.php');
 }
-
-
-
-//ceceicejchfuiheuqdhcqdhckqehdkc

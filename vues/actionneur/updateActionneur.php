@@ -24,8 +24,7 @@
 
         <p>Dernière modification le</p>
         <p>../../..</p>
-        <p><br/>par : <?php $_SESSION['']
-            ?></p>
+        <p><br/>par : </p>
 
         <span class="barre"></span>   <!--pour la barre verticale , MAIS NE S'ADAPTE PAS LORSQU'ON CHANGE LA TAILLE DE L'ECRAN!-->
         <input type="submit" value="Confirmer" />
