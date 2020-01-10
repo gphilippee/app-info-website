@@ -1,7 +1,7 @@
 <?php
 
 // on récupère les requêtes génériques
-require('requetes.generiques.php');
+include('requetes.generiques.php');
 
 function recupereDonneesUtilisateurs(PDO $bdd): array
 {
@@ -91,6 +91,13 @@ function addActionneur(PDO $bdd, array $valeur)
     $donnees->bindParam(":typeActionneur", $valeur['typeActionneur']);
     $donnees->bindParam(":unite", $valeur['uniteCapteur']);
     return $donnees->execute();
+}
+
+function recupActionneur(PDO $bdd, array $valeur){
+    $query = $bdd->prepare('SELECT idCapteur FROM capteur_actionneur WHERE idCapteur = :id ');
+    $query->bindValue(':id', $valeur['idCapteur']);
+    $query->execute();
+    return $query->fetch();
 }
 
 /**
