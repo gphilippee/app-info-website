@@ -21,7 +21,7 @@
     <h3 class="titre"><span class="ruban">GESTION ACTIONNEURS</span></h3>
     <ul>
         <li><a class="sous-titre" href="#">Modifier les seuils</a></li>
-        <li><a class="sous-titre" href="#">Ajouter un Actionneur</a></li>
+        <li><a class="sous-titre" href="index.php?cible=admin&fonction=ajoutActionneur">Ajouter un Actionneur</a></li>
         <li><a class="sous-titre" href="#">Enlever un Actionneur</a></li>
     </ul>
     <h3 class="titre"><span class="ruban">MODIFIER LES DONNÉES FIXES</span></h3>

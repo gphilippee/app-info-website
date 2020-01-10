@@ -77,6 +77,13 @@ switch ($function) {
         $vue = "actionneur/actionneurSonore";
         $css = "actionneur/CSSactionneur";
         break;
+        
+    case 'ajoutActionneur':
+        $title = "Ajout d'actionneur";
+        $vue = "actionneur/ajoutActionneur";
+        $css = "actionneur/CSSactionneur";
+        $donneesActionneur = recupereTous($bdd, "capteur_actionneur");
+        break;
 
     case 'modifCGU':
         $title = "Modifier les CGU";
