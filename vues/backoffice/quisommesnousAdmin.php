@@ -2,12 +2,7 @@
     <div id="vide">
 
     </div>
-    <?php
-        foreach ($donneesQSN as $element) {
-            if ($element['idFixe'] == 5) {     //5 correspond à l'id de QSN
-                echo $element['donneeFixe'];
-        }
-    } ?>
+
     <div id="contenuQSN">  <!--même mise en forme que les mentions légales -->
         <div id="parametrer">
             <form method="POST" action="">

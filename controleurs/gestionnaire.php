@@ -11,7 +11,7 @@
  */
 // on vérifie bien que le visiteur est un gestionnaire, puis on appelle le modèle qui fait appel aux requetes génériques
 if ($_SESSION['type'] == "gestionnaire") {
-    require('./modele/requetes.gestionnaire.php');
+    include('./modele/requetes.gestionnaire.php');
 } else {
     throw new Exception("Vous vous êtes égaré.");
 }
@@ -177,15 +177,15 @@ switch ($function) {
         $message = "Erreur 404 : la page recherchée n'existe pas.";
 }
 
-require('vues/header/header.php');
+include('vues/header/header.php');
 if ($vue !== 'accueil/accueilGestionnaire') {
-    require('vues/accueil/accueilGestionnaire.php');
+    include('vues/accueil/accueilGestionnaire.php');
 }
-require('vues/' . $vue . '.php');
+include('vues/' . $vue . '.php');
 if ($vue == 'accueil/accueilGestionnaire') {
-    require('vues/header/footer.php');
+    include('vues/header/footer.php');
 } else {
-    require('vues/header/footerFixed.php');
+    include('vues/header/footerFixed.php');
 }
 
 

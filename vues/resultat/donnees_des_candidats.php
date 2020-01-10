@@ -8,10 +8,10 @@
                     <tr>
                         <th onclick="sortTable(0)">ID</th>
                         <th onclick="sortTable(1)">Nom</th>
-                    <th onclick="sortTable(2)">Prenom</th>
-                    <th onclick="sortTable(3)">Resultat</th>
-                    <th onclick="sortTable(4)">Date</th>
-                </tr>
+                        <th onclick="sortTable(2)">Prenom</th>
+                        <th onclick="sortTable(3)">Resultat</th>
+                        <th onclick="sortTable(4)">Date</th>
+                    </tr>
                 </thead>
                 <tbody>
                 <?php

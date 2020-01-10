@@ -1,8 +1,7 @@
 <?php
-ob_start();
 session_start();
 // Appel pour la traduction des pages
-require("config.php");
+include("config.php");
 
 /**
  * MVC :
@@ -16,9 +15,9 @@ require("config.php");
 ini_set('display_errors', 1);
 
 // Appel des fonctions du contrôleur
-require("controleurs/fonctions.php");
+include("controleurs/fonctions.php");
 // Appel des fonctions liées à l'affichage
-require("vues/fonctions.php");
+include("vues/fonctions.php");
 
 // On identifie le contrôleur à appeler dont le nom est contenu dans cible passé en GET
 if(isset($_GET['cible']) && !empty($_GET['cible'])) {
@@ -31,5 +30,5 @@ if(isset($_GET['cible']) && !empty($_GET['cible'])) {
 }
 
 // On appelle le contrôleur
-require('controleurs/' . $url . '.php');
+include('controleurs/' . $url . '.php');
 
