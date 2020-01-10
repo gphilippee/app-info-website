@@ -1,5 +1,5 @@
 <?php
-
+//LOL THOMAS
 /**
  * Le contrôleur :
  * - définit le contenu des variables à afficher
