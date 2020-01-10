@@ -165,6 +165,9 @@ p {
     height:44px;
     width:100%;
 }
-#parametrer{
+.parametrer{
     width: 50%;
+}
+.conteneurNousContacter{
+    width: 100%;
 }
