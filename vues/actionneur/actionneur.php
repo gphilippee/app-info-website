@@ -18,7 +18,7 @@
                             <td><?php echo $element['typeActionneur']; ?></td>
                             <td>
                                 <div id="blocAction">
-                                    <a href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=updateUSER"
+                                    <a href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=updateActionneur&id=<?php echo $element['idCapteur'];?>"
                                        title='Update Record'><img class="stylo" src="pictures/pencil.png" height="32" width="32"
                                                                   alt="modifier"></a>
                                     <a href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=deleteUSER"

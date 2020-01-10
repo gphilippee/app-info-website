@@ -112,6 +112,13 @@ switch ($function) {
         }
         break;
 
+    case 'updateActionneur':
+        $title ="Modifier les actionneurs";
+        $vue ="actionneur/updateActionneur";
+        $css="actionneur/CSSactionneur";
+        $valeursActionneurs = recupereTous($bdd, "capteur_actionneur");
+        break;
+
     case 'modifCGU':
         $title = "Modifier les CGU";
         $vue = "backoffice/cguAdmin";

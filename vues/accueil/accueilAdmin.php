@@ -19,11 +19,7 @@
     </ul>
     <h3 class="titre"><a href="index.php?cible=admin&fonction=donneesUtilisateurs"><span class="ruban">RESULTATS CANDIDATS</span></a></h3>
     <h3 class="titre"><a href="index.php?cible=admin&fonction=actionneur"><span class="ruban">GESTION ACTIONNEURS</span></a></h3>
-    <ul>
-        <li><a class="sous-titre" href="#">Modifier les seuils</a></li>
-        <li><a class="sous-titre" href="index.php?cible=admin&fonction=ajoutActionneur">Ajouter un Actionneur</a></li>
-        <li><a class="sous-titre" href="#">Enlever un Actionneur</a></li>
-    </ul>
+
     <h3 class="titre"><span class="ruban">MODIFIER LES DONNÉES FIXES</span></h3>
     <ul>
         <li class="sous-titre"><a href="index.php?cible=admin&fonction=modifCGU">Modifier la CGU</a></li>
