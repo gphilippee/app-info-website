@@ -3,8 +3,8 @@
 // requêtes génériques pour récupérer les données de la BDD
 
 // Appel du fichier déclarant PDO
-include("modele/connexion.php");
-include("modele/requetes.mesures.php");
+require("modele/connexion.php");
+require("modele/requetes.mesures.php");
 /**
  * Récupère tous les éléments d'une table
  * @param PDO $bdd

@@ -1,7 +1,7 @@
 <?php
 
 // on récupère les requêtes génériques
-include('requetes.generiques.php');
+require('requetes.generiques.php');
 
 // requêtes spécifiques à la table des capteurs
 

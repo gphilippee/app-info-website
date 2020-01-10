@@ -12,7 +12,7 @@ if (session_status() != 2) {
     session_start();
 }
 // on inclut le fichier modèle contenant les appels à la BDD
-include('./modele/requetes.utilisateurs.php');
+require('./modele/requetes.utilisateurs.php');
 
 // si la fonction n'est pas définie, on choisit d'afficher l'accueil
 if (!isset($_GET['fonction']) || empty($_GET['fonction'])) {
@@ -289,10 +289,10 @@ switch ($function) {
         $message = "Erreur 404 : la page recherchée n'existe pas.";
 }
 
-include('vues/header/header.php');
-include('vues/' . $vue . '.php');
+require('vues/header/header.php');
+require('vues/' . $vue . '.php');
 if ($vue == 'accueil/accueil' or $vue == 'accueil/accueilAdmin' or $vue == 'accueil/accueilGestionnaire' or $vue == 'accueil/accueilClient') {
-    include('vues/header/footer.php');
+    require('vues/header/footer.php');
 } else {
-    include('vues/header/footerFixed.php');
+    require('vues/header/footerFixed.php');
 }
