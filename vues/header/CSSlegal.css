@@ -168,11 +168,15 @@ p {
 #parametrer{
     width: 50%;
 }
-
 .blocML {
-    margin: 5% 10% 10%;
+    margin: 5% 10% 10% 10%;
+    justify-content: center;
 }
 
 .blocCGU {
     margin: 5% 10% 10%;
+
+}
+.conteneurNousContacter, .conteneurML, .conteneurCGU, .conteneurQSN{
+    width: 100%;
 }
