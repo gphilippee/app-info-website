@@ -12,7 +12,7 @@
                         echo $element['donneeFixe'];        //affiche le mail
                     } ?>
                 <?php } ?>
-            </a>    
+            </a>
         </p>
     </div>
 
