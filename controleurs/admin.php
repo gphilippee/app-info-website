@@ -207,7 +207,7 @@ switch ($function) {
     case 'modifQSN':
         $title = "Modifier le contenu de Qui sommes-nous";
         $vue = "backoffice/quisommesnousAdmin";
-        $css = "accueil/CSSaccueil";
+        $css = "header/CSSlegal";
         $donneesFixes = "donneesfixes";   //petit 'f' pour fixes
         $donneesQSN = recupereTous($bdd, $donneesFixes);
         if (isset($_POST['contenuQSN'])) {

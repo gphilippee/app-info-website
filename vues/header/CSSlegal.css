@@ -175,6 +175,6 @@ p {
 .blocCGU {
     margin: 5% 10% 10%;
 }
-.conteneurNousContacter{
+.conteneurNousContacter, .conteneurML, .conteneurCGU, .conteneurQSN{
     width: 100%;
 }

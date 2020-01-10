@@ -1,8 +1,17 @@
-<div>
+<div class="conteneurQSN">
     <div id="vide">
 
     </div>
-
+        <h1>Qui sommes-nous?</h1>
+        <p>
+            <?php
+            foreach($donneesQSN as $element){
+                if($element['idFixe']==5){     //idFixe = 5 correspond aux données Qui sommes-nous
+                    echo nl2br($element['donneeFixe']);
+                }
+            }
+            ?>
+        </p>
     <div id="contenuQSN">  <!--même mise en forme que les mentions légales -->
         <div id="parametrer">
             <form method="POST" action="">
@@ -22,4 +31,4 @@
 
     <div id="vide"></div>
 </div>
-</div>
+
