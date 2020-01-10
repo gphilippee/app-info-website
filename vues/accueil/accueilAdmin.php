@@ -13,12 +13,12 @@
     </ul>
     <h3 class="titre"><span class="ruban">GESTION CAPTEURS</span></h3>
     <ul>
-        <li><a class="sous-titre" href="#">Modifier les seuils</a></li>
-        <li><a class="sous-titre" href="#">Ajouter un capteur</a></li>
-        <li><a class="sous-titre" href="#">Enlever un capteur</a></li>
+        <li><a class="sous-titre" href="index.php?cible=admin&fonction=actionneurLumineux">Modifier les seuils</a></li>
+        <li><a class="sous-titre" href="index.php?cible=admin&fonction=alerteTemperature">Ajouter un capteur</a></li>
+        <li><a class="sous-titre" href="index.php?cible=admin&fonction=alerteTemperature">Enlever un capteur</a></li>
     </ul>
     <h3 class="titre"><a href="index.php?cible=admin&fonction=donneesUtilisateurs"><span class="ruban">RESULTATS CANDIDATS</span></a></h3>
-    <h3 class="titre"><span class="ruban">GESTION ACTIONNEURS</span></h3>
+    <h3 class="titre"><a href="index.php?cible=admin&fonction=actionneur"><span class="ruban">GESTION ACTIONNEURS</span></a></h3>
     <ul>
         <li><a class="sous-titre" href="#">Modifier les seuils</a></li>
         <li><a class="sous-titre" href="index.php?cible=admin&fonction=ajoutActionneur">Ajouter un Actionneur</a></li>

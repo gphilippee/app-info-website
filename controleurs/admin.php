@@ -77,12 +77,39 @@ switch ($function) {
         $vue = "actionneur/actionneurSonore";
         $css = "actionneur/CSSactionneur";
         break;
-        
-    case 'ajoutActionneur':
-        $title = "Ajout d'actionneur";
-        $vue = "actionneur/ajoutActionneur";
+
+    case 'actionneur':
+        $title = "Actionneur";
+        $vue = "actionneur/actionneur";
         $css = "actionneur/CSSactionneur";
         $donneesActionneur = recupereTous($bdd, "capteur_actionneur");
+        break;
+
+    case 'ajoutActionneur':
+        $title ="Ajout actionneur";
+        $vue = "actionneur/ajoutActionneur";
+        $css = "actionneur/CSSactionneur";
+        // Cette partie du code est appelée si le formulaire a été posté
+        if (isset($_POST['idActionneur']) && isset($_POST['typeActionneur'])) {
+            if (empty($_POST['idActionneur']) OR empty($_POST['typeActionneur'])) {
+                $alerte = "Aucune saisie";
+            }
+            else {
+                $values = [
+                    'idActionneur' => htmlspecialchars($_POST['idActionneur']),
+                    'typeActionneur' => htmlspecialchars($_POST['typeActionneur']),
+                    'uniteCapteur' => htmlspecialchars($_POST['uniteCapteur'])
+                ];
+                // Appel à la BDD à travers une fonction du modèle.
+                $retour = addActionneur($bdd, $values);
+                if ($retour) {
+                    $alerte = "Ajout réussie";
+                    header('Refresh: 0.5,index.php?cible=admin&fonction=actionneur');  // refresh dans 0.5sec
+                } else {
+                    $alerte = "L'ajout n'a pas fonctionné";
+                }
+            }
+        }
         break;
 
     case 'modifCGU':

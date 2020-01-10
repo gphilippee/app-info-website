@@ -1,44 +1,39 @@
-
-<h1>Ajouter un actionneur</h1>
-<h2>Actionneur déjà existants</h2>
-<div class="blocTable">
-    <div class="overflow">
-        <table id="myTable" class="tableauActionneur">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Type Actionneur</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php
-            foreach ($donneesActionneur as $element) { ?>
+<?php
+/**
+ * Vue : ajouter un Actionneur
+ */
+?>
+<div id="contenuAccueil">
+    <h1 class="addFAQ">Ajouter un actionneur</h1>
+    <div id="blocAjout">
+        <form class="formAdd" method="POST" action="">
+            <table id="addTable">
                 <tr>
-                    <?php if($element['typeActionneur'] != ""){?>
-                    <td><?php echo $element['idCapteur']; ?></td>
-                    <td><?php echo $element['typeActionneur']; ?></td>
-                    <?php } ?>
+                    <td class="left"><label for="idActionneur">Id Actionneur</label></td>
+                    <td><input type="text" name="idActionneur" value=""/></td>
                 </tr>
-            <?php } ?>
-            </tbody>
-        </table>
+                <tr>
+                    <td><label for="typeActionneur">Type Actionneur</label></td>
+                    <td><select name="typeActionneur">
+                        <option>
+                            lumineux
+                        </option>
+                        <option>
+                            sonore
+                        </option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="uniteCapteur">Unité de l'Actionneur</label></td>
+                    <td><input type="text" name="uniteCapteur" value=""/></td>
+                </tr>
+            </table>
+            <div class="blocBTN">
+                <input type="submit" value="Ajouter">
+                <a class="styleBTN addBTN"
+                   href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=actionneur">Annuler</a>
+            </div>
+        </form>
     </div>
 </div>
-
-
-<p>Type et Id de l'actionneur</p>
-<form method="post" action="">
-    <div>
-        <input type="text" name="idActionneur" value="Id de l'actionneur"/>
-        <input type="text" name="typeActionneur" value="Type de l'actionneur"/>
-        <button>Ajouter le capteur</button>
-    </div>
-</form>
-
-<?php if(isset($_POST['idActionneur']) AND isset($_POST['typeActionneur'])){
-    $query = 'INSERT INTO capteur_actionneur VALUES(:id, :nom)';
-    $donnees = $bdd->prepare($query);
-    $donnees->bindParam(":id", $_POST['idActionneur']);
-    $donnees->bindParam(":nom", $_POST['typeActionneur']);
-    $donnees->execute();
-}

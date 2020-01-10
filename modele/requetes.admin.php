@@ -83,6 +83,16 @@ function addUser(PDO $bdd, array $utilisateur)
     return $donnees->execute();
 }
 
+function addActionneur(PDO $bdd, array $valeur)
+{
+    $query = 'INSERT INTO capteur_actionneur (idCapteur, typeActionneur, unite) VALUES (:id, :typeActionneur, :unite)';
+    $donnees = $bdd->prepare($query);
+    $donnees->bindParam(":id", $valeur['idActionneur']);
+    $donnees->bindParam(":typeActionneur", $valeur['typeActionneur']);
+    $donnees->bindParam(":unite", $valeur['uniteCapteur']);
+    return $donnees->execute();
+}
+
 /**
  * Supprimer une question dans la base de données
  * @param $id

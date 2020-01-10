@@ -1,70 +1,223 @@
-* {
-    font-family: Arial, Verdana, sans-serif;
+body {
+    background-image: url("../../pictures/Pattern_blanc.png");
+    margin: 0 0;
 }
 
-#titre {
+#vide {
+    height: 44px;
+}
+
+#contenuAccueil {
     display: flex;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    max-height: 60px;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+}
+
+h1,.alert {
+    text-align: center;
+}
+
+.suppFAQ {
+    margin-top: 130px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.ajoutBTN {
+    width: 44px;
+}
+
+/**
+ * CSS : user.php
+ */
+
+#myInput {
+    background-image: url('../pictures/searchicon.png'); /* Add a search icon to input */
+    background-position: 5px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 64%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+    margin: 0px 18% 0 18%;
+}
+
+.blocTable {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    margin: 3% 4%;
+    border-color: #cccccc;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2)
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    overflow: auto;
+}
+
+.overflow {
+    overflow: auto;
+}
+
+thead th, thead td {
+    text-align: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+#myTable tbody th,#myTable tbody td, #myTable td{
+    text-align: center;
+    padding: 10px;
+}
+
+#myTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#blocAction {
+    display: flex;
     flex-direction: row;
-    /*background-color: green;*/
+}
+
+/**
+ * CSS : deleteUSER.php
+ */
+
+#blocSupprimer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.formSupprimer {
+    margin: 0 0;
+    display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #cccccc;
+    padding: 15px;
+    min-height: 150px;
+    width: 530px;
+    box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
+    min-width: 300px;
+    background-color: white;
 }
 
-.photo {
-    padding-right: 10px;
-}
+/**
+ * CSS : ajoutUSER.php / updateUSER.php
+ */
 
-h3 {
-    font-size: 2em;
-    /*background-color: red;*/
-}
-
-fieldset {
-    background-color: whitesmoke;
-    margin-left: 30%;
-    margin-right: 30%;
-}
-
-#conteneur {
+#blocAjout {
     display: flex;
-    justify-content: space-around;
-    padding-right: 3%;
+    width: 100%;
+    justify-content: center;
 }
 
-.element {
-    /*non utilisé pour l'instant*/
+.addFAQ {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.haut { /* aligne Temps et la barre*/
+.formAdd {
+    margin: 0 0;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #cccccc;
+    padding: 15px;
+    min-height: 150px;
+    width: 500px;
+    box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
+    min-width: 300px;
+    background-color: white;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.blocBTN {
+    display: flex;
+    width: 100%;
 
 }
 
-.phaseControl {
-    margin-left: 32%;
-    margin-right: 6%;
+.styleBTN {
+    display: flex;
+    background-color: #0066CC;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    margin: 20px 5;
+    cursor: pointer;
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+    padding: 14px 0px;
 }
 
-.phase1 {
-    margin-left: 30%;
-    margin-right: 10%;
-
+.addBTN {
+    padding: 14px 20px;
 }
 
-fieldset {
-    width: 35%;
-    border-width: 5px;
+input[type=text], input[type=date], input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.barre { /*faire une barre verticale entre les deux fieldset         attention NE S'ADAPTE PAS LORSQU'ON CHANGE LA TAILLE DE L'ECRAN!*/
-    border: 1px dashed #000;
-    position: absolute;
-    width: 0%;
-    height: 15%;
-    left: 18%;
-    top: 29%;
+input[type=submit] {
+    width: 100%;
+    background-color: #0066CC;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
 
+input[type=submit]:hover, .styleBTN:hover {
+    background-color: #0022cc;
+}
+
+label {
+    display: block;
+    width: 100%;
+}
+#addTable td{
+    text-align: left;
+    padding-left:10px;
+    font-size:1rem;
+}
+.left{
+    width:30%;
 }
