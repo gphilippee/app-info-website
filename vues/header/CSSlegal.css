@@ -165,8 +165,15 @@ p {
     height:44px;
     width:100%;
 }
-.parametrer{
+#parametrer{
     width: 50%;
+}
+.blocML {
+    margin: 5% 10% 10%;
+}
+
+.blocCGU {
+    margin: 5% 10% 10%;
 }
 .conteneurNousContacter{
     width: 100%;
