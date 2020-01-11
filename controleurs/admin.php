@@ -202,6 +202,12 @@ switch ($function) {
         }
         break;
 
+    case 'modifDonneesFixes':
+        $title = "Modifier les données fixes";
+        $vue = "backoffice/modifierDonneesFixes";
+        $css = "backoffice/CSSdonneesFixes";
+        break;
+        
     case 'modifCGU':
         $title = "Modifier les CGU";
         $vue = "backoffice/cguAdmin";
