@@ -86,14 +86,15 @@ switch ($function) {
         break;
 
     case 'ajoutActionneur':
-        $title = "Ajout actionneur";
+        $title ="Ajout actionneur";
         $vue = "actionneur/ajoutActionneur";
         $css = "actionneur/CSSactionneur";
         // Cette partie du code est appelée si le formulaire a été posté
         if (isset($_POST['idActionneur']) && isset($_POST['typeActionneur'])) {
             if (empty($_POST['idActionneur']) OR empty($_POST['typeActionneur'])) {
                 $alerte = "Aucune saisie";
-            } else {
+            }
+            else {
                 $values = [
                     'idActionneur' => htmlspecialchars($_POST['idActionneur']),
                     'typeActionneur' => htmlspecialchars($_POST['typeActionneur']),
@@ -119,7 +120,7 @@ switch ($function) {
         break;
 
     case 'deleteActionneur':
-        $title = "Supprimer un capter";
+        $title = "Supprimer un capteur";
         $vue = "actionneur/deleteActionneur";
         $css = "actionneur/CSSActionneur";
         if (isset($_POST['id'])) {
@@ -131,6 +132,69 @@ switch ($function) {
                 if ($retour) {
                     $alerte = "Suppression réussie";
                     header('Refresh: 0.5,index.php?cible=admin&fonction=actionneur');  // refresh dans 0.5sec
+                } else {
+                    $alerte = "La suppression dans la FAQ n'a pas fonctionné";
+                }
+            }
+        }
+        break;
+    /**
+     * Capteur
+     */
+    case 'capteur':
+        $title = 'Capteur';
+        $vue = 'actionneur/capteur';
+        $css ='actionneur/CSSactionneur';
+        $donneesCapteur = recupereTous($bdd, "capteur_actionneur");
+        break;
+
+    case 'ajoutCapteur':
+        $title ="Ajout capteurs";
+        $vue = "actionneur/ajoutCapteur";
+        $css = "actionneur/CSSactionneur";
+        // Cette partie du code est appelée si le formulaire a été posté
+        if (isset($_POST['idCapteur']) && isset($_POST['typeCapteur'])) {
+            if (empty($_POST['idCapteur']) OR empty($_POST['typeCapteur'])) {
+                $alerte = "Aucune saisie";
+            }
+            else {
+                $values = [
+                    'idCapteur' => htmlspecialchars($_POST['idCapteur']),
+                    'typeCapteur' => htmlspecialchars($_POST['typeCapteur']),
+                    'uniteCapteur' => htmlspecialchars($_POST['uniteCapteur'])
+                ];
+                // Appel à la BDD à travers une fonction du modèle.
+                $retour = addCapteur($bdd, $values);
+                if ($retour) {
+                    $alerte = "Ajout réussie";
+                    header('Refresh: 0.5,index.php?cible=admin&fonction=capteur');  // refresh dans 0.5sec
+                } else {
+                    $alerte = "L'ajout n'a pas fonctionné";
+                }
+            }
+        }
+        break;
+
+    case 'updateCapteur':
+        $title ="Modifier les capteurs";
+        $vue ="actionneur/updateCapteur";
+        $css="actionneur/CSSactionneur";
+        $valeursCapteurs = recupereTous($bdd, "capteur_actionneur");
+        break;
+
+    case 'deleteCapteur':
+        $title ="Supprimer un capteur";
+        $vue ="actionneur/deleteCapteur";
+        $css ="actionneur/CSSActionneur";
+        if (isset($_POST['id'])) {
+            if (empty($_POST["id"])) {
+                $alerte = "Aucune saisie";
+            } else {
+                // Appel à la BDD à travers une fonction du modèle.
+                $retour = deleteCapteur($bdd, htmlspecialchars($_POST['id']));
+                if ($retour) {
+                    $alerte = "Suppression réussie";
+                    header('Refresh: 0.5,index.php?cible=admin&fonction=capteur');  // refresh dans 0.5sec
                 } else {
                     $alerte = "La suppression dans la FAQ n'a pas fonctionné";
                 }
