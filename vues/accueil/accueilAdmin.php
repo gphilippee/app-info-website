@@ -16,7 +16,7 @@
     <h3 class="titre"><a href="index.php?cible=admin&fonction=donneesUtilisateurs"><span class="ruban">RESULTATS CANDIDATS</span></a></h3>
     <h3 class="titre"><a href="index.php?cible=admin&fonction=actionneur"><span class="ruban">GESTION ACTIONNEURS</span></a></h3>
 
-    <h3 class="titre"><span class="ruban">MODIFIER LES DONNÉES FIXES</span></h3>
+    <h3 class="titre"><a href="index.php?cible=admin&fonction=modifDonneesFixes"><span class="ruban">MODIFIER LES DONNÉES FIXES</span></a></h3>
 
     <div id="margin"></div>
 </nav>
