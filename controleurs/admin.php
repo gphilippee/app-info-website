@@ -292,6 +292,7 @@ switch ($function) {
         }
         break;
 
+
     case 'modifQSN':
         $title = "Modifier le contenu de Qui sommes-nous";
         $vue = "backoffice/quisommesnousAdmin";
