@@ -20,12 +20,7 @@
     <h3 class="titre"><a href="index.php?cible=admin&fonction=donneesUtilisateurs"><span class="ruban">RESULTATS CANDIDATS</span></a></h3>
     <h3 class="titre"><a href="index.php?cible=admin&fonction=actionneur"><span class="ruban">GESTION ACTIONNEURS</span></a></h3>
 
-    <h3 class="titre"><span class="ruban">MODIFIER LES DONNÉES FIXES</span></h3>
-    <ul>
-        <li class="sous-titre"><a href="index.php?cible=admin&fonction=modifCGU">Modifier la CGU</a></li>
-        <li class="sous-titre"><a href="index.php?cible=admin&fonction=modifMentionsLegales">Modifier les mentions légales</a></li>
-        <li class="sous-titre"><a href="index.php?cible=admin&fonction=modifNousContacter">Modifier la page nous contacter</a></li>
-        <li class="sous-titre"><a href="index.php?cible=admin&fonction=modifQSN">Modifier le contenu de Qui sommes-nous</a></li>
-    </ul>
+    <h3 class="titre"><a href="index.php?cible=admin&fonction=modifDonneesFixes"><span class="ruban">MODIFIER LES DONNÉES FIXES</span></a></h3>
+
     <div id="margin"></div>
 </nav>

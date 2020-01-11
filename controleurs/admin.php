@@ -86,15 +86,14 @@ switch ($function) {
         break;
 
     case 'ajoutActionneur':
-        $title ="Ajout actionneur";
+        $title = "Ajout actionneur";
         $vue = "actionneur/ajoutActionneur";
         $css = "actionneur/CSSactionneur";
         // Cette partie du code est appelée si le formulaire a été posté
         if (isset($_POST['idActionneur']) && isset($_POST['typeActionneur'])) {
             if (empty($_POST['idActionneur']) OR empty($_POST['typeActionneur'])) {
                 $alerte = "Aucune saisie";
-            }
-            else {
+            } else {
                 $values = [
                     'idActionneur' => htmlspecialchars($_POST['idActionneur']),
                     'typeActionneur' => htmlspecialchars($_POST['typeActionneur']),
@@ -113,16 +112,16 @@ switch ($function) {
         break;
 
     case 'updateActionneur':
-        $title ="Modifier les actionneurs";
-        $vue ="actionneur/updateActionneur";
-        $css="actionneur/CSSactionneur";
+        $title = "Modifier les actionneurs";
+        $vue = "actionneur/updateActionneur";
+        $css = "actionneur/CSSactionneur";
         $valeursActionneurs = recupereTous($bdd, "capteur_actionneur");
         break;
 
     case 'deleteActionneur':
-        $title ="Supprimer un capter";
-        $vue ="actionneur/deleteActionneur";
-        $css ="actionneur/CSSActionneur";
+        $title = "Supprimer un capter";
+        $vue = "actionneur/deleteActionneur";
+        $css = "actionneur/CSSActionneur";
         if (isset($_POST['id'])) {
             if (empty($_POST["id"])) {
                 $alerte = "Aucune saisie";
@@ -137,6 +136,12 @@ switch ($function) {
                 }
             }
         }
+        break;
+
+    case 'modifDonneesFixes':
+        $title = "Modifier les données fixes";
+        $vue = "backoffice/modifierDonneesFixes";
+        $css = "backoffice/CSSdonneesFixes";
         break;
 
     case 'modifCGU':
@@ -208,7 +213,7 @@ switch ($function) {
                 $alerte = "Aucune saisie";
             } else {
                 $numeroTelephone = htmlspecialchars($_POST['numeroTelephone']);
-                if (preg_match("#[+]?[0-9]{2}([-. ]?[0-9]){4,5}$#", $numeroTelephone)) {    //utilisation des expressions régulières pour controler la saisie de l'utilisateur
+                if (preg_match("#[+]?[0-9]{2}([-. ]?[0-9]{2}){4}$#", $numeroTelephone)) {    //utilisation des expressions régulières pour controler la saisie de l'utilisateur
                     $retour = modifierNumeroSite($bdd, $numeroTelephone);
                     if ($retour) {
                         $alerte = "Modification réussie";
@@ -222,7 +227,6 @@ switch ($function) {
             }
         }
         break;
-
 
     case 'modifQSN':
         $title = "Modifier le contenu de Qui sommes-nous";
