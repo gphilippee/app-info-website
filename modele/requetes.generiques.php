@@ -117,10 +117,9 @@ function modifierMdp(PDO $bdd, string $nouveauMdp)
 function modifierNumero(PDO $bdd, string $nouveauNum)
 {
     $req = $bdd->prepare('UPDATE utilisateur SET numero_telephone = :nve WHERE login = :lgn');
-    $req->execute(array(
+    return $req->execute(array(
         'nve' => $nouveauNum,
-        'lgn' => $_SESSION['login']
-    ));
+        'lgn' => $_SESSION['login']));
 }
 
 /**

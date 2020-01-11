@@ -149,12 +149,21 @@ switch ($function) {
         $title = "Changement Numero";
         $values = ['username' => $_SESSION['login']];
         if (isset($_POST['nouveauNumero']) && $_POST['nouveauNumero'] != "") {
-            modifierNumero($bdd, $_POST['nouveauNumero']);
-            $_SESSION['numero_telephone'] = htmlspecialchars($_POST['nouveauNumero']);//pour actualiser l'affichage de la page Mon profil
-            $css = "profil/CSSprofil";
-            $vue = "profil/profil";
-            $title = "Profil";
-            $alerte = 'Changement correctement effectué';
+            $nouveauNumero = htmlspecialchars($_POST['nouveauNumero']);
+            if (preg_match("#^[0-9]{10}$#", $nouveauNumero)) {
+                $retour = modifierNumero($bdd, $nouveauNumero);
+                $_SESSION['numero_telephone'] = htmlspecialchars($_POST['nouveauNumero']);//pour actualiser l'affichage de la page Mon profil
+                if($retour){
+                    $alerte = "Modification réussie";
+                    $css = "profil/CSSprofil";    //diriger vers la page profil
+                    $vue = "profil/profil";
+                    $title = "Profil";
+                } else {
+                    $alerte = "La modification du numéro n'a pas fonctionné";
+                }
+            } else {
+                $alerte = "Saisie incorrecte";
+            }
         } else {
             $alerte = 'Le champ doit être renseigné pour effectuer un changement';
         }
