@@ -93,6 +93,16 @@ function addActionneur(PDO $bdd, array $valeur)
     return $donnees->execute();
 }
 
+function addCapteur(PDO $bdd, array $valeur)
+{
+    $query = 'INSERT INTO capteur_actionneur (idCapteur, typeCapteur, unite) VALUES (:id, :typeCapteur, :unite)';
+    $donnees = $bdd->prepare($query);
+    $donnees->bindParam(":id", $valeur['idCapteur']);
+    $donnees->bindParam(":typeCapteur", $valeur['typeCapteur']);
+    $donnees->bindParam(":unite", $valeur['uniteCapteur']);
+    return $donnees->execute();
+}
+
 function recupActionneur(PDO $bdd, array $valeur){
     $query = $bdd->prepare('SELECT idCapteur FROM capteur_actionneur WHERE idCapteur = :id ');
     $query->bindValue(':id', $valeur['idCapteur']);
@@ -107,6 +117,15 @@ function deleteActionneur(PDO $bdd, $id)
     $donnees->bindValue(":id", $id);
     return $donnees->execute();
 }
+
+function deleteCapteur(PDO $bdd, $id)
+{
+    $query = 'DELETE FROM capteur_actionneur WHERE idCapteur = :id ';
+    $donnees = $bdd->prepare($query);
+    $donnees->bindValue(":id", $id);
+    return $donnees->execute();
+}
+
 /**
  * Supprimer une question dans la base de données
  * @param $id

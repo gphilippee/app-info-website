@@ -27,7 +27,8 @@
         <p><br/>par : </p>
 
         <span class="barre"></span>   <!--pour la barre verticale , MAIS NE S'ADAPTE PAS LORSQU'ON CHANGE LA TAILLE DE L'ECRAN!-->
-        <input type="submit" value="Confirmer" />
+        <!--<input type="submit" value="Confirmer" />-->
+        <a class="styleBTN" href="index.php?cible=admin&fonction=actionneur">Confirmer</a>
     </fieldset>
 
 </form>
