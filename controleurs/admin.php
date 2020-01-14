@@ -222,7 +222,7 @@ switch ($function) {
                 $retour = modifierCGU($bdd, $contenuCGU);
                 if ($retour) {
                     $alerte = "Modification réussie";
-                    header('Refresh: 0.5, index.php?cible=admin&fonction=modifCGU');  // refresh dans 0.5sec
+                    header('Refresh: 0.5, index.php?cible=admin&fonction=modifDonneesFixes');  // refresh dans 0.5sec
                 } else {
                     $alerte = "La modification des CGU n'a pas fonctionné";
                 }
@@ -244,7 +244,7 @@ switch ($function) {
                 $retour = modifierMentionLegale($bdd, $contenuML);
                 if ($retour) {
                     $alerte = "Modification réussie";
-                    header('Refresh: 0.5, index.php?cible=admin&fonction=modifMentionsLegales');  //refresh dans 0.5sec
+                    header('Refresh: 0.5, index.php?cible=admin&fonction=modifDonneesFixes');  //refresh dans 0.5sec
                 } else {
                     $alerte = "La modification des mentions légales n'a pas fonctionné";
                 }
@@ -307,7 +307,7 @@ switch ($function) {
                 $retour = modifierQSN($bdd, $contenuQSN);
                 if ($retour) {
                     $alerte = "Modification réussie";
-                    header('Refresh: 0.5, index.php?cible=admin&fonction=modifQSN');    //refresh dans 0.5sec
+                    header('Refresh: 0.5, index.php?cible=admin&fonction=modifDonneesFixes');    //refresh dans 0.5sec
                 } else {
                     $alerte = "La modification du contenu Qui sommes-nous n'a pas fonctionné";
                 }

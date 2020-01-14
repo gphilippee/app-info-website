@@ -7,6 +7,7 @@
     ?>
     <div id="contenuML">
         <div id="parametrer">
+
             <form method="POST" action="">
                 <div class="input">
                     <textarea name="contenuML" class="ML" rows="10" cols="120"><?php    //pour afficher le texte deja présent
@@ -15,9 +16,10 @@
                                 echo $element['donneeFixe']; }
                         } ?>
                     </textarea>
-                </div>
                 <input type="submit" value="Modifier les mentions légales">
+                </div>
             </form>
+
         </div>
     </div>
         <div id="vide">

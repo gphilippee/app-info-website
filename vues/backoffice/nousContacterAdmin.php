@@ -3,7 +3,7 @@
     require(__DIR__."/../header/nousContacter.php");
     ?>
     <div class="contact">
-        <div class="parametrer">
+        <div class="parametrerContact">
             <form method="POST" action="">
                 <div class="input">
                     <input type="email" name="contenuMail" placeholder="Modifier votre mail ici">
@@ -12,7 +12,7 @@
             </form>
         </div>
 
-        <div class="parametrer">
+        <div class="parametrerContact">
             <form method="POST" action="">
                 <div class="input">
                     <input type="text" name="numeroTelephone" placeholder="Modifier le numéro de téléphone ici" size="28"/>

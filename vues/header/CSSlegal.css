@@ -134,8 +134,9 @@ p {
     font-family: verdana;
     font-size: 20px;
     color: dimgray;
-    padding: 1% 10%;
+    padding: 1% 0;
     text-align: justify;
+    width: 80%;
 }
 
 .contact{
@@ -166,7 +167,7 @@ p {
     width:100%;
 }
 #parametrer{
-    width: 50%;
+    width: 100%;
 }
 
 .blocML {
@@ -187,7 +188,7 @@ p {
      justify-content: space-between;
  }
 
-.parametrer{
+.parametrerContact{
     width: 50%;
 }
 .input{
@@ -217,3 +218,12 @@ input[type=text],input[type=password], input[type=email] {
     box-sizing: border-box;
 }
 
+form{
+    width: 100%;
+}
+
+textarea{
+    border: #0066CC 2px solid;
+    border-radius: 10px;
+    width: 80%;
+}

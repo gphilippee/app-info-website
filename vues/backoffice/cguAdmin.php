@@ -15,12 +15,10 @@
                                 echo $element['donneeFixe']; }
                         } ?>
                     </textarea>
+                    <input type="submit" value="Modifier les conditions générales d'utilisation">
                 </div>
-                <input type="submit" value="Modifier les conditions générales d'utilisation">
             </form>
         </div>
-    </div>
-        <div id="vide">
-
         </div>
+    </div>
 </div>
