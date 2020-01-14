@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 13 jan. 2020 à 13:19
+-- Généré le :  mar. 14 jan. 2020 à 09:17
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -122,7 +122,7 @@ INSERT INTO `donneesfixes` (`idFixe`, `donneeFixe`) VALUES
 (2, 'Dénomination : INFINITE MEASURES\r\nCapital social : 120 000 Euros\r\nAdresse siège social : 19 rue Louis Guérin, 69100 Villeurbanne France\r\nAdresse électronique : infinite@measures.fr\r\nTéléphone : + 33 (0)1 78 38 99 54\r\nNuméro Siren : 741422399\r\nDirecteur de la publication : Hervé ALLANIC\r\nHébergement : ISEP, 10 rue de Vanves 92170 Issy-les-Moulineaux\r\n                                                  \r\n                                        '),
 (3, '+331 78 38 99 54'),
 (4, 'infinite@measures.fr'),
-(5, 'Contenu qui-sommes nous ?       dz   OK ok                        \r\ndsq                          daz                fze');
+(5, 'Notre entreprise, INFINITE MEASURES, a vu le jour quand nous avons eu l\'idée d\'accompagner de manière particulière chacun de nos clients dans les démarches nécessaire à la conservation de leurs permis spéciaux (poids lourd, engin de chantier, train...). Dans cette optique nous avons ouvert un centre de test à Paris pour permettre à tous de savoir où se situe leurs compétences.                                ');
 
 -- --------------------------------------------------------
 
@@ -169,6 +169,7 @@ DROP TABLE IF EXISTS `mesure`;
 CREATE TABLE IF NOT EXISTS `mesure` (
   `idMesure` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `valeur` int(11) NOT NULL,
+  `tempsReaction` decimal(10,0) DEFAULT NULL,
   `instant` datetime NOT NULL,
   `Capteur_Actionneur_idCapteur` int(11) NOT NULL,
   `Utilisateur_id` int(11) NOT NULL,
@@ -179,14 +180,14 @@ CREATE TABLE IF NOT EXISTS `mesure` (
 -- Déchargement des données de la table `mesure`
 --
 
-INSERT INTO `mesure` (`idMesure`, `valeur`, `instant`, `Capteur_Actionneur_idCapteur`, `Utilisateur_id`) VALUES
-(1, 200, '2019-11-24 17:28:50', 1, 6),
-(2, 150, '2019-11-24 17:29:25', 1, 6),
-(3, 148, '2019-11-24 17:30:51', 1, 6),
-(4, 165, '2019-11-24 17:31:24', 1, 7),
-(5, 37, '2019-11-24 17:32:02', 2, 7),
-(6, 36, '2019-11-24 17:32:17', 2, 7),
-(7, 37, '2019-11-24 17:33:04', 2, 6);
+INSERT INTO `mesure` (`idMesure`, `valeur`, `tempsReaction`, `instant`, `Capteur_Actionneur_idCapteur`, `Utilisateur_id`) VALUES
+(1, 200, NULL, '2019-11-24 17:28:50', 1, 6),
+(2, 150, NULL, '2019-11-24 17:29:25', 1, 6),
+(3, 148, NULL, '2019-11-24 17:30:51', 1, 6),
+(4, 165, NULL, '2019-11-24 17:31:24', 1, 7),
+(5, 37, NULL, '2019-11-24 17:32:02', 2, 7),
+(6, 36, NULL, '2019-11-24 17:32:17', 2, 7),
+(7, 37, NULL, '2019-11-24 17:33:04', 2, 6);
 
 -- --------------------------------------------------------
 
