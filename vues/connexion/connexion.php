@@ -1,5 +1,5 @@
 <div id="connexion">
-    <h1 class="connex">Connexion</h1>
+    <h1>Connexion</h1>
     <form method="POST" action="">
         <label for="username"><?php echo _NOM_UTILISA; ?></label>
         <input type="text" id="username" name="connex_login" placeholder="username">

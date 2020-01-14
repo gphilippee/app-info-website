@@ -120,13 +120,14 @@ thead th, thead td {
 
 #blocAjout {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .addFAQ {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 30px 0;
 }
 
 .formAdd {
@@ -141,7 +142,9 @@ thead th, thead td {
     border-color: #cccccc;
     padding: 15px;
     min-height: 150px;
-    width: 500px;
+    width: 550px;
+    height: 60%;
+    overflow-y: auto;
     box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
     min-width: 300px;
     background-color: white;
@@ -220,4 +223,9 @@ label {
 }
 .left{
     width:30%;
+}
+
+#addTable{
+    height: 100%;
+    margin-top: 220px;
 }

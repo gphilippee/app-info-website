@@ -510,7 +510,7 @@ if ($vue !== 'accueil/accueilAdmin') {
     require('vues/accueil/accueilAdmin.php');
 }
 require('vues/' . $vue . '.php');
-if ($vue == 'accueil/accueilAdmin') {
+if ($vue == 'accueil/accueilAdmin' ) {
     require('vues/header/footer.php');
 } else {
     require('vues/header/footerFixed.php');

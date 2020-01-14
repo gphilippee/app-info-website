@@ -13,12 +13,14 @@ body{
 #allinone{
     display:flex;
     flex-direction: row;
+    height: 89%;
 }
 #naviguation{
     background: linear-gradient(to bottom, #ededef,#f5f5f7);
     width:300px;
     min-width:300px;
     margin-top:0px;
+    height: 100%;
 
 }
 #naviguation ul{
@@ -44,6 +46,7 @@ body{
     text-shadow: 1px 1px 0 #fff;
     box-shadow: 0px 2px 5px 1px rgba(0, 0, 255, .2);
     position: relative;
+    margin: 8.9% 0;
 }
 .ruban{
     background-color:#E7E6E6;
@@ -51,7 +54,7 @@ body{
     padding: 8px 5px 10px 20px;
     font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
     font-weight:bold;
-
+    padding: 5%;
 }
 .sous-titre{
     font-weight:normal;
