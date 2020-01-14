@@ -1,7 +1,10 @@
-<body>
-<div class="Conteneur">
+<div class="conteneur">
         <form method="post" action="">
-            <p><span class="profil"><?php echo _ADRESSE_EMAIL; ?></p><input type="email" name="nouvelEmail">
-            <p><button type="submit" name="submit">Valider</button></p>
+            <h1><label for="nouvelEmail" class="profil"><?php echo _ADRESSE_EMAIL; ?></label></h1>
+            <input type="email" name="nouvelEmail" placeholder="Nouvelle adresse Email"/>
+            <div class="blocBouton">
+                <button class="styleBTN"   type="submit" >Valider</button>
+                <a class="styleBTN addBTN" href="index.php?cible=utilisateurs&fonction=profil">Annuler</a>
+            </div>
         </form>
 </div>

@@ -4,8 +4,8 @@
  */
 ?>
 <div id="contenuAccueil">
-    <h1 class="addFAQ">Modifier un utilisateur</h1>
     <div id="blocAjout">
+    <h1 class="addFAQ">Modifier un utilisateur</h1>
         <form class="formAdd" action="" method="POST">
             <?php if ($user['type'] != "admin") { ?>
                 <table id="addTable">

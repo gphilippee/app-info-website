@@ -1,7 +1,10 @@
-<body>
-<div class="Conteneur">
+<div class="conteneur">
         <form method="post" action="">
-            <p><span class="profil"><?php echo _NUMERO; ?></p><input type="text" name="nouveauNumero">
-            <p><button type="submit" name="submit">Valider</button></p>
+            <h1><label for="nouveauNumero" class="profil"><?php echo _NUMERO; ?></label></h1>
+            <input type="text" name="nouveauNumero" placeholder="Nouveau numéro de téléphone">
+            <div class="blocBouton">
+                <button class="styleBTN" type="submit" name="submit" value="Numéro de téléphone">Valider</button>
+                <a class="styleBTN addBTN" href="index.php?cible=utilisateurs&fonction=profil">Annuler</a>
+            </div>
         </form>
 </div>
