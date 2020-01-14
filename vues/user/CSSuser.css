@@ -33,7 +33,7 @@ h1,.alert {
  */
 
 #myInput {
-    background-image: url('../pictures/searchicon.png'); /* Add a search icon to input */
+    background-image: url('../../pictures/searchicon.png'); /* Add a search icon to input */
     background-position: 5px; /* Position the search icon */
     background-repeat: no-repeat; /* Do not repeat the icon image */
     width: 64%; /* Full-width */
@@ -174,7 +174,7 @@ textarea {
     text-decoration: none;
     border: none;
     border-radius: 4px;
-    margin: 20px 5;
+    margin: 20px 5px;
     cursor: pointer;
     color: white;
     width: 100%;
@@ -201,7 +201,7 @@ input[type=submit] {
     background-color: #0066CC;
     color: white;
     padding: 14px 20px;
-    margin: 20px 5;
+    margin: 20px 5px;
     border: none;
     border-radius: 4px;
     cursor: pointer;

@@ -1,20 +1,22 @@
 <div id="vide"></div>
-<h1>Liste des Utilisateurs inscrits</h1>
+<h1>Vos Résultats</h1>
 <div id="contenuListeUttilisateurs">
     <div class="blocListeUtilisateurs">
         <table id="myTable">
             <tr >
                 <!--<th onclick="sortTable(0)">Id</th>-->
-                <th onclick="sortTable(0)">Valeur</i></th>
-                <th onclick="sortTable(1)">Date</th>
+                <th onclick="sortTable(0)">Date</th>
+                <th onclick="sortTable(1)">Valeur</th>
+                <th onclick="sortTable(0)">Unite</th>
                 <th></th>
             </tr>
             <?php
             foreach ($donneesMesure as $element) { ?>
             <tr>
                 <!--<td><?php echo  $element['id']; ?></td>-->
-                <td><?php echo  $element['valeur']; ?></td>
                 <td><?php echo  $element['instant']; ?></td>
+                <td><?php echo  $element['valeur']; ?></td>
+                <td><?php echo  $element['unite']; ?></td>
                 <td><span class="close">x</span></td>
             </tr>
             <?php } ?>
