@@ -1,14 +1,13 @@
-<div id="vide"></div>
+<div id="contenuAccueil">
 <h1>Données des Utilisateurs</h1>
-<div id="contenuAnonymesUttilisateurs">
-    <div class="blocListeUtilisateurs">
+<div class="blocTable">
+    <div class="overflow">
         <table id="myTable">
             <tr>
                 <!--<th onclick="sortTable(0)">Id</th>-->
                 <th onclick="sortTable(0)">Résultat</i></th>
                 <th onclick="sortTable(1)">Date</th>
-                <th onclick="sortTable(2)">Id Capteur</th>
-                <th></th>
+                <th onclick="sortTable(2)">Id composant</th>
             </tr>
             <?php
             foreach ($donneesUtilisateurs as $element) { ?>
@@ -17,15 +16,12 @@
                     <td><?php echo  $element['valeur']; ?></td>
                     <td><?php echo  $element['instant']; ?></td>
                     <td><?php echo  $element['Capteur_Actionneur_idCapteur']; ?></td>
-                    <td><span class="close">x</span></td>
-
                 </tr>
             <?php } ?>
         </table>
-
-    </div>  <!--bloc questionReponse-->
+    </div>
 </div>
-
+</div>
 <script>
     function sortTable(n) {
         var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;

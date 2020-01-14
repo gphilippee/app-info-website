@@ -68,7 +68,7 @@ switch ($function) {
         $title = "Données des Utilisateurs Anonymes";
         $donneesUtilisateurs = recupereDonneesUtilisateurs($bdd);
         $vue = "resultat/donnees_des_candidats_anonymes";
-        $css = "resultat/CSSlisteUtilisateurs";
+        $css = "user/CSSuser";
         break;
     /**
      * Actionneur
