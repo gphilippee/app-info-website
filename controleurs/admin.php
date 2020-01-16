@@ -260,6 +260,8 @@ switch ($function) {
         if (isset($_POST['contenuMail'])) {             //modifier le mail de contact
             if ($_POST['contenuMail'] == "") {
                 $alerte = "Aucune saisie";
+            } elseif (!filter_var(htmlspecialchars($_POST['contenuMail']), FILTER_VALIDATE_EMAIL)) {
+                $alerte = "Adresse email invalide";
             } else {
                 $contenuMail = htmlspecialchars($_POST['contenuMail']);
                 $retour = modifierMailSite($bdd, $contenuMail);
