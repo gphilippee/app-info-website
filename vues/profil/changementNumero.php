@@ -1,4 +1,4 @@
-<div class="conteneur">
+<div class="conteneurTelephone">
         <form method="post" action="">
             <h1><label for="nouveauNumero" class="profil"><?php echo _NUMERO; ?></label></h1>
             <input type="text" name="nouveauNumero" placeholder="Nouveau numéro de téléphone">
