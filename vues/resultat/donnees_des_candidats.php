@@ -4,7 +4,6 @@
     <div class="blocTable">
         <div class="overflow">
             <table id="myTable" class="tableauFAQ">
-                <thead>
                 <tr>
                     <th onclick="sortTable(0)">ID</th>
                     <th onclick="sortTable(1)">Nom</th>
@@ -12,8 +11,6 @@
                     <th onclick="sortTable(3)">Resultat</th>
                     <th onclick="sortTable(4)">Date</th>
                 </tr>
-                </thead>
-                <tbody>
                 <?php
                 foreach ($donneesUtilisateurs as $element) { ?>
                     <tr>
@@ -24,7 +21,6 @@
                         <td><?php echo $element['instant']; ?></td>
                     </tr>
                 <?php } ?>
-                </tbody>
             </table>
         </div>
     </div>
