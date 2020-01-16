@@ -13,7 +13,7 @@
             foreach ($donneesUtilisateurs as $element) { ?>
                 <tr>
                     <!--<td><?php echo  $element['id']; ?></td>-->
-                    <td><?php echo  $element['valeur']; ?></td>
+                    <td><?php echo  $element['valeur'].' '; ?><?php echo  $element['unite']; ?></td>
                     <td><?php echo  $element['instant']; ?></td>
                     <td><?php echo  $element['Capteur_Actionneur_idCapteur']; ?></td>
                 </tr>
