@@ -13,8 +13,8 @@
             <textarea name="reponse" rows="5" cols="60"><?php echo $faq['contenuReponse']; ?></textarea>
             <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>"/>
             <div class="blocBTN">
-            <input type="submit" value="Valider">
-            <a class="styleBTN addBTN" href="index.php?cible=admin&fonction=faq">Annuler</a>
+                <input type="submit" value="Valider">
+                <a class="styleBTN addBTN" href="index.php?cible=admin&fonction=faq">Annuler</a>
             </div>
         </form>
     </div>

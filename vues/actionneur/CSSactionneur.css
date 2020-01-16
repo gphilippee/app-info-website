@@ -14,7 +14,7 @@ body {
     width: 100%;
 }
 
-h1,.alert {
+h1, .alert {
     text-align: center;
 }
 
@@ -73,7 +73,7 @@ thead th, thead td {
     background-color: #f2f2f2;
 }
 
-#myTable tbody th,#myTable tbody td, #myTable td{
+#myTable tbody th, #myTable tbody td, #myTable td {
     text-align: center;
     padding: 10px;
 }
@@ -185,7 +185,7 @@ textarea {
     width: 35%;
 }
 
-#inputAjout{
+#inputAjout {
     width: 40%;
     padding: 0px 20px;
     margin: 20px 10px;
@@ -225,30 +225,35 @@ label {
     display: block;
     width: 100%;
 }
-#addTable td{
+
+#addTable td {
     text-align: left;
-    padding-left:10px;
-    font-size:1rem;
+    padding-left: 10px;
+    font-size: 1rem;
 }
-.left{
-    width:30%;
+
+.left {
+    width: 30%;
 }
 
 /*Modification des seuils*/
 
-.modifActionneur{
+.modifActionneur {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 20px 25%;
 }
-.labelRadio{
+
+.labelRadio {
     width: 75%;
 }
-.inputradio{
+
+.inputradio {
     display: flex;
 }
-.fieldset{
+
+.fieldset {
     background-color: white;
     border-radius: 5px;
     box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);

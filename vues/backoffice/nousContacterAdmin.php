@@ -1,6 +1,6 @@
 <div class="conteneurNousContacter">
     <?php
-    require(__DIR__."/../header/nousContacter.php");
+    require(__DIR__ . "/../header/nousContacter.php");
     ?>
     <div class="contact">
         <div class="parametrerContact">
@@ -15,13 +15,14 @@
         <div class="parametrerContact">
             <form method="POST" action="">
                 <div class="input">
-                    <input type="text" name="numeroTelephone" placeholder="Modifier le numéro de téléphone ici" size="28"/>
+                    <input type="text" name="numeroTelephone" placeholder="Modifier le numéro de téléphone ici"
+                           size="28"/>
                     <input type="submit" value="Modifier le numéro de téléphone"/>
                 </div>
             </form>
         </div>
     </div>
 
-    <div id="vide"> </div>
-    </div>
+    <div id="vide"></div>
+</div>
 </div>

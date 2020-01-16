@@ -15,13 +15,13 @@
                 <tr>
                     <td><label for="typeActionneur">Type Actionneur</label></td>
                     <td><select name="typeActionneur">
-                        <option>
-                            lumineux
-                        </option>
-                        <option>
-                            sonore
-                        </option>
-                    </select>
+                            <option>
+                                lumineux
+                            </option>
+                            <option>
+                                sonore
+                            </option>
+                        </select>
                     </td>
                 </tr>
                 <tr>

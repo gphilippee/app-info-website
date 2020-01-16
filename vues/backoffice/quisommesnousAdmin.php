@@ -3,12 +3,12 @@
 
     </div>
 
-        <h1>Qui sommes-nous?</h1>
+    <h1>Qui sommes-nous?</h1>
     <div class="blocCGU">
-    <p>
+        <p>
             <?php
-            foreach($donneesQSN as $element){
-                if($element['idFixe']==5){     //idFixe = 5 correspond aux données Qui sommes-nous
+            foreach ($donneesQSN as $element) {
+                if ($element['idFixe'] == 5) {     //idFixe = 5 correspond aux données Qui sommes-nous
                     echo nl2br($element['donneeFixe']);
                 }
             }
@@ -20,14 +20,15 @@
 
             <form method="POST" action="">
                 <div class="input">
-                <textarea class="zoneDeTexte" name="contenuQSN" rows="10" cols="120"><?php //pour afficher le texte deja présent
+                <textarea class="zoneDeTexte" name="contenuQSN" rows="10"
+                          cols="120"><?php //pour afficher le texte deja présent
                     foreach ($donneesQSN as $element) {
                         if ($element['idFixe'] == 5) {     //5 correspond à l'id de QSN
                             echo $element['donneeFixe'];
                         }
                     } ?>
                 </textarea>
-                <input type="submit" value="Modifier le contenu de Qui sommes-nous">
+                    <input type="submit" value="Modifier le contenu de Qui sommes-nous">
                 </div>
             </form>
 

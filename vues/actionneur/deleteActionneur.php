@@ -1,8 +1,7 @@
-
 <div id="contenuAccueil">
     <h1 class="suppCapteur">Supprimer un Actionneur</h1>
     <div id="blocSupprimer">
-        <form class="formSupprimer"action="" method="POST">
+        <form class="formSupprimer" action="" method="POST">
             <div>
                 <input type="hidden" name="id" value="<?php echo htmlspecialchars($_GET["id"]); ?>"/>
                 <label>Êtes-vous sure de vouloir supprimer ce capteur ?</label>
