@@ -309,10 +309,6 @@ if ($vue !== 'accueil/accueilGestionnaire') {
     require('vues/accueil/accueilGestionnaire.php');
 }
 require('vues/' . $vue . '.php');
-if ($vue == 'accueil/accueilGestionnaire') {
-    require('vues/header/footer.php');
-} else {
-    require('vues/header/footerFixed.php');
-}
+require('vues/header/footerFixed.php');
 
 
