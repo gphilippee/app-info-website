@@ -14,8 +14,11 @@
                 <div class="element">
                     <p>Fréquence d'émission : 0.8 Hz</p><!--la valeur doit être modifiable-->
                     <div class="inputRadio">
-                        <input type="radio" name="freqlumineux" value="aleatoire" id="aleatoire" checked/><label class="labelRadio" for="aleatoire">Émission aléatoire</label>
-                        <input type="radio" name="freqlumineux" value="rythmee" id="rythmee"/><label class="labelRadio" for="aleatoire">Émission rythmée</label>
+                        <input type="radio" name="freqlumineux" value="aleatoire" id="aleatoire" checked/><label
+                                class="labelRadio" for="aleatoire">Émission aléatoire</label>
+                        <input type="radio" name="freqlumineux" value="rythmee" id="rythmee"/><label class="labelRadio"
+                                                                                                     for="aleatoire">Émission
+                            rythmée</label>
                     </div>
                     <input class="buttonModif" type="submit" value="Modifier"/>
                 </div>
@@ -26,9 +29,10 @@
             <p>../../..</p>
             <p><br/>par : </p>
 
-            <span class="barre"></span>   <!--pour la barre verticale , MAIS NE S'ADAPTE PAS LORSQU'ON CHANGE LA TAILLE DE L'ECRAN!-->
+            <span class="barre"></span>
+            <!--pour la barre verticale , MAIS NE S'ADAPTE PAS LORSQU'ON CHANGE LA TAILLE DE L'ECRAN!-->
             <!--<input type="submit" value="Confirmer" />-->
-            <a class="styleBTN" href="index.php?cible=admin&fonction=capteur">Confirmer</a>
+            <a class="styleBTN" href="index.php?cible=gestionnaire&fonction=capteur">Confirmer</a>
         </fieldset>
 
     </form>

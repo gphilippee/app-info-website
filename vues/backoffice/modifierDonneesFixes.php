@@ -9,7 +9,7 @@
                     <td>
                         <a href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=modifCGU"
                            title='Modifier la CGU'><img class="stylo" src="pictures/pencil.png" height="32" width="32"
-                                                      alt="modifier"></a>
+                                                        alt="modifier"></a>
                     </td>
                 </tr>
                 <tr>

@@ -3,7 +3,7 @@
 <div class="blocTable">
     <div class="overflow">
         <table id="myTable" class="tableauFAQ">
-            <tr >
+            <tr>
                 <!--<th onclick="sortTable(0)">Id</th>-->
                 <th onclick="sortTable(0)">Date</th>
                 <th onclick="sortTable(1)">Valeur</th>
@@ -12,16 +12,16 @@
             </tr>
             <?php
             foreach ($donneesMesure as $element) { ?>
-            <tr>
-                <!--<td><?php echo  $element['id']; ?></td>-->
-                <td><?php echo  $element['instant']; ?></td>
-                <td><?php echo  $element['valeur']; ?></td>
-                <td><?php echo  $element['unite']; ?></td>
-            </tr>
+                <tr>
+                    <!--<td><?php echo $element['id']; ?></td>-->
+                    <td><?php echo $element['instant']; ?></td>
+                    <td><?php echo $element['valeur']; ?></td>
+                    <td><?php echo $element['unite']; ?></td>
+                </tr>
             <?php } ?>
         </table>
 
-    </div> <!--bloc questionReponse-->
+    </div> <!-- bloc questionReponse -->
 </div>
 
 <script>
@@ -69,7 +69,7 @@
                 rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
                 switching = true;
                 // Each time a switch is done, increase this count by 1:
-                switchcount ++;
+                switchcount++;
             } else {
                 /* If no switching has been done AND the direction is "asc",
                 set the direction to "desc" and run the while loop again. */

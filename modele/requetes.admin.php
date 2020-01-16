@@ -5,7 +5,9 @@ require('requetes.generiques.php');
 
 function recupereDonneesUtilisateurs(PDO $bdd): array
 {
-    $query = 'SELECT id,nom, prenom, valeur, instant FROM utilisateur INNER JOIN mesure ON mesure.Utilisateur_id = utilisateur.id ORDER BY nom,prenom';
+    $query = 'SELECT id, nom, prenom, valeur, instant, unite FROM utilisateur 
+INNER JOIN mesure ON mesure.Utilisateur_id = utilisateur.id
+INNER JOIN capteur_actionneur ON Capteur_Actionneur_idCapteur = idCapteur ORDER BY nom,prenom';
     return $bdd->query($query)->fetchAll();
 }
 
@@ -103,7 +105,8 @@ function addCapteur(PDO $bdd, array $valeur)
     return $donnees->execute();
 }
 
-function recupActionneur(PDO $bdd, array $valeur){
+function recupActionneur(PDO $bdd, array $valeur)
+{
     $query = $bdd->prepare('SELECT idCapteur FROM capteur_actionneur WHERE idCapteur = :id ');
     $query->bindValue(':id', $valeur['idCapteur']);
     $query->execute();

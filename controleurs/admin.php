@@ -86,15 +86,14 @@ switch ($function) {
         break;
 
     case 'ajoutActionneur':
-        $title ="Ajout actionneur";
+        $title = "Ajout actionneur";
         $vue = "actionneur/ajoutActionneur";
         $css = "actionneur/CSSactionneur";
         // Cette partie du code est appelée si le formulaire a été posté
         if (isset($_POST['idActionneur']) && isset($_POST['typeActionneur'])) {
             if (empty($_POST['idActionneur']) OR empty($_POST['typeActionneur'])) {
                 $alerte = "Aucune saisie";
-            }
-            else {
+            } else {
                 $values = [
                     'idActionneur' => htmlspecialchars($_POST['idActionneur']),
                     'typeActionneur' => htmlspecialchars($_POST['typeActionneur']),
@@ -120,9 +119,9 @@ switch ($function) {
         break;
 
     case 'deleteActionneur':
-        $title = "Supprimer un capteur";
-        $vue = "actionneur/deleteActionneur";
-        $css = "actionneur/CSSActionneur";
+        $title ="Supprimer un actionneur";
+        $vue ="actionneur/deleteActionneur";
+        $css ="actionneur/CSSActionneur";
         if (isset($_POST['id'])) {
             if (empty($_POST["id"])) {
                 $alerte = "Aucune saisie";
@@ -144,20 +143,19 @@ switch ($function) {
     case 'capteur':
         $title = 'Capteur';
         $vue = 'actionneur/capteur';
-        $css ='actionneur/CSSactionneur';
+        $css = 'actionneur/CSSactionneur';
         $donneesCapteur = recupereTous($bdd, "capteur_actionneur");
         break;
 
     case 'ajoutCapteur':
-        $title ="Ajout capteurs";
+        $title = "Ajout capteurs";
         $vue = "actionneur/ajoutCapteur";
         $css = "actionneur/CSSactionneur";
         // Cette partie du code est appelée si le formulaire a été posté
         if (isset($_POST['idCapteur']) && isset($_POST['typeCapteur'])) {
             if (empty($_POST['idCapteur']) OR empty($_POST['typeCapteur'])) {
                 $alerte = "Aucune saisie";
-            }
-            else {
+            } else {
                 $values = [
                     'idCapteur' => htmlspecialchars($_POST['idCapteur']),
                     'typeCapteur' => htmlspecialchars($_POST['typeCapteur']),
@@ -176,16 +174,16 @@ switch ($function) {
         break;
 
     case 'updateCapteur':
-        $title ="Modifier les capteurs";
-        $vue ="actionneur/updateCapteur";
-        $css="actionneur/CSSactionneur";
+        $title = "Modifier les capteurs";
+        $vue = "actionneur/updateCapteur";
+        $css = "actionneur/CSSactionneur";
         $valeursCapteurs = recupereTous($bdd, "capteur_actionneur");
         break;
 
     case 'deleteCapteur':
-        $title ="Supprimer un capteur";
-        $vue ="actionneur/deleteCapteur";
-        $css ="actionneur/CSSActionneur";
+        $title = "Supprimer un capteur";
+        $vue = "actionneur/deleteCapteur";
+        $css = "actionneur/CSSActionneur";
         if (isset($_POST['id'])) {
             if (empty($_POST["id"])) {
                 $alerte = "Aucune saisie";
@@ -277,7 +275,7 @@ switch ($function) {
                 $alerte = "Aucune saisie";
             } else {
                 $numeroTelephone = htmlspecialchars($_POST['numeroTelephone']);
-                if (preg_match("#[+]?[0-9]{2}([-. ]?[0-9]{2}){4}$#", $numeroTelephone)) {    //utilisation des expressions régulières pour controler la saisie de l'utilisateur
+                if (preg_match("#[+]?[0-9]{2}([-. ]?[0-9]){4,5}$#", $numeroTelephone)) {    //utilisation des expressions régulières pour controler la saisie de l'utilisateur
                     $retour = modifierNumeroSite($bdd, $numeroTelephone);
                     if ($retour) {
                         $alerte = "Modification réussie";
@@ -510,8 +508,4 @@ if ($vue !== 'accueil/accueilAdmin') {
     require('vues/accueil/accueilAdmin.php');
 }
 require('vues/' . $vue . '.php');
-if ($vue == 'accueil/accueilAdmin' ) {
-    require('vues/header/footer.php');
-} else {
-    require('vues/header/footerFixed.php');
-}
+require('vues/header/footerFixed.php');

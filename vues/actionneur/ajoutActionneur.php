@@ -15,13 +15,13 @@
                 <tr>
                     <td><label for="typeActionneur">Type Actionneur</label></td>
                     <td><select name="typeActionneur">
-                        <option>
-                            lumineux
-                        </option>
-                        <option>
-                            sonore
-                        </option>
-                    </select>
+                            <option>
+                                lumineux
+                            </option>
+                            <option>
+                                sonore
+                            </option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
@@ -30,7 +30,7 @@
                 </tr>
             </table>
             <div class="blocBTN">
-                <input type="submit" value="Ajouter">
+                <input id="inputAjout" type="submit" value="Ajouter">
                 <a class="styleBTN addBTN"
                    href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=actionneur">Annuler</a>
             </div>

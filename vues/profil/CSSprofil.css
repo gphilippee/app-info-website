@@ -4,18 +4,18 @@ body {
     background-image: url("../../pictures/Pattern_blanc.png");
     margin: 0 0;
 }
+
 /*modification du conteneur*/
-.conteneur{
-    display:flex;
+.conteneur {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin:auto;
-    margin-top:150px;
+    margin: auto;
+    margin-top: 150px;
     border-radius: 5px;
-    border-style:solid;
+    border-style: solid;
     border-color: #cccccc;
-    padding:20px;
     width:45%;
     height:45%;
     min-width:600px;
@@ -24,7 +24,7 @@ body {
     overflow: auto;
 }
 
-form{
+form {
     height: 100%;
     width: 100%;
     display: flex;
@@ -32,21 +32,21 @@ form{
     justify-content: center;
 }
 
-h1{
+h1 {
     text-align: center;
-    color:black;
+    color: black;
     width: 100%;
-    min-width:240px;
+    min-width: 240px;
 }
 
-.informations{
+.informations {
     padding: 0px;
     width: 100%;
     float: left;
 }
 
-.informations p{
-    font-size:1.3rem;
+.informations p {
+    font-size: 1.3rem;
     margin: 4% 20px;
 }
 
@@ -66,16 +66,16 @@ h1{
     padding: 14px 0px;
 }
 
-#vide{
-    height:44px;
-    width:100%;
+#vide {
+    height: 44px;
+    width: 100%;
 }
 
-.profil{
+.profil {
     font-weight: bold;
 }
 
-.pencil{
+.pencil {
     float: right;
 }
 

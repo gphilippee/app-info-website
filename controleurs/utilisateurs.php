@@ -153,7 +153,7 @@ switch ($function) {
             if (preg_match("#^[0-9]{10}$#", $nouveauNumero)) {
                 $retour = modifierNumero($bdd, $nouveauNumero);
                 $_SESSION['numero_telephone'] = htmlspecialchars($_POST['nouveauNumero']);//pour actualiser l'affichage de la page Mon profil
-                if($retour){
+                if ($retour) {
                     $alerte = "Modification réussie";
                     $css = "profil/CSSprofil";    //diriger vers la page profil
                     $vue = "profil/profil";
@@ -300,7 +300,7 @@ switch ($function) {
 
 include('vues/header/header.php');
 include('vues/' . $vue . '.php');
-if ($vue == 'accueil/accueil' or $vue == 'accueil/accueilAdmin' or $vue == 'accueil/accueilGestionnaire' or $vue == 'accueil/accueilClient') {
+if ($vue == 'accueil/accueil' or $vue == 'accueil/accueilClient') {
     include('vues/header/footer.php');
 } else {
     include('vues/header/footerFixed.php');
