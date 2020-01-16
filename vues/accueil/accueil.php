@@ -1,6 +1,6 @@
 <div class="accueil_contenu">
     <div id="Who">
-        <h3> Qui sommes nous ?</h3>
+        <h3> Qui sommes-nous ?</h3>
         <a href="#QuiSommesNous"><img id="flèches" src="pictures/fleches.png" height="100px" width="auto"></a>
     </div>
 </div>
