@@ -151,6 +151,7 @@ p {
 }
 #mail p{
     text-align: center;
+    padding-left: 70px;
 }
 
 #telephone{
@@ -161,6 +162,7 @@ p {
 }
 #telephone p{
     text-align: center;
+    margin-left: 70px;
 }
 #vide{
     height:44px;
