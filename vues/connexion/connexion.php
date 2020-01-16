@@ -9,7 +9,7 @@
 
         <input type="checkbox" id="souvenir" value="Rester connecté"/>
         <label for="souvenir"><?php echo _SOUVENIR; ?></label></br>
-        <input type="submit" value="SUBMIT">
+        <input type="submit" value="Valider">
     </form>
 </div>
 <div id="espace">
