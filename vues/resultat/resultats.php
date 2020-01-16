@@ -21,7 +21,7 @@
             <?php } ?>
         </table>
 
-    </div> <!--bloc questionReponse-->
+    </div> <!-- bloc questionReponse -->
 </div>
 
 <script>
