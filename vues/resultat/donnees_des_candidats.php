@@ -5,13 +5,13 @@
         <div class="overflow">
             <table id="myTable" class="tableauFAQ">
                 <thead>
-                    <tr>
-                        <th onclick="sortTable(0)">ID</th>
-                        <th onclick="sortTable(1)">Nom</th>
-                        <th onclick="sortTable(2)">Prenom</th>
-                        <th onclick="sortTable(3)">Resultat</th>
-                        <th onclick="sortTable(4)">Date</th>
-                    </tr>
+                <tr>
+                    <th onclick="sortTable(0)">ID</th>
+                    <th onclick="sortTable(1)">Nom</th>
+                    <th onclick="sortTable(2)">Prenom</th>
+                    <th onclick="sortTable(3)">Resultat</th>
+                    <th onclick="sortTable(4)">Date</th>
+                </tr>
                 </thead>
                 <tbody>
                 <?php
@@ -20,7 +20,7 @@
                         <td><?php echo $element['id']; ?></td>
                         <td><?php echo $element['nom']; ?></td>
                         <td><?php echo $element['prenom']; ?></td>
-                        <td><?php echo $element['valeur'].' '; ?><?php echo $element['unite']; ?></td>
+                        <td><?php echo $element['valeur'] . ' '; ?><?php echo $element['unite']; ?></td>
                         <td><?php echo $element['instant']; ?></td>
                     </tr>
                 <?php } ?>

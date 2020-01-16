@@ -105,7 +105,8 @@ function addCapteur(PDO $bdd, array $valeur)
     return $donnees->execute();
 }
 
-function recupActionneur(PDO $bdd, array $valeur){
+function recupActionneur(PDO $bdd, array $valeur)
+{
     $query = $bdd->prepare('SELECT idCapteur FROM capteur_actionneur WHERE idCapteur = :id ');
     $query->bindValue(':id', $valeur['idCapteur']);
     $query->execute();

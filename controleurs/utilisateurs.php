@@ -153,7 +153,7 @@ switch ($function) {
             if (preg_match("#^[0-9]{10}$#", $nouveauNumero)) {
                 $retour = modifierNumero($bdd, $nouveauNumero);
                 $_SESSION['numero_telephone'] = htmlspecialchars($_POST['nouveauNumero']);//pour actualiser l'affichage de la page Mon profil
-                if($retour){
+                if ($retour) {
                     $alerte = "Modification réussie";
                     $css = "profil/CSSprofil";    //diriger vers la page profil
                     $vue = "profil/profil";

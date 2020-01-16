@@ -86,15 +86,14 @@ switch ($function) {
         break;
 
     case 'ajoutActionneur':
-        $title ="Ajout actionneur";
+        $title = "Ajout actionneur";
         $vue = "actionneur/ajoutActionneur";
         $css = "actionneur/CSSactionneur";
         // Cette partie du code est appelée si le formulaire a été posté
         if (isset($_POST['idActionneur']) && isset($_POST['typeActionneur'])) {
             if (empty($_POST['idActionneur']) OR empty($_POST['typeActionneur'])) {
                 $alerte = "Aucune saisie";
-            }
-            else {
+            } else {
                 $values = [
                     'idActionneur' => htmlspecialchars($_POST['idActionneur']),
                     'typeActionneur' => htmlspecialchars($_POST['typeActionneur']),
@@ -113,16 +112,16 @@ switch ($function) {
         break;
 
     case 'updateActionneur':
-        $title ="Modifier les actionneurs";
-        $vue ="actionneur/updateActionneur";
-        $css="actionneur/CSSactionneur";
+        $title = "Modifier les actionneurs";
+        $vue = "actionneur/updateActionneur";
+        $css = "actionneur/CSSactionneur";
         $valeursActionneurs = recupereTous($bdd, "capteur_actionneur");
         break;
 
     case 'deleteActionneur':
-        $title ="Supprimer un actionneur";
-        $vue ="actionneur/deleteActionneur";
-        $css ="actionneur/CSSActionneur";
+        $title = "Supprimer un actionneur";
+        $vue = "actionneur/deleteActionneur";
+        $css = "actionneur/CSSActionneur";
         if (isset($_POST['id'])) {
             if (empty($_POST["id"])) {
                 $alerte = "Aucune saisie";
@@ -144,20 +143,19 @@ switch ($function) {
     case 'capteur':
         $title = 'Capteur';
         $vue = 'actionneur/capteur';
-        $css ='actionneur/CSSactionneur';
+        $css = 'actionneur/CSSactionneur';
         $donneesCapteur = recupereTous($bdd, "capteur_actionneur");
         break;
 
     case 'ajoutCapteur':
-        $title ="Ajout capteurs";
+        $title = "Ajout capteurs";
         $vue = "actionneur/ajoutCapteur";
         $css = "actionneur/CSSactionneur";
         // Cette partie du code est appelée si le formulaire a été posté
         if (isset($_POST['idCapteur']) && isset($_POST['typeCapteur'])) {
             if (empty($_POST['idCapteur']) OR empty($_POST['typeCapteur'])) {
                 $alerte = "Aucune saisie";
-            }
-            else {
+            } else {
                 $values = [
                     'idCapteur' => htmlspecialchars($_POST['idCapteur']),
                     'typeCapteur' => htmlspecialchars($_POST['typeCapteur']),
@@ -176,16 +174,16 @@ switch ($function) {
         break;
 
     case 'updateCapteur':
-        $title ="Modifier les capteurs";
-        $vue ="actionneur/updateCapteur";
-        $css="actionneur/CSSactionneur";
+        $title = "Modifier les capteurs";
+        $vue = "actionneur/updateCapteur";
+        $css = "actionneur/CSSactionneur";
         $valeursCapteurs = recupereTous($bdd, "capteur_actionneur");
         break;
 
     case 'deleteCapteur':
-        $title ="Supprimer un capteur";
-        $vue ="actionneur/deleteCapteur";
-        $css ="actionneur/CSSActionneur";
+        $title = "Supprimer un capteur";
+        $vue = "actionneur/deleteCapteur";
+        $css = "actionneur/CSSActionneur";
         if (isset($_POST['id'])) {
             if (empty($_POST["id"])) {
                 $alerte = "Aucune saisie";
@@ -207,7 +205,7 @@ switch ($function) {
         $vue = "backoffice/modifierDonneesFixes";
         $css = "backoffice/CSSdonneesFixes";
         break;
-        
+
     case 'modifCGU':
         $title = "Modifier les CGU";
         $vue = "backoffice/cguAdmin";

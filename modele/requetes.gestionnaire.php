@@ -36,7 +36,8 @@ function addUser(PDO $bdd, array $utilisateur)
  * Supprimer une question dans la base de données
  * @param $id
  */
-function deleteUser(PDO $bdd, $id){
+function deleteUser(PDO $bdd, $id)
+{
     $query = 'DELETE FROM utilisateur WHERE id = :id ';
     $donnees = $bdd->prepare($query);
     $donnees->bindValue(":id", $id);
@@ -47,7 +48,8 @@ function deleteUser(PDO $bdd, $id){
  * Modifier une question
  * @param array $question
  */
-function modifyUser(PDO $bdd, array $utilisateur){
+function modifyUser(PDO $bdd, array $utilisateur)
+{
     $query = 'UPDATE utilisateur SET nom = :nom, prenom = :prenom, date_naissance = :date, numero_telephone = :telephone, taille= :taille, poids= :poids, type=:type, login =:login, adresse_mail=:email WHERE id = :id ';
     $donnees = $bdd->prepare($query);
     $donnees->bindParam(":id", $utilisateur['id']);
@@ -67,9 +69,10 @@ function modifyUser(PDO $bdd, array $utilisateur){
  * Recupere la question et la reponse en fonction de l'id
  * @param $id
  */
-function recupereUser(PDO $bdd, $id){
-    $query=$bdd->prepare('SELECT * FROM utilisateur WHERE id = :id ');
-    $query->bindValue(':id',$id);
+function recupereUser(PDO $bdd, $id)
+{
+    $query = $bdd->prepare('SELECT * FROM utilisateur WHERE id = :id ');
+    $query->bindValue(':id', $id);
     $query->execute();
     return $query->fetch();
 }
