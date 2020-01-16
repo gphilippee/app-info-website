@@ -87,10 +87,9 @@ body {
     border-radius: 5px;
     border-style: solid;
     border-color: #cccccc;
-    padding: 20px;
-    width: 50%;
-    height: 25%;
-    min-height: 200px;
+    width:50%;
+    height:25%;
+    min-height:200px;
     box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
     min-width: 500px;
     background-color: white;

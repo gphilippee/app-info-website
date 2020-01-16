@@ -16,10 +16,9 @@ body {
     border-radius: 5px;
     border-style: solid;
     border-color: #cccccc;
-    padding: 20px;
-    width: 45%;
-    height: 45%;
-    min-width: 600px;
+    width:45%;
+    height:45%;
+    min-width:600px;
     background-color: white;
     box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
     overflow: auto;
