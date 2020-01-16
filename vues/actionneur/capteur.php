@@ -12,8 +12,8 @@
                 </tr>
                 <?php
                 foreach ($donneesCapteur as $element) { ?>
-                    <tr>
-                        <?php if ($element['typeCapteur'] != "") { ?>
+                    <?php if ($element['typeCapteur'] != "") { ?>
+                        <tr>
                             <td><?php echo $element['idCapteur']; ?></td>
                             <td><?php echo $element['typeCapteur']; ?></td>
                             <td>
@@ -28,8 +28,8 @@
                                                                   alt="supprimer"></a>
                                 </div>
                             </td>
-                        <?php } ?>
-                    </tr>
+                        </tr>
+                    <?php } ?>
                 <?php } ?>
             </table>
         </div>

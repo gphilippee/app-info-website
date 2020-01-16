@@ -10,10 +10,9 @@
                     <th>Type Actionneur</th>
                     <th>Action</th>
                 </tr>
-                <?php
-                foreach ($donneesActionneur as $element) { ?>
+                <?php foreach ($donneesActionneur as $element) { ?>
+                    <?php if ($element['typeActionneur'] != "") { ?>
                     <tr>
-                        <?php if ($element['typeActionneur'] != "") { ?>
                             <td><?php echo $element['idCapteur']; ?></td>
                             <td><?php echo $element['typeActionneur']; ?></td>
                             <td>
@@ -28,8 +27,8 @@
                                                                   alt="supprimer"></a>
                                 </div>
                             </td>
-                        <?php } ?>
                     </tr>
+                    <?php } ?>
                 <?php } ?>
             </table>
         </div>
