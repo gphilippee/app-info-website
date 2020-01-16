@@ -85,6 +85,7 @@ thead th, thead td {
 #blocAction {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 /**
@@ -171,7 +172,7 @@ textarea {
     text-decoration: none;
     border: none;
     border-radius: 4px;
-    margin: 20px 5;
+    margin: 20px 5%;
     cursor: pointer;
     color: white;
     width: 100%;

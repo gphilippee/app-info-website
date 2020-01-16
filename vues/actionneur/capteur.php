@@ -3,7 +3,7 @@
     <div class="blocTable">
         <a class="ajoutBTN" href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=ajoutCapteur"><img src="pictures/plus.png" height="32" width="32" alt="ajouter"></a>
         <div class="overflow">
-            <table id="myTable" class="tableauFAQ">
+            <table id="myTable">
                 <tr>
                     <th>Id Capteur</th>
                     <th>Type Capteur</th>

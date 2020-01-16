@@ -118,8 +118,8 @@ switch ($function) {
         $donneesNousContacter = recupereTous($bdd, $donneesFixes);
         break;
 
-    case 'modifierMdp':
-        $css = "profil/CSSprofil";
+    case 'changementMdp':
+        $css = "profil/CSSchangement";
         $vue = "profil/changementMdp";
         $title = "Changement mot de passe";
 
@@ -143,8 +143,8 @@ switch ($function) {
 
         break;
 
-    case 'modifierNumeroTelephone':
-        $css = "profil/CSSprofil";
+    case 'changementNumero':
+        $css = "profil/CSSchangement";
         $vue = "profil/changementNumero";
         $title = "Changement Numero";
         $values = ['username' => $_SESSION['login']];
@@ -169,8 +169,8 @@ switch ($function) {
         }
         break;
 
-    case 'modifierEmail':
-        $css = "profil/CSSprofil";
+    case 'changementEmail':
+        $css = "profil/CSSchangement";
         $vue = "profil/changementEmail";
         $title = "Changement Email";
         $values = ['username' => $_SESSION['login']];
@@ -281,7 +281,7 @@ switch ($function) {
 
     case 'resultats':
         $title = "Résultat";
-        $css = "resultat/CSSlisteUtilisateurs";
+        $css = "user/CSSuser";
         $vue = "resultat/resultats";
         $values = [
             'capteur' => 1,

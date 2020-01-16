@@ -33,7 +33,7 @@ h1,.alert {
  */
 
 #myInput {
-    background-image: url('../pictures/searchicon.png'); /* Add a search icon to input */
+    background-image: url('../../pictures/searchicon.png'); /* Add a search icon to input */
     background-position: 5px; /* Position the search icon */
     background-repeat: no-repeat; /* Do not repeat the icon image */
     width: 64%; /* Full-width */
@@ -120,13 +120,14 @@ thead th, thead td {
 
 #blocAjout {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .addFAQ {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 30px 0;
 }
 
 .formAdd {
@@ -141,7 +142,9 @@ thead th, thead td {
     border-color: #cccccc;
     padding: 15px;
     min-height: 150px;
-    width: 500px;
+    width: 550px;
+    height: 60%;
+    overflow-y: auto;
     box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
     min-width: 300px;
     background-color: white;
@@ -171,7 +174,7 @@ textarea {
     text-decoration: none;
     border: none;
     border-radius: 4px;
-    margin: 20px 5;
+    margin: 20px 5px;
     cursor: pointer;
     color: white;
     width: 100%;
@@ -198,7 +201,7 @@ input[type=submit] {
     background-color: #0066CC;
     color: white;
     padding: 14px 20px;
-    margin: 20px 5;
+    margin: 20px 5px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -220,4 +223,9 @@ label {
 }
 .left{
     width:30%;
+}
+
+#addTable{
+    height: 100%;
+    margin-top: 220px;
 }
