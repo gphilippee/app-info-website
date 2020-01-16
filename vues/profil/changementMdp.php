@@ -11,7 +11,7 @@
             <input type="password" name="confirmationNouveauMdp" placeholder="Confirmer votre nouveau mot de passe"/>
 
             <div class="blocBouton">
-                <input type="submit" value="SUBMIT"/>
+                <input type="submit" value="Valider"/>
                 <a class="styleBTN addBTN" href="index.php?cible=utilisateurs&fonction=profil">Annuler</a>
             </div>
         </form>
