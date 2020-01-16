@@ -4,14 +4,11 @@
         <a href="index.php?cible=admin&fonction=ajoutFAQ"><img src="pictures/plus.png" height="32" width="32"
                                                                alt="ajouter"></a>
         <table class="tableauFAQ">
-            <thead>
             <tr>
                 <th>Question</th>
                 <th>Reponse</th>
                 <th>Action</th>
             </tr>
-            </thead>
-            <tbody>
             <?php
             foreach ($faq as $element) { ?>
                 <tr>
@@ -29,7 +26,6 @@
                     </td>
                 </tr>
             <?php } ?>
-            </tbody>
         </table>
     </div>
 </div>
