@@ -8,8 +8,8 @@
                 </div>
 
                 <div class="scroll_boutons">
-                    <h2>Forum</h2>
-                    <a href="#"><img id="flèches" src="pictures/fleches_link.png" height="100px" width="auto"></a>
+                    <h2>FAQ</h2>
+                    <a href="index.php?cible=utilisateurs&fonction=faq"><img id="flèches" src="pictures/fleches_link.png" height="100px" width="auto"></a>
                 </div>
             </div>
 
