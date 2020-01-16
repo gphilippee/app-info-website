@@ -20,7 +20,7 @@
                         <td><?php echo $element['id']; ?></td>
                         <td><?php echo $element['nom']; ?></td>
                         <td><?php echo $element['prenom']; ?></td>
-                        <td><?php echo $element['valeur']; ?></td>
+                        <td><?php echo $element['valeur'].' '; ?><?php echo $element['unite']; ?></td>
                         <td><?php echo $element['instant']; ?></td>
                     </tr>
                 <?php } ?>
