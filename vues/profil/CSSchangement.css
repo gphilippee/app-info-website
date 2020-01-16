@@ -70,11 +70,11 @@ body{
     border-style:solid;
     border-color: #cccccc;
     padding:20px;
-    width:30%;
-    height:40%;
-    min-height:300px;
+    width:50%;
+    height:25%;
+    min-height:200px;
     box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
-    min-width:400px;
+    min-width:500px;
     background-color: white;
     margin: 150px 0;
 }
