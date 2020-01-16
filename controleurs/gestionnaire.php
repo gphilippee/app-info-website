@@ -100,7 +100,7 @@ switch ($function) {
                 $retour = addActionneur($bdd, $values);
                 if ($retour) {
                     $alerte = "Ajout réussie";
-                    header('Refresh: 0.5,index.php?cible=admin&fonction=actionneur');  // refresh dans 0.5sec
+                    header('Refresh: 0.5,index.php?cible=gestionnaire&fonction=actionneur');  // refresh dans 0.5sec
                 } else {
                     $alerte = "L'ajout n'a pas fonctionné";
                 }
@@ -118,7 +118,7 @@ switch ($function) {
     case 'deleteActionneur':
         $title ="Supprimer un actionneur";
         $vue ="actionneur/deleteActionneur";
-        $css ="actionneur/CSSActionneur";
+        $css ="actionneur/CSSactionneur";
         if (isset($_POST['id'])) {
             if (empty($_POST["id"])) {
                 $alerte = "Aucune saisie";
@@ -127,7 +127,7 @@ switch ($function) {
                 $retour = deleteActionneur($bdd, htmlspecialchars($_POST['id']));
                 if ($retour) {
                     $alerte = "Suppression réussie";
-                    header('Refresh: 0.5,index.php?cible=admin&fonction=actionneur');  // refresh dans 0.5sec
+                    header('Refresh: 0.5,index.php?cible=gestionnaire&fonction=actionneur');  // refresh dans 0.5sec
                 } else {
                     $alerte = "La suppression dans la FAQ n'a pas fonctionné";
                 }
@@ -163,7 +163,7 @@ switch ($function) {
                 $retour = addCapteur($bdd, $values);
                 if ($retour) {
                     $alerte = "Ajout réussie";
-                    header('Refresh: 0.5,index.php?cible=admin&fonction=capteur');  // refresh dans 0.5sec
+                    header('Refresh: 0.5,index.php?cible=gestionnaire&fonction=capteur');  // refresh dans 0.5sec
                 } else {
                     $alerte = "L'ajout n'a pas fonctionné";
                 }
@@ -181,7 +181,7 @@ switch ($function) {
     case 'deleteCapteur':
         $title ="Supprimer un capteur";
         $vue ="actionneur/deleteCapteur";
-        $css ="actionneur/CSSActionneur";
+        $css ="actionneur/CSSactionneur";
         if (isset($_POST['id'])) {
             if (empty($_POST["id"])) {
                 $alerte = "Aucune saisie";
@@ -190,7 +190,7 @@ switch ($function) {
                 $retour = deleteCapteur($bdd, htmlspecialchars($_POST['id']));
                 if ($retour) {
                     $alerte = "Suppression réussie";
-                    header('Refresh: 0.5,index.php?cible=admin&fonction=capteur');  // refresh dans 0.5sec
+                    header('Refresh: 0.5,index.php?cible=gestionnaire&fonction=capteur');  // refresh dans 0.5sec
                 } else {
                     $alerte = "La suppression dans la FAQ n'a pas fonctionné";
                 }
@@ -309,10 +309,6 @@ if ($vue !== 'accueil/accueilGestionnaire') {
     require('vues/accueil/accueilGestionnaire.php');
 }
 require('vues/' . $vue . '.php');
-if ($vue == 'accueil/accueilGestionnaire') {
-    require('vues/header/footer.php');
-} else {
-    require('vues/header/footerFixed.php');
-}
+require('vues/header/footerFixed.php');
 
 

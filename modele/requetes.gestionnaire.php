@@ -71,3 +71,39 @@ function recupereUser(PDO $bdd, $id){
     $query->execute();
     return $query->fetch();
 }
+
+function addActionneur(PDO $bdd, array $valeur)
+{
+    $query = 'INSERT INTO capteur_actionneur (idCapteur, typeActionneur, unite) VALUES (:id, :typeActionneur, :unite)';
+    $donnees = $bdd->prepare($query);
+    $donnees->bindParam(":id", $valeur['idActionneur']);
+    $donnees->bindParam(":typeActionneur", $valeur['typeActionneur']);
+    $donnees->bindParam(":unite", $valeur['uniteCapteur']);
+    return $donnees->execute();
+}
+
+function addCapteur(PDO $bdd, array $valeur)
+{
+    $query = 'INSERT INTO capteur_actionneur (idCapteur, typeCapteur, unite) VALUES (:id, :typeCapteur, :unite)';
+    $donnees = $bdd->prepare($query);
+    $donnees->bindParam(":id", $valeur['idCapteur']);
+    $donnees->bindParam(":typeCapteur", $valeur['typeCapteur']);
+    $donnees->bindParam(":unite", $valeur['uniteCapteur']);
+    return $donnees->execute();
+}
+
+function deleteActionneur(PDO $bdd, $id)
+{
+    $query = 'DELETE FROM capteur_actionneur WHERE idCapteur = :id ';
+    $donnees = $bdd->prepare($query);
+    $donnees->bindValue(":id", $id);
+    return $donnees->execute();
+}
+
+function deleteCapteur(PDO $bdd, $id)
+{
+    $query = 'DELETE FROM capteur_actionneur WHERE idCapteur = :id ';
+    $donnees = $bdd->prepare($query);
+    $donnees->bindValue(":id", $id);
+    return $donnees->execute();
+}

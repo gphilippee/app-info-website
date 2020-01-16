@@ -300,7 +300,7 @@ switch ($function) {
 
 include('vues/header/header.php');
 include('vues/' . $vue . '.php');
-if ($vue == 'accueil/accueil' or $vue == 'accueil/accueilAdmin' or $vue == 'accueil/accueilGestionnaire' or $vue == 'accueil/accueilClient') {
+if ($vue == 'accueil/accueil' or $vue == 'accueil/accueilClient') {
     include('vues/header/footer.php');
 } else {
     include('vues/header/footerFixed.php');
