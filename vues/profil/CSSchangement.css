@@ -61,7 +61,25 @@ body{
     margin: 150px 0;
 }
 
-.conteneur{
+.conteneurTelephone{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border-style:solid;
+    border-color: #cccccc;
+    padding:20px;
+    width:30%;
+    height:35%;
+    min-height:350px;
+    box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
+    min-width:400px;
+    background-color: white;
+    margin: 150px 0;
+}
+
+.conteneurMail{
     display:flex;
     flex-direction: column;
     justify-content: center;
