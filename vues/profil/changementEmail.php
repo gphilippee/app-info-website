@@ -1,4 +1,4 @@
-<div class="conteneur">
+<div class="conteneurMail">
         <form method="post" action="">
             <h1><label for="nouvelEmail" class="profil"><?php echo _ADRESSE_EMAIL; ?></label></h1>
             <input type="email" name="nouvelEmail" placeholder="Nouvelle adresse mail"/>
