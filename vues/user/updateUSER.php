@@ -7,7 +7,7 @@
     <div id="blocAjout">
     <h1 class="addFAQ">Modifier un utilisateur</h1>
         <form class="formAdd" action="" method="POST">
-            <?php if ($user['type'] != "admin") { ?>
+            <?php if (($_SESSION['type'] == 'gestionnaire' && $user['type'] == "candidat") || $_SESSION['type'] == 'admin') { ?>
                 <table id="addTable">
                     <tr>
                         <td class="left"><label for="login">Login</label></td>
@@ -27,9 +27,17 @@
                                 <?php if ($user['type'] == "gestionnaire") { ?>
                                     <option value="gestionnaire">Gestionnaire</option>
                                     <option value="candidat">Candidat</option>
+                                    <option value="gestionnaire">Administrateur</option>
+                                 <?php }else if($user['type'] == "admin" ) { ?>
+                                    <option value="gestionnaire">Administrateur</option>
+                                    <option value="gestionnaire">Gestionnaire</option>
+                                    <option value="candidat">Candidat</option>
+                                <?php } else if ($_SESSION['type'] == "admin"){ ?>
+                                    <option value="candidat">Candidat</option>
+                                    <option value="gestionnaire">Administrateur</option>
+                                    <option value="gestionnaire">Gestionnaire</option>
                                 <?php } else { ?>
                                     <option value="candidat">Candidat</option>
-                                    <option value="gestionnaire">Gestionnaire</option>
                                 <?php } ?>
                             </select>
                         </td>
@@ -57,7 +65,7 @@
                     </tr>
                 </table>
             <?php } else { ?>
-                <h3 class="alerte">Vous n'êtes pas autorisé à modifier un administrateur</h3>
+                <h3 class="alerte">Vous n'êtes pas autorisé à modifier</h3>
             <?php } ?>
             <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>"/>
 

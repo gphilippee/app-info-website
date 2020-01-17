@@ -23,8 +23,13 @@
                 <tr>
                     <td><label for="type">Type</label></td>
                     <td><select name="type">
-                            <option value="1">Gestionnaire</option>
-                            <option value="2">Candidat</option>
+                           <?php if($_SESSION['type'] == 'admin'){ ?>
+                                <option value="1">Gestionnaire</option>
+                                <option value="2">Candidat</option>
+                                <option value="3">Administrateur</option>
+                            <?php } else { ?>
+                                <option value="1">Candidat</option>
+                            <?php } ?>
                         </select>
                     </td>
                 </tr>

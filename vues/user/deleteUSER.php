@@ -4,6 +4,7 @@
  */
 ?>
 <div id="contenuAccueil">
+    <?php if (($_SESSION['type'] == 'gestionnaire' && $user['type'] == "candidat") || $_SESSION['type'] == 'admin') { ?>
     <h1 class="suppFAQ">Supprimer un utilisateur</h1>
     <div id="blocSupprimer">
         <form class="formSupprimer"action="" method="POST">
@@ -17,5 +18,9 @@
             </div>
         </form>
     </div>
+    <?php } else {  ?>
+        <label>Vous n'avez pas l'autorisation ?</label>
+        <a class="styleBTN" href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=user">Annuler</a>
+    <?php } ?>
 </div>
 </div>
