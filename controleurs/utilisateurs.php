@@ -288,6 +288,7 @@ switch ($function) {
             'idUtilisateur' => $_SESSION['id']
         ];
         $donneesMesure = recuperResultat($bdd, $values);
+        $moyenneResultats = recuperMoyenne($bdd);
         break;
 
     default:

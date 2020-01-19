@@ -12,6 +12,12 @@ WHERE utilisateur.id = :qui AND mesure.Capteur_Actionneur_idCapteur = :numeroCap
     return $query->fetchAll();
 }
 
+function recuperMoyenne(PDO $bdd){
+    $query = $bdd->prepare('SELECT AVG(valeur) FROM mesure');
+    $query->execute();
+    return $query->fetchAll();
+}
+
 
 /*
 
