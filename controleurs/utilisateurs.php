@@ -36,12 +36,19 @@ switch ($function) {
         if (isset($_POST['ancienMdp']) && isset($_POST['nouveauMdp']) && isset($_POST['confirmationNouveauMdp'])) {
             $a = hachagePassword($_POST['ancienMdp']);
             $b = $a . $a;
-            if (($b == $ancienMdp) && ($_POST['nouveauMdp'] == $_POST['confirmationNouveauMdp'])) {
+            if($b != $ancienMdp){
+                $alerte = 'Le mot de passe n\'est pas correct';
+            }
+            else if(strlen($_POST['nouveauMdp'])<7){
+                $alerte= 'Le mot de passe n\'est pas assez long';
+            }
+            else if($_POST['nouveauMdp'] != $_POST['confirmationNouveauMdp']){
+                $alerte = 'Les mots de passe ne sont pas identiques';
+            }
+            else{
                 modifierMdp($bdd, hachagePassword($_POST['nouveauMdp']));
-                header('Refresh: 0.5,index.php?cible=utilisateurs&fonction=profil');
                 $alerte = 'Mot de passe correctement changé';
-            } else {
-                $alerte = 'Une ou plusieurs saisie(s) incorrecte(s)';
+                header('Refresh: 0.5,index.php?cible=utilisateurs&fonction=profil');
             }
         }
         break;
