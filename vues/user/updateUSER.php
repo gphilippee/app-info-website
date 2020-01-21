@@ -7,19 +7,19 @@
     <div id="blocAjout">
     <h1 class="addFAQ">Modifier un utilisateur</h1>
         <form class="formAdd" action="" method="POST">
-            <?php if ($user['type'] != "admin") { ?>
+            <?php if (($_SESSION['type'] == 'gestionnaire' && $user['type'] == "candidat") || $_SESSION['type'] == 'admin') { ?>
                 <table id="addTable">
                     <tr>
                         <td class="left"><label for="login">Login</label></td>
-                        <td><input type="text" name="login" value="<?php echo $user['login']; ?>"/></td>
+                        <td><input type="text" name="login" value="<?php echo $user['login']; ?>" required/></td>
                     </tr>
                     <tr>
                         <td><label for="nom">Nom</label></td>
-                        <td><input type="text" name="nom" value="<?php echo $user['nom']; ?>"/></td>
+                        <td><input type="text" name="nom" value="<?php echo $user['nom']; ?>" required/></td>
                     </tr>
                     <tr>
                         <td><label for="prenom">Prenom</label></td>
-                        <td><input type="text" name="prenom" value="<?php echo $user['prenom']; ?>"/></td>
+                        <td><input type="text" name="prenom" value="<?php echo $user['prenom']; ?>" required/></td>
                     </tr>
                     <tr>
                         <td><label for="type">Type</label></td>
@@ -27,44 +27,52 @@
                                 <?php if ($user['type'] == "gestionnaire") { ?>
                                     <option value="gestionnaire">Gestionnaire</option>
                                     <option value="candidat">Candidat</option>
+                                    <option value="gestionnaire">Administrateur</option>
+                                 <?php }else if($user['type'] == "admin" ) { ?>
+                                    <option value="gestionnaire">Administrateur</option>
+                                    <option value="gestionnaire">Gestionnaire</option>
+                                    <option value="candidat">Candidat</option>
+                                <?php } else if ($_SESSION['type'] == "admin"){ ?>
+                                    <option value="candidat">Candidat</option>
+                                    <option value="gestionnaire">Administrateur</option>
+                                    <option value="gestionnaire">Gestionnaire</option>
                                 <?php } else { ?>
                                     <option value="candidat">Candidat</option>
-                                    <option value="gestionnaire">Gestionnaire</option>
                                 <?php } ?>
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <td><label for="date">Date de naissance</label></td>
-                        <td><input type="date" name="date" value="<?php echo $user['date_naissance']; ?>"/></td>
+                        <td><input type="date" name="date" value="<?php echo $user['date_naissance']; ?>" required/></td>
                     </tr>
                     <tr>
                         <td><label for="telephone">Telephone</label></td>
-                        <td><input type="number" name="telephone" value="<?php echo $user['numero_telephone']; ?>"/>
+                        <td><input type="tel" name="telephone" value="<?php echo $user['numero_telephone']; ?>" required/>
                         </td>
                     </tr>
                     <tr>
                         <td><label for="taille">Taille</label></td>
-                        <td><input type="number" name="taille" value="<?php echo $user['taille']; ?>"/></td>
+                        <td><input type="number" name="taille" value="<?php echo $user['taille']; ?>" required/></td>
                     </tr>
                     <tr>
                         <td><label for="poids">Poids</label></td>
-                        <td><input type="number" name="poids" value="<?php echo $user['poids']; ?>"/></td>
+                        <td><input type="number" name="poids" value="<?php echo $user['poids']; ?>" required/></td>
                     </tr>
                     <tr>
                         <td><label for="email">Adresse mail</label></td>
-                        <td><input type="text" name="email" value="<?php echo $user['adresse_mail']; ?>"/></td>
+                        <td><input type="email" name="email" value="<?php echo $user['adresse_mail']; ?>" required/></td>
                     </tr>
                 </table>
             <?php } else { ?>
-                <h3 class="alerte">Vous n'êtes pas autorisé à modifier un administrateur</h3>
+                <h3 class="alerte">Vous n'êtes pas autorisé à modifier</h3>
             <?php } ?>
             <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>"/>
 
             <div class="blocBTN">
                 <input type="submit" value="Valider">
                 <a class="styleBTN addBTN"
-                   href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=user">Annuler</a>
+                   href="index.php?cible=gestionnaire&fonction=user">Annuler</a>
             </div>
         </form>
     </div>

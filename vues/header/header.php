@@ -22,12 +22,14 @@
     <input type="checkbox" id="switch">
     <nav id="navheader" role="navigation">
         <ul>
-            <li><a class="MenuP" href="index.php?cible=utilisateurs&fonction=faq"><?php echo _FAQH; ?></a></li>
+            <li><a class="MenuP" href="index.php?cible=visiteur&fonction=faq"><?php echo _FAQH; ?></a></li>
             <li><a class="MenuP" href="index.php"><?php echo _ACCUEIL; ?></a></li>
+            <?php if($_SESSION['connecter'] == _DECONNEXION){?>
             <li><a class="MenuP" href="index.php?cible=utilisateurs&fonction=profil"><?php echo _MON_PROFIL; ?></a></li>
+            <?php }?>
             <li><a class="MenuP"
-                   href="index.php?cible=utilisateurs&fonction=connexion"><?php echo $_SESSION['connecter']; ?></a></li>
-            <li><a class="MenuP" href="index.php?cible=utilisateurs&fonction=langue"><img class="drapeau"
+                   href="index.php?cible=visiteur&fonction=connexion"><?php echo $_SESSION['connecter']; ?></a></li>
+            <li><a class="MenuP" href="index.php?cible=visiteur&fonction=langue"><img class="drapeau"
                                                                                           src=<?php echo $drapeau; ?>
                                                                                           height="30" width="auto"
                                                                                           alt="drapeau"></a></li>

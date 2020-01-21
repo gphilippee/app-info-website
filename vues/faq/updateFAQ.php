@@ -8,9 +8,9 @@
     <div id="blocAjout">
         <form class="formAdd" action="" method="post">
             <label for="question">Veuillez modifier la question</label>
-            <textarea name="question" rows="5" cols="60"><?php echo $faq['contenuQuestion']; ?></textarea>
+            <textarea name="question" rows="5" cols="60" required><?php echo $faq['contenuQuestion']; ?></textarea>
             <label for="reponse">Veuillez modifier la reponse</label>
-            <textarea name="reponse" rows="5" cols="60"><?php echo $faq['contenuReponse']; ?></textarea>
+            <textarea name="reponse" rows="5" cols="60" required><?php echo $faq['contenuReponse']; ?></textarea>
             <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>"/>
             <div class="blocBTN">
                 <input type="submit" value="Valider">

@@ -7,7 +7,7 @@
                 <label>Êtes-vous sure de vouloir supprimer ce capteur ?</label>
                 <p>
                     <input type="submit" value="Oui">
-                    <a class="styleBTN" href="index.php?cible=admin&fonction=actionneur">Non</a>
+                    <a class="styleBTN" href="index.php?cible=gestionnaire&fonction=actionneur">Non</a>
                 </p>
             </div>
         </form>

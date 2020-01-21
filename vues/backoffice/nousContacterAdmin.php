@@ -6,7 +6,7 @@
         <div class="parametrerContact">
             <form method="POST" action="">
                 <div class="input">
-                    <input type="email" name="contenuMail" placeholder="Modifier votre mail ici">
+                    <input type="email" name="contenuMail" placeholder="Modifier votre mail ici" required>
                     <input type="submit" value="Modifier l'adresse mail">
                 </div>
             </form>
@@ -16,7 +16,7 @@
             <form method="POST" action="">
                 <div class="input">
                     <input type="text" name="numeroTelephone" placeholder="Modifier le numéro de téléphone ici"
-                           size="28"/>
+                           size="28" required>
                     <input type="submit" value="Modifier le numéro de téléphone"/>
                 </div>
             </form>

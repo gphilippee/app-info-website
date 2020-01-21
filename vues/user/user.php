@@ -2,7 +2,7 @@
     <h1>Utilisateur</h1>
     <input type="text" id="myInput" onkeyup="triFunction()" placeholder="Search for names..">
     <div class="blocTable">
-        <a class="ajoutBTN" href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=ajoutUSER"><img src="pictures/plus.png" height="32" width="32" alt="ajouter"></a>
+        <a class="ajoutBTN" href="index.php?cible=gestionnaire&fonction=ajoutUSER"><img src="pictures/plus.png" height="32" width="32" alt="ajouter"></a>
         <div class="overflow">
         <table id="myTable" class="tableauFAQ">
             <tr>
@@ -29,10 +29,10 @@
                     <td><?php echo $element['adresse_mail']; ?></td>
                     <td>
                         <div id="blocAction">
-                            <a href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=updateUSER&id=<?php echo $element['id']; ?>"
+                            <a href="index.php?cible=gestionnaire&fonction=updateUSER&id=<?php echo $element['id']; ?>"
                                title='Update Record'><img class="stylo" src="pictures/pencil.png" height="32" width="32"
                                                           alt="modifier"></a>
-                            <a href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=deleteUSER&id=<?php echo $element['id']; ?>"
+                            <a href="index.php?cible=gestionnaire&fonction=deleteUSER&id=<?php echo $element['id']; ?>"
                                title='Delete Record'><img class="trash" src="pictures/trash.png" height="32" width="32"
                                                           alt="supprimer"></a>
                         </div>

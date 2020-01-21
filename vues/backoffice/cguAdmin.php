@@ -10,7 +10,7 @@
             <form method="POST" action="">
                 <div class="input">
                     <textarea name="contenuCGU" class="ML" rows="10"
-                              cols="120"><?php //pour afficher le texte deja présent
+                              cols="120" required><?php //pour afficher le texte deja présent
                         foreach ($donneesCGU as $element) {
                             if ($element['idFixe'] == 1) {     //1 correspond à l'id des CGU
                                 echo $element['donneeFixe'];
