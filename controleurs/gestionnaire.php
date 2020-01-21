@@ -73,7 +73,7 @@ switch ($function) {
             // Appel à la BDD à travers une fonction du modèle.
             $retour = addActionneur($bdd, $values);
             if ($retour) {
-                $alerte = "Ajout réussie";
+                $alerte = "Ajout réussi";
                 header('Refresh: 0.5,index.php?cible=gestionnaire&fonction=actionneur');  // refresh dans 0.5sec
             } else {
                 $alerte = "L'ajout n'a pas fonctionné";
@@ -125,7 +125,7 @@ switch ($function) {
             // Appel à la BDD à travers une fonction du modèle.
             $retour = addCapteur($bdd, $values);
             if ($retour) {
-                $alerte = "Ajout réussie";
+                $alerte = "Ajout réussi";
                 header('Refresh: 0.5,index.php?cible=gestionnaire&fonction=capteur');
             } else {
                 $alerte = "L'ajout n'a pas fonctionné";
@@ -169,6 +169,7 @@ switch ($function) {
         $title = "Ajouter un utilisateur";
         // Cette partie du code est appelée si le formulaire a été posté
         if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['date']) && isset($_POST['telephone']) && isset($_POST['taille']) && isset($_POST['poids']) && isset($_POST['type']) && isset($_POST['login']) && isset($_POST['email'])) {
+            $mdpAleatoire = chaine_aleatoire(8);   //générer un mot de passe aléatoire
             $values = [
                 'nom' => htmlspecialchars($_POST['nom']),
                 'prenom' => htmlspecialchars($_POST['prenom']),
@@ -179,13 +180,12 @@ switch ($function) {
                 'type' => htmlspecialchars($_POST['type']),
                 'login' => htmlspecialchars($_POST['login']),
                 'email' => htmlspecialchars($_POST['email']),
-                'password' => hachagePassword(chaine_aleatoire(8))
+                'password' => hachagePassword($mdpAleatoire)
             ];
             // Appel à la BDD à travers une fonction du modèle.
             $retour = addUser($bdd, $values);
             if ($retour) {
-                $alerte = "Ajout réussie";
-                header('Refresh: 0.5,index.php?cible=gestionnaire&fonction=user');  // refresh dans 0.5sec
+                $alerte = "Ajout réussi, veuillez noter le mot de passe : " . $mdpAleatoire;
             } else {
                 $alerte = "L'ajout n'a pas fonctionné";
             }
@@ -214,7 +214,7 @@ switch ($function) {
             ];
             $retour = modifyUser($bdd, $values);
             if ($retour) {
-                $alerte = "La modification a réussie";
+                $alerte = "Modification réussie";
                 header('Refresh: 0.5,index.php?cible=gestionnaire&fonction=user');  // refresh dans 0.5sec
             } else {
                 $alerte = "La modification n'a pas fonctionné";
