@@ -12,21 +12,11 @@ WHERE utilisateur.id = :qui AND mesure.Capteur_Actionneur_idCapteur = :numeroCap
     return $query->fetchAll();
 }
 
-function recuperMoyenne(PDO $bdd){
+function recuperMoyenne(PDO $bdd)
+{
     $query = $bdd->prepare('SELECT AVG(valeur) FROM mesure');
     $query->execute();
     return $query->fetchAll();
 }
 
-
-/*
-
-$values = [
-    'capteur' => 1,
-    'idUtilisateur' => 6
-];
-$donneesMesure = recuperResultat($bdd, $values);
-foreach ($donneesMesure as $element) { ?>
-    <P><?php echo  $element['valeur']; ?></P>
-<?php } */
 ?>
