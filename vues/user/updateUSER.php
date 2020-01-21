@@ -27,14 +27,14 @@
                                 <?php if ($user['type'] == "gestionnaire") { ?>
                                     <option value="gestionnaire">Gestionnaire</option>
                                     <option value="candidat">Candidat</option>
-                                    <option value="gestionnaire">Administrateur</option>
+                                    <option value="admin">Administrateur</option>
                                  <?php }else if($user['type'] == "admin" ) { ?>
-                                    <option value="gestionnaire">Administrateur</option>
+                                    <option value="admin">Administrateur</option>
                                     <option value="gestionnaire">Gestionnaire</option>
                                     <option value="candidat">Candidat</option>
                                 <?php } else if ($_SESSION['type'] == "admin"){ ?>
                                     <option value="candidat">Candidat</option>
-                                    <option value="gestionnaire">Administrateur</option>
+                                    <option value="admin">Administrateur</option>
                                     <option value="gestionnaire">Gestionnaire</option>
                                 <?php } else { ?>
                                     <option value="candidat">Candidat</option>
