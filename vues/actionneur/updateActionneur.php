@@ -7,7 +7,7 @@
             <legend>Actionneur n°<?php echo $_GET['id']; ?> </legend>
             <div class="haut">
                 <div>
-                    <label>Temps (minutes)<input type="number" min="1" max="20" step="1"/><br/></label>
+                    <label>Temps (minutes)<input type="number" min="1" max="20" step="1" required/><br/></label>
                 </div>
             </div>
             <div id="conteneur">

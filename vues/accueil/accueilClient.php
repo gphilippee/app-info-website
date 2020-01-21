@@ -11,7 +11,7 @@
 
             <div class="scroll_boutons">
                 <h2>FAQ</h2>
-                <a href="index.php?cible=utilisateurs&fonction=faq"><img id="flèches" src="pictures/fleches_link.png"
+                <a href="index.php?cible=visiteur&fonction=faq"><img id="flèches" src="pictures/fleches_link.png"
                                                                          height="100px" width="auto"></a>
             </div>
         </div>

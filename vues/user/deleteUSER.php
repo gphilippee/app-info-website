@@ -20,7 +20,7 @@
     </div>
     <?php } else {  ?>
         <label>Vous n'avez pas l'autorisation ?</label>
-        <a class="styleBTN" href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=user">Annuler</a>
+        <a class="styleBTN" href="index.php?cible=gestionnaire&fonction=user">Annuler</a>
     <?php } ?>
 </div>
 </div>

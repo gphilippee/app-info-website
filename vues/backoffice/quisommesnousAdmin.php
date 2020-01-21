@@ -21,7 +21,7 @@
             <form method="POST" action="">
                 <div class="input">
                 <textarea class="zoneDeTexte" name="contenuQSN" rows="10"
-                          cols="120"><?php //pour afficher le texte deja présent
+                          cols="120" required><?php //pour afficher le texte deja présent
                     foreach ($donneesQSN as $element) {
                         if ($element['idFixe'] == 5) {     //5 correspond à l'id de QSN
                             echo $element['donneeFixe'];

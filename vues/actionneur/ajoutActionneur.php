@@ -10,7 +10,7 @@
             <table id="addTable">
                 <tr>
                     <td class="left"><label for="idActionneur">Id Actionneur</label></td>
-                    <td><input type="text" name="idActionneur" value=""/></td>
+                    <td><input type="text" name="idActionneur" value="" required/></td>
                 </tr>
                 <tr>
                     <td><label for="typeActionneur">Type Actionneur</label></td>
@@ -26,13 +26,13 @@
                 </tr>
                 <tr>
                     <td><label for="uniteCapteur">Unité de l'Actionneur</label></td>
-                    <td><input type="text" name="uniteCapteur" value=""/></td>
+                    <td><input type="text" name="uniteCapteur" value="" required/></td>
                 </tr>
             </table>
             <div class="blocBTN">
-                <input id="inputAjout" type="submit" value="Ajouter">
+                <input id="inputAjout" type="submit" value="Ajouter" required>
                 <a class="styleBTN addBTN"
-                   href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=actionneur">Annuler</a>
+                   href="index.php?cible=gestionnaire&fonction=actionneur">Annuler</a>
             </div>
         </form>
     </div>

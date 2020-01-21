@@ -11,15 +11,15 @@
                 <table id="addTable">
                     <tr>
                         <td class="left"><label for="login">Login</label></td>
-                        <td><input type="text" name="login" value="<?php echo $user['login']; ?>"/></td>
+                        <td><input type="text" name="login" value="<?php echo $user['login']; ?>" required/></td>
                     </tr>
                     <tr>
                         <td><label for="nom">Nom</label></td>
-                        <td><input type="text" name="nom" value="<?php echo $user['nom']; ?>"/></td>
+                        <td><input type="text" name="nom" value="<?php echo $user['nom']; ?>" required/></td>
                     </tr>
                     <tr>
                         <td><label for="prenom">Prenom</label></td>
-                        <td><input type="text" name="prenom" value="<?php echo $user['prenom']; ?>"/></td>
+                        <td><input type="text" name="prenom" value="<?php echo $user['prenom']; ?>" required/></td>
                     </tr>
                     <tr>
                         <td><label for="type">Type</label></td>
@@ -44,24 +44,24 @@
                     </tr>
                     <tr>
                         <td><label for="date">Date de naissance</label></td>
-                        <td><input type="date" name="date" value="<?php echo $user['date_naissance']; ?>"/></td>
+                        <td><input type="date" name="date" value="<?php echo $user['date_naissance']; ?>" required/></td>
                     </tr>
                     <tr>
                         <td><label for="telephone">Telephone</label></td>
-                        <td><input type="number" name="telephone" value="<?php echo $user['numero_telephone']; ?>"/>
+                        <td><input type="tel" name="telephone" value="<?php echo $user['numero_telephone']; ?>" required/>
                         </td>
                     </tr>
                     <tr>
                         <td><label for="taille">Taille</label></td>
-                        <td><input type="number" name="taille" value="<?php echo $user['taille']; ?>"/></td>
+                        <td><input type="number" name="taille" value="<?php echo $user['taille']; ?>" required/></td>
                     </tr>
                     <tr>
                         <td><label for="poids">Poids</label></td>
-                        <td><input type="number" name="poids" value="<?php echo $user['poids']; ?>"/></td>
+                        <td><input type="number" name="poids" value="<?php echo $user['poids']; ?>" required/></td>
                     </tr>
                     <tr>
                         <td><label for="email">Adresse mail</label></td>
-                        <td><input type="text" name="email" value="<?php echo $user['adresse_mail']; ?>"/></td>
+                        <td><input type="email" name="email" value="<?php echo $user['adresse_mail']; ?>" required/></td>
                     </tr>
                 </table>
             <?php } else { ?>
@@ -72,7 +72,7 @@
             <div class="blocBTN">
                 <input type="submit" value="Valider">
                 <a class="styleBTN addBTN"
-                   href="index.php?cible=<?php echo $_SESSION['type']; ?>&fonction=user">Annuler</a>
+                   href="index.php?cible=gestionnaire&fonction=user">Annuler</a>
             </div>
         </form>
     </div>
