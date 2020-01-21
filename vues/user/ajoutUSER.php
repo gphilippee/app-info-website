@@ -51,7 +51,7 @@
                 </tr>
                 <tr>
                     <td><label for="email">Adresse mail</label></td>
-                    <td><input type="email" name="email" value="" required/></td>
+                    <td><input id="email" type="email" name="email" value="" required/></td>
                 </tr>
             </table>
             <div class="blocBTN">
@@ -62,3 +62,19 @@
         </form>
     </div>
 </div>
+
+<script>
+    function emailValid (email) {
+        return /\S+@\S+\.\S+/.test(email)
+    }
+
+    document.getElementById("email").addEventListener("input",function(e){
+        var email1=e.target.value;
+        if (emailValid(email1)){
+            e.target.style.color = "green";
+        }
+        else{
+            e.target.style.color = "red";
+        }
+    });
+</script>

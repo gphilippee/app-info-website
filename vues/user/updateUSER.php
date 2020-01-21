@@ -5,7 +5,7 @@
 ?>
 <div id="contenuAccueil">
     <div id="blocAjout">
-    <h1 class="addFAQ">Modifier un utilisateur</h1>
+        <h1 class="addFAQ">Modifier un utilisateur</h1>
         <form class="formAdd" action="" method="POST">
             <?php if (($_SESSION['type'] == 'gestionnaire' && $user['type'] == "candidat") || $_SESSION['type'] == 'admin') { ?>
                 <table id="addTable">
@@ -28,11 +28,11 @@
                                     <option value="gestionnaire">Gestionnaire</option>
                                     <option value="candidat">Candidat</option>
                                     <option value="admin">Administrateur</option>
-                                 <?php }else if($user['type'] == "admin" ) { ?>
+                                <?php } else if ($user['type'] == "admin") { ?>
                                     <option value="admin">Administrateur</option>
                                     <option value="gestionnaire">Gestionnaire</option>
                                     <option value="candidat">Candidat</option>
-                                <?php } else if ($_SESSION['type'] == "admin"){ ?>
+                                <?php } else if ($_SESSION['type'] == "admin") { ?>
                                     <option value="candidat">Candidat</option>
                                     <option value="admin">Administrateur</option>
                                     <option value="gestionnaire">Gestionnaire</option>
@@ -44,11 +44,13 @@
                     </tr>
                     <tr>
                         <td><label for="date">Date de naissance</label></td>
-                        <td><input type="date" name="date" value="<?php echo $user['date_naissance']; ?>" required/></td>
+                        <td><input type="date" name="date" value="<?php echo $user['date_naissance']; ?>" required/>
+                        </td>
                     </tr>
                     <tr>
                         <td><label for="telephone">Telephone</label></td>
-                        <td><input type="tel" name="telephone" value="<?php echo $user['numero_telephone']; ?>" required/>
+                        <td><input type="tel" name="telephone" value="<?php echo $user['numero_telephone']; ?>"
+                                   required/>
                         </td>
                     </tr>
                     <tr>
@@ -61,7 +63,8 @@
                     </tr>
                     <tr>
                         <td><label for="email">Adresse mail</label></td>
-                        <td><input type="email" name="email" value="<?php echo $user['adresse_mail']; ?>" required/></td>
+                        <td><input id="email" type="email" name="email" value="<?php echo $user['adresse_mail']; ?>" required/>
+                        </td>
                     </tr>
                 </table>
             <?php } else { ?>
@@ -78,3 +81,19 @@
     </div>
 </div>
 </div>
+
+<script>
+    function emailValid (email) {
+        return /\S+@\S+\.\S+/.test(email)
+    }
+
+    document.getElementById("email").addEventListener("input",function(e){
+        var email1=e.target.value;
+        if (emailValid(email1)){
+            e.target.style.color = "green";
+        }
+        else{
+            e.target.style.color = "red";
+        }
+    });
+</script>
