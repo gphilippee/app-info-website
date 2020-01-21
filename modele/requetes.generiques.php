@@ -11,7 +11,7 @@ require("modele/requetes.mesures.php");
  * @param string $table
  * @return array
  */
-function recupereTous(PDO $bdd, string $table): array
+function recupereTous(PDO $bdd,  $table)
 {
     $query = 'SELECT * FROM ' . $table;
     return $bdd->query($query)->fetchAll();
@@ -21,7 +21,7 @@ function recupereTous(PDO $bdd, string $table): array
  * Modifie l'adresse mail
  * @param string $nouvelEMail
  */
-function modifierMail(PDO $bdd, string $nouvelEmail)
+function modifierMail(PDO $bdd, $nouvelEmail)
 {
     $req = $bdd->prepare('UPDATE utilisateur SET adresse_mail = :nve WHERE login = :lgn');
     $req->execute(array(
@@ -34,7 +34,7 @@ function modifierMail(PDO $bdd, string $nouvelEmail)
  * Modifie le mdp
  * @param string $nouveauMdp
  */
-function modifierMdp(PDO $bdd, string $nouveauMdp)
+function modifierMdp(PDO $bdd, $nouveauMdp)
 {
     $req = $bdd->prepare('UPDATE utilisateur SET mot_de_passe = :nvmdp WHERE login = :lgn');
     $req->execute(array(
@@ -47,7 +47,7 @@ function modifierMdp(PDO $bdd, string $nouveauMdp)
  * Modifie le numéro de téléphone
  * @param string $nouveauNum
  */
-function modifierNumero(PDO $bdd, string $nouveauNum)
+function modifierNumero(PDO $bdd, $nouveauNum)
 {
     $req = $bdd->prepare('UPDATE utilisateur SET numero_telephone = :nve WHERE login = :lgn');
     return $req->execute(array(
@@ -72,7 +72,7 @@ function recupereMdp(PDO $bdd, array $utilisateur)
  * @param $mdp
  * @return string
  */
-function hachagePassword($mdp): string
+function hachagePassword($mdp)
 {
     $part1 = strlen($mdp);
     $part1 = ((((($part1 ** $part1) + 5) / 3) + 30) / $part1);

@@ -3,7 +3,7 @@
 // on récupère les requêtes génériques
 require('requetes.generiques.php');
 
-function recupereDonneesUtilisateurs(PDO $bdd): array
+function recupereDonneesUtilisateurs(PDO $bdd)
 {
     $query = 'SELECT id, nom, prenom, valeur, instant, unite FROM utilisateur 
 INNER JOIN mesure ON mesure.Utilisateur_id = utilisateur.id

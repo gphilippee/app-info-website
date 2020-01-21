@@ -74,10 +74,14 @@ switch ($function) {
         $title = "Changement Email";
         $values = ['username' => $_SESSION['login']];
         if (isset($_POST['nouvelEmail'])) {
-            modifierMail($bdd, $_POST['nouvelEmail']);
-            $_SESSION['email'] = htmlspecialchars($_POST['nouvelEmail']);
-            header('Refresh: 0.5,index.php?cible=utilisateurs&fonction=profil');
-            $alerte = 'Changement correctement effectué';
+            if (!filter_var(htmlspecialchars($_POST['nouvelEmail']), FILTER_VALIDATE_EMAIL)) {
+                $alerte = "Adresse email invalide";
+            }else{
+                modifierMail($bdd, $_POST['nouvelEmail']);
+                $_SESSION['email'] = htmlspecialchars($_POST['nouvelEmail']);
+                header('Refresh: 0.5,index.php?cible=utilisateurs&fonction=profil');
+                $alerte = 'Changement correctement effectué';
+            }
         }
         break;
 
