@@ -53,7 +53,7 @@ switch ($function) {
         $values = ['username' => $_SESSION['login']];
         if (isset($_POST['nouveauNumero'])) {
             $nouveauNumero = htmlspecialchars($_POST['nouveauNumero']);
-            if (preg_match("#^[0-9]{10}$#", $nouveauNumero)) {
+            if (preg_match("#[+]?[0-9]{2}([-. ]?[0-9]){2}$#", $nouveauNumero)) {   ////requiert un numéro de 4 chiffres minimum
                 $retour = modifierNumero($bdd, $nouveauNumero);
                 $_SESSION['numero_telephone'] = htmlspecialchars($_POST['nouveauNumero']);
                 if ($retour) {
