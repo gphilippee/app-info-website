@@ -30,8 +30,7 @@
             <li><a class="MenuP"
                    href="index.php?cible=visiteur&fonction=connexion"><?php echo $_SESSION['connecter']; ?></a></li>
             <li><a class="MenuP" href="index.php?cible=visiteur&fonction=langue"><img class="drapeau"
-                                                                                          src=<?php $drapeau =null;
-                                                                                          echo $drapeau; ?>
+                                                                                          src=<?php echo $drapeau; ?>
                                                                                           height="30" width="auto"
                                                                                           alt="drapeau"></a></li>
         </ul>
