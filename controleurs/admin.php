@@ -83,7 +83,8 @@ switch ($function) {
             }
         } elseif (isset($_POST['numeroTelephone'])) {
             $numeroTelephone = htmlspecialchars($_POST['numeroTelephone']);
-            if (preg_match("#[+]?[0-9]{2}([-. ]?[0-9]){4,5}$#", $numeroTelephone)) {    //utilisation des expressions régulières pour controler la saisie de l'utilisateur
+            if (preg_match("#[+]?[0-9]{2}([-. ]?[0-9]){2}$#", $numeroTelephone)) {    //utilisation des expressions régulières pour controler la saisie de l'utilisateur
+                                                                                      //requiert un numéro de 4 chiffres minimum
                 $retour = modifierNumeroSite($bdd, $numeroTelephone);
                 if ($retour) {
                     $alerte = "Modification réussie";
