@@ -1,4 +1,5 @@
 <?php
+$drapeau =null;
 if(empty($_GET['lang'])){
     $_SESSION['lang'] = "fr";
 }
