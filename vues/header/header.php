@@ -24,11 +24,15 @@
         <ul>
             <li><a class="MenuP" href="index.php?cible=visiteur&fonction=faq"><?php echo _FAQH; ?></a></li>
             <li><a class="MenuP" href="index.php"><?php echo _ACCUEIL; ?></a></li>
-            <?php if($_SESSION['connecter'] == _DECONNEXION){?>
+            <?php if($_SESSION['connecter'] == "true"){?>
             <li><a class="MenuP" href="index.php?cible=utilisateurs&fonction=profil"><?php echo _MON_PROFIL; ?></a></li>
             <?php }?>
             <li><a class="MenuP"
-                   href="index.php?cible=visiteur&fonction=connexion"><?php echo $_SESSION['connecter']; ?></a></li>
+                   href="index.php?cible=visiteur&fonction=connexion"><?php if($_SESSION['connecter']=="true"){
+                        echo _DECONNEXION;
+                    }else{
+                        echo _CONNEXION;
+                    } ?></a></li>
             <li><a class="MenuP" href="index.php?cible=visiteur&fonction=langue"><img class="drapeau"
                                                                                           src=<?php echo $drapeau; ?>
                                                                                           height="30" width="auto"
@@ -41,4 +45,6 @@
     <p>' . $alerte . '</p>
 </div>';
 } ?>
+
+
 
