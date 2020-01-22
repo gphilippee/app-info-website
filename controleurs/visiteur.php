@@ -65,15 +65,16 @@ switch ($function) {
         $donneesML = recupereTous($bdd, "donneesfixes");
         break;
 
-    case 'langue':
+     case 'langue':
         $vue = "accueil/accueil";
         $css = "accueil/CSSaccueil";
         $title = "Accueil";
-        if ($_SESSION['lang'] == "fr") {
-            $_SESSION['lang'] = "en";
-        } elseif ($_SESSION['lang'] == "en") {
-            $_SESSION['lang'] = "fr";
+        if ($_COOKIE['lang'] == "fr") {
+            setcookie("lang", "en", time()+3600);  /* expire dans 1 heure */
+        } elseif ($_COOKIE['lang'] == "en") {
+            setcookie("lang", "fr", time()+3600);  /* expire dans 1 heure */
         }
+        header('Refresh: 0.1,index.php?cible=visiteur&fonction=accueil');
         break;
 
     case 'connexion':
