@@ -50,7 +50,7 @@
                     <td><input type="number" name="poids" value="" required/></td>
                 </tr>
                 <tr>
-                    <td><label for="email"><?php echo _QSN ?></label></td>
+                    <td><label for="email"><?php echo _ADRESSE_EMAIL ?></label></td>
                     <td><input id="email" type="email" name="email" value="" required/></td>
                 </tr>
             </table>
