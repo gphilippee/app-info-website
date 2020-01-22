@@ -1,22 +1,9 @@
 <?php
 $drapeau =null;
-if(empty($_GET['lang'])){
-    $_SESSION['lang'] = "fr";
+if(empty($_COOKIE['lang'])){
+    setcookie("lang", "fr", time()+3600);  /* expire dans 1 heure */
 }
-else{
-    switch($_GET['lang']){
-        case "fr":
-            $_SESSION['lang'] = "fr";
-            break;
-        case "en":
-            $_SESSION['lang'] = "en";
-            break;
-        default :
-            $_SESSION['lang'] = "fr"; //au cas ou quelqu'un rentre autre chose que fr/en ou it
-            break;
-    }
-}
-switch($_SESSION['lang']){
+switch($_COOKIE['lang']){
     case "fr":
         $fichier_langage = "traduction/fr.inc";
         break;
@@ -26,7 +13,7 @@ switch($_SESSION['lang']){
 }
 
 
-if ($_SESSION['lang'] == "fr") {
+if ($_COOKIE['lang'] == "fr") {
     $drapeau="pictures/drapeau_FR.png";
 } else {
     $drapeau="pictures/drapeau_EN.png";
@@ -34,3 +21,4 @@ if ($_SESSION['lang'] == "fr") {
 
 require($fichier_langage);
 ?>
+
