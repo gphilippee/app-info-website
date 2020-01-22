@@ -14,7 +14,7 @@ if (!isset($_GET['fonction']) || empty($_GET['fonction'])) {
 }
 
 if (!isset($_SESSION['connecter']) || empty($_SESSION['connecter'])) {
-    $_SESSION['connecter'] = _CONNEXION;
+    $_SESSION['connecter'] = "false";
 } else {
     $_SESSION['connecter'] = $_SESSION['connecter'];
 }
@@ -65,7 +65,7 @@ switch ($function) {
         $donneesML = recupereTous($bdd, "donneesfixes");
         break;
 
-     case 'langue':
+    case 'langue':
         $vue = "accueil/accueil";
         $css = "accueil/CSSaccueil";
         $title = "Accueil";
@@ -78,7 +78,7 @@ switch ($function) {
         break;
 
     case 'connexion':
-        if ($_SESSION['connecter'] == _CONNEXION) {
+        if ($_SESSION['connecter'] == "false") {
             $css = "connexion/CSSconnexion";
             $vue = "connexion/connexion";
             $title = "Connexion";
@@ -90,7 +90,7 @@ switch ($function) {
                 ];
                 $connexion = bddContient($bdd, $values);
                 if ($connexion['mot_de_passe'] == HachagePassword(htmlspecialchars($_POST['connex_mdp']))) {
-                    $_SESSION['connecter'] = _DECONNEXION;
+                    $_SESSION['connecter'] = "true";
                     $_SESSION['type'] = $connexion['type'];
                     $_SESSION['nom'] = $connexion['nom'];
                     $_SESSION['prenom'] = $connexion['prenom'];
@@ -121,7 +121,6 @@ switch ($function) {
             $css = "connexion/CSSconnexion";
             $vue = "connexion/deconnexion";
             $title = "Deconnexion";
-            $_SESSION['connecter'] = _CONNEXION;
             session_destroy();
         }
         break;
@@ -148,4 +147,6 @@ if ($vue == 'accueil/accueil' or $vue == 'accueil/accueilClient') {
 } else {
     include('vues/header/footerFixed.php');
 }
+
+
 
