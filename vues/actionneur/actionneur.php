@@ -6,8 +6,8 @@
         <div class="overflow">
             <table id="myTable" class="tableauFAQ">
                 <tr>
-                    <th><?php echo _ID_ACT; ?></th>
-                    <th><?php echo _TYPE_ACT; ?></th>
+                    <th><?php echo _ID; ?></th>
+                    <th><?php echo _TYPE; ?></th>
                     <th><?php echo _ACTION; ?></th>
                 </tr>
                 <?php foreach ($donneesActionneur as $element) { ?>
