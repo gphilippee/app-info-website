@@ -13,10 +13,8 @@ if (!isset($_GET['fonction']) || empty($_GET['fonction'])) {
     $function = htmlspecialchars($_GET['fonction']);
 }
 
-if (!isset($_SESSION['connecter']) || empty($_SESSION['connecter'])) {
-    $_SESSION['connecter'] = "false";
-} else {
-    $_SESSION['connecter'] = $_SESSION['connecter'];
+if (!isset($_COOKIE['connecter']) || empty($_COOKIE['connecter'])) {
+    setcookie("connecter", "false", time()+3600);  /* expire dans 1 heure */
 }
 
 if (!isset($_SESSION['type']) || empty($_SESSION['type'])) {
@@ -78,7 +76,7 @@ switch ($function) {
         break;
 
     case 'connexion':
-        if ($_SESSION['connecter'] == "false") {
+        if ($_COOKIE['connecter'] == "false") {
             $css = "connexion/CSSconnexion";
             $vue = "connexion/connexion";
             $title = "Connexion";
@@ -90,7 +88,7 @@ switch ($function) {
                 ];
                 $connexion = bddContient($bdd, $values);
                 if ($connexion['mot_de_passe'] == HachagePassword(htmlspecialchars($_POST['connex_mdp']))) {
-                    $_SESSION['connecter'] = "true";
+                    setcookie("connecter", "true", time()+3600);  /* expire dans 1 heure */
                     $_SESSION['type'] = $connexion['type'];
                     $_SESSION['nom'] = $connexion['nom'];
                     $_SESSION['prenom'] = $connexion['prenom'];
@@ -147,6 +145,3 @@ if ($vue == 'accueil/accueil' or $vue == 'accueil/accueilClient') {
 } else {
     include('vues/header/footerFixed.php');
 }
-
-
-
