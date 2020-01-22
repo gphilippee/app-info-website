@@ -74,6 +74,7 @@ define("_MODIF_MENTION","Modifier les mentions légales");
 define("_MODIF_FIXE","Modifier les données fixes");
 define("_MODIF_TEL","Modifier le numéro de téléphone");
 define("_MODIF_QSN","Modifier Qui sommes-nous ?");
+define("_MODIF_MAIL","Modifier l'adresse email");
 define("_DONNE_MODIF","Quelles données souhaitez-vous modifier ?");
 
 //faq

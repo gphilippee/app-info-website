@@ -74,6 +74,7 @@ define("_MODIF_MENTION","Modify the legal notice");
 define("_MODIF_FIXE","Modify the backoffice");
 define("_MODIF_TEL","Modify the phone number");
 define("_MODIF_QSN","Modifier the Who are we ?");
+define("_MODIF_MAIL","Modify the email adress");
 define("_DONNE_MODIF","What data do you want to change?");
 
 //faq
