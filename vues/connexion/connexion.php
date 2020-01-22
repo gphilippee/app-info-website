@@ -7,7 +7,6 @@
         <label for="password"><?php echo _MDP; ?></label>
         <input type="password" id="password" name="connex_mdp" placeholder="password" required>
 
-        <label for="souvenir"><?php echo _SOUVENIR; ?></label></br>
         <input type="submit" value="Connexion">
     </form>
 </div>
