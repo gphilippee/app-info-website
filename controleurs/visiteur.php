@@ -110,6 +110,7 @@ switch ($function) {
                         $title = "Accueil";
                         $donneesQSN = recupereTous($bdd, "donneesfixes");   //sinon dès qu'on se connecte en tant que candidat, le contenu de QSN bug
                     }
+                    header("Refresh: 0.1,index.php?cible=visiteur&fonction=accueil");
                 } else {
                     $alerte = "Login ou mot de passe incorrect";
                 }
@@ -119,7 +120,9 @@ switch ($function) {
             $css = "connexion/CSSconnexion";
             $vue = "connexion/deconnexion";
             $title = "Deconnexion";
+            setcookie("connecter", "false", time()+3600);  /* expire dans 1 heure */
             session_destroy();
+            header("Refresh: 0.1,index.php?cible=visiteur&fonction=accueil");
         }
         break;
 
