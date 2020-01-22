@@ -19,7 +19,7 @@
                                 <?php echo _LUM; ?>
                             </option>
                             <option>
-                                <?php echo _SONORE; ?>
+                                <?php echo _SON; ?>
                             </option>
                         </select>
                     </td>
