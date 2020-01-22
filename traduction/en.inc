@@ -97,7 +97,7 @@ define("_NEW_TEL","New phone number");
 define("_TEL","Phone number");
 
 //resultat
-define("_MOY_UTILI","The average of all users is");
+define("_MOY_UTILI","The average of all users is ");
 define("_NOM","Last name");
 define("_PRENOM","First name");
 define("_DONNE_UTILI","User data");
