@@ -20,7 +20,7 @@
 	linear-gradient(127deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%),
 	linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%) fixed;">
             <div class="scroll_boutons_who">
-                <h3> Qui sommes nous ?</h3>
+                <h3><?php echo _QSN ?></h3>
                 <a href="#QuiSommesNous"><img id="flèches" src="pictures/fleches.png" height="100px" width="auto"></a>
             </div>
         </div>
