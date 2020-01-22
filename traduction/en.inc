@@ -12,7 +12,7 @@ define("_ERREUR","Requested page does not exist");
 //header
 define("_FAQH","FAQ");
 define("_ACCUEIL","Home");
-define("_MON_PROFIL","My profile");
+define("_MON_PROFIL","My profil");
 define("_DECONNEXION","Log out");
 define("_CONNEXION","Log in");
 define("_RES","Results");
