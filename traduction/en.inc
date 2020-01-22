@@ -116,7 +116,7 @@ define("_ADMINISTRATEUR","Administrator");
 define("_CANDIDAT","Candidate");
 define("_DATE_NAISSANCE","Date of birth");
 define("_TAILLE","Size");
-define("_POIDS","Date of Birth");
+define("_POIDS","Weight");
 define("_AUTORISATION","You don't have the authorization");
 define("_USER","User");
 
