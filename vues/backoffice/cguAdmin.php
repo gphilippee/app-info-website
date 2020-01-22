@@ -17,7 +17,7 @@
                             }
                         } ?>
                     </textarea>
-                    <input type="submit" value="Modifier les conditions générales d'utilisation">
+                    <input type="submit" value="<?php echo _MODIF_CGU ?>">
                 </div>
             </form>
         </div>

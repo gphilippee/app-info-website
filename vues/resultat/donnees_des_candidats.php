@@ -1,15 +1,15 @@
 <div id="contenuAccueil">
-    <h1>Données des Utilisateurs</h1>
+    <h1><?php echo _DONNE_UTILI?></h1>
     <input type="text" id="myInput" onkeyup="triFunction()" placeholder="Search for names..">
     <div class="blocTable">
         <div class="overflow">
             <table id="myTable" class="tableauFAQ">
                 <tr>
-                    <th onclick="sortTable(0)">ID</th>
-                    <th onclick="sortTable(1)">Nom</th>
-                    <th onclick="sortTable(2)">Prenom</th>
-                    <th onclick="sortTable(3)">Resultat</th>
-                    <th onclick="sortTable(4)">Date</th>
+                    <th onclick="sortTable(0)"><?php echo _ID?></th>
+                    <th onclick="sortTable(1)"><?php echo _NOM?></th>
+                    <th onclick="sortTable(2)"><?php echo _PRENOM?></th>
+                    <th onclick="sortTable(3)"><?php echo _RESULTAT?></th>
+                    <th onclick="sortTable(4)"><?php echo _DATE?></th>
                 </tr>
                 <?php
                 foreach ($donneesUtilisateurs as $element) { ?>

@@ -15,7 +15,7 @@
             <a class="pencil" href="index.php?cible=utilisateurs&fonction=changementNumero"
                title='Update Record'><img class="stylo" src="pictures/pencil.png" height="25" width="25"
                                           alt="modifier"></a></p>
-        <a class="styleBTN" href="index.php?cible=utilisateurs&fonction=changementMdp">Modifier mon mot de passe</a>
+        <a class="styleBTN" href="index.php?cible=utilisateurs&fonction=changementMdp"><?php echo _MOD_MDP ?></a>
 
     </div>
 </div>

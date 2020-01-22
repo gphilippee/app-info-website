@@ -1,5 +1,5 @@
 <div id="vide"></div>
-<h1>Mentions Légales</h1>
+<h1><?php echo _MENTIONS_LEGALES ?></h1>
 
 <div class="blocML">
     <p><?php

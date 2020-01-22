@@ -1,13 +1,13 @@
 <div id="vide"></div>
-<h1>Vos Résultats</h1>
+<h1><?php echo _VOS_RES?></h1>
 <div class="blocTable">
     <div class="overflow">
         <table id="myTable" class="tableauFAQ">
             <tr>
                 <!--<th onclick="sortTable(0)">Id</th>-->
-                <th onclick="sortTable(0)">Date</th>
-                <th onclick="sortTable(1)">Valeur</th>
-                <th onclick="sortTable(0)">Unite</th>
+                <th onclick="sortTable(0)"><?php echo _DATE ?></th>
+                <th onclick="sortTable(1)"><?php echo _VALEUR ?></th>
+                <th onclick="sortTable(0)"><?php echo _UNITE ?></th>
 
             </tr>
             <?php
@@ -24,7 +24,7 @@
     </div>
 </div>
 <div id="moyenne">
-    <p>Le moyenne de tous les utilisateurs est de: <?php echo $moyenneResultats[0][0];?></p>
+    <p><?php echo _MOY_UTILI?><?php echo $moyenneResultats[0][0];?>.</p>
 </div>
 
 <script>

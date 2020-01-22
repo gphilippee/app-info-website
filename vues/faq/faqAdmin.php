@@ -5,9 +5,9 @@
                                                                alt="ajouter"></a>
         <table class="tableauFAQ">
             <tr>
-                <th>Question</th>
-                <th>Reponse</th>
-                <th>Action</th>
+                <th><?php echo _QUEST ?></th>
+                <th><?php echo _REP ?></th>
+                <th><?php echo _ACTION ?></th>
             </tr>
             <?php
             foreach ($faq as $element) { ?>

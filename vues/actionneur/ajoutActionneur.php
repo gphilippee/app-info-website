@@ -1,38 +1,38 @@
 <?php
 /**
- * Vue : ajouter un Actionneur
+ * Vue : ajouter un actionneur
  */
 ?>
 <div id="contenuAccueil">
-    <h1 class="addFAQ">Ajouter un actionneur</h1>
+    <h1 class="addFAQ"><?php echo _ADD_ACT; ?></h1>
     <div id="blocAjout">
         <form class="formAdd" method="POST" action="">
             <table id="addTable">
                 <tr>
-                    <td class="left"><label for="idActionneur">Id Actionneur</label></td>
+                    <td class="left"><label for="idActionneur"><?php echo _ID; ?></label></td>
                     <td><input type="text" name="idActionneur" value="" required/></td>
                 </tr>
                 <tr>
-                    <td><label for="typeActionneur">Type Actionneur</label></td>
+                    <td><label for="typeActionneur"><?php echo _TYPE; ?></label></td>
                     <td><select name="typeActionneur">
                             <option>
-                                lumineux
+                                <?php echo _LUM; ?>
                             </option>
                             <option>
-                                sonore
+                                <?php echo _SON; ?>
                             </option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td><label for="uniteCapteur">Unité de l'Actionneur</label></td>
+                    <td><label for="uniteCapteur"><?php echo _UNITE; ?></label></td>
                     <td><input type="text" name="uniteCapteur" value="" required/></td>
                 </tr>
             </table>
             <div class="blocBTN">
-                <input id="inputAjout" type="submit" value="Ajouter" required>
+                <input id="inputAjout" type="submit" value="Ajouter">
                 <a class="styleBTN addBTN"
-                   href="index.php?cible=gestionnaire&fonction=actionneur">Annuler</a>
+                   href="index.php?cible=gestionnaire&fonction=actionneur"><?php echo _ANNULER; ?></a>
             </div>
         </form>
     </div>

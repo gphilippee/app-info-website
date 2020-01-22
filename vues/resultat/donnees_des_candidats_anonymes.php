@@ -1,13 +1,13 @@
 <div id="contenuAccueil">
-    <h1>Données des Utilisateurs</h1>
+    <h1><?php echo _DONNE_UTILI?></h1>
     <div class="blocTable">
         <div class="overflow">
             <table id="myTable">
                 <tr>
                     <!--<th onclick="sortTable(0)">Id</th>-->
-                    <th onclick="sortTable(0)">Résultat</i></th>
-                    <th onclick="sortTable(1)">Date</th>
-                    <th onclick="sortTable(2)">Id composant</th>
+                    <th onclick="sortTable(0)"><?php echo _RESULTAT?></i></th>
+                    <th onclick="sortTable(1)"><?php echo _DATE?></th>
+                    <th onclick="sortTable(2)"><?php echo _ID?></th>
                 </tr>
                 <?php
                 foreach ($donneesUtilisateurs as $element) { ?>

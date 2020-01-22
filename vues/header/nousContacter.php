@@ -1,5 +1,5 @@
 <div id="vide"></div>
-<h1>Nous Contacter</h1>
+<h1><?php echo _NOUS_CONTACTER ?></h1>
 
 <div class="contact">
     <div id="mail">

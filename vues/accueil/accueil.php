@@ -1,13 +1,13 @@
 <div class="accueil_contenu">
     <div id="Who">
-        <h3> Qui sommes-nous ?</h3>
+        <h3><?php echo _QSN ?></h3>
         <a href="#QuiSommesNous"><img id="flèches" src="pictures/fleches.png" height="100px" width="auto"></a>
     </div>
 </div>
 
 <div id="QuiSommesNous">
     <div id="QSNplace"></div>
-    <h1>Qui sommes-nous?</h1>
+    <h1><?php echo _QSN ?></h1>
     <p>
         <?php
         foreach ($donneesQSN as $element) {

@@ -18,7 +18,7 @@
                             }
                         } ?>
                     </textarea>
-                    <input type="submit" value="Modifier les mentions légales">
+                    <input type="submit" value="<?php echo _MODIF_MENTION ?>">
                 </div>
             </form>
 

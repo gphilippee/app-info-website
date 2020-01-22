@@ -1,19 +1,19 @@
 <div id="contenuAccueil">
-    <h1>Utilisateur</h1>
+    <h1><?php echo _USER ?></h1>
     <input type="text" id="myInput" onkeyup="triFunction()" placeholder="Search for names..">
     <div class="blocTable">
         <a class="ajoutBTN" href="index.php?cible=gestionnaire&fonction=ajoutUSER"><img src="pictures/plus.png" height="32" width="32" alt="ajouter"></a>
         <div class="overflow">
         <table id="myTable" class="tableauFAQ">
             <tr>
-                <th onclick="sortTable(0)">Identifiant</th>
-                <th onclick="sortTable(1)">Nom</th>
-                <th onclick="sortTable(2)">Prenom</th>
-                <th onclick="sortTable(3)">Date de naissance</th>
-                <th onclick="sortTable(4)">Telephone</th>
-                <th onclick="sortTable(5)">Taille</th>
-                <th onclick="sortTable(6)">Poids</th>
-                <th onclick="sortTable(7)">Email</th>
+                <th onclick="sortTable(0)">Login</th>
+                <th onclick="sortTable(1)"><?php echo _NOM ?></th>
+                <th onclick="sortTable(2)"><?php echo _PRENOM ?></th>
+                <th onclick="sortTable(3)"><?php echo _DATE_NAISSANCE ?></th>
+                <th onclick="sortTable(4)"><?php echo _TEL?></th>
+                <th onclick="sortTable(5)"><?php echo _TAILLE ?></th>
+                <th onclick="sortTable(6)"><?php echo _POIDS ?></th>
+                <th onclick="sortTable(7)"><?php echo _ADRESSE_EMAIL ?></th>
                 <th>Action</th>
             </tr>
             <?php

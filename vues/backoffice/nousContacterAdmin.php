@@ -6,7 +6,7 @@
         <div class="parametrerContact">
             <form method="POST" action="">
                 <div class="input">
-                    <input type="email" name="contenuMail" placeholder="Modifier votre mail ici" required>
+                    <input type="email" name="contenuMail" required>
                     <input type="submit" value="Modifier l'adresse mail">
                 </div>
             </form>
@@ -15,9 +15,8 @@
         <div class="parametrerContact">
             <form method="POST" action="">
                 <div class="input">
-                    <input type="text" name="numeroTelephone" placeholder="Modifier le numéro de téléphone ici"
-                           size="28" required>
-                    <input type="submit" value="Modifier le numéro de téléphone"/>
+                    <input type="text" name="numeroTelephone" size="28" required>
+                    <input type="submit" value="<?php echo _MODIF_TEL ?>"/>
                 </div>
             </form>
         </div>

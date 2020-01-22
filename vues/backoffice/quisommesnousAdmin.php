@@ -3,7 +3,7 @@
 
     </div>
 
-    <h1>Qui sommes-nous?</h1>
+    <h1><?php echo  _QSN?></h1>
     <div class="blocCGU">
         <p>
             <?php
@@ -28,7 +28,7 @@
                         }
                     } ?>
                 </textarea>
-                    <input type="submit" value="Modifier le contenu de Qui sommes-nous">
+                    <input type="submit" value="<?php echo _MODIF_QSN ?>">
                 </div>
             </form>
 

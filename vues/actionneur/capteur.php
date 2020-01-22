@@ -1,14 +1,14 @@
 <div id="contenuAccueil">
-    <h1>Page des capteurs</h1>
+    <h1><?php echo _CAPT; ?></h1>
     <div class="blocTable">
         <a class="ajoutBTN" href="index.php?cible=gestionnaire&fonction=ajoutCapteur"><img
                     src="pictures/plus.png" height="32" width="32" alt="ajouter"></a>
         <div class="overflow">
             <table id="myTable">
                 <tr>
-                    <th>Id Capteur</th>
-                    <th>Type Capteur</th>
-                    <th>Action</th>
+                    <th><?php echo _ID; ?></th>
+                    <th><?php echo _TYPE; ?></th>
+                    <th><?php echo _ACTION; ?></th>
                 </tr>
                 <?php
                 foreach ($donneesCapteur as $element) { ?>

@@ -1,12 +1,21 @@
 <?php
 // fichier de langues en français
 
+//general
+define("_YES","Oui");
+define("_NO","Non");
+define("_SUPPRIMER","Etes-vous sur de vouloir supprimer ?");
+define("_ANNULER","Annuler");
+define("_CONFIRM","Confirmer");
+define("_ERREUR","Page demandée inexistante");
+
 //header
 define("_FAQH","FAQ");
 define("_ACCUEIL","Accueil");
 define("_MON_PROFIL","Mon profil");
 define("_DECONNEXION","Deconnexion");
 define("_CONNEXION","Connexion");
+define("_RES","Résultats");
 
 //mon profil
 define("_NOM_PRENOM","Nom Prénom");
@@ -19,29 +28,99 @@ define("_PROFIL","Mon Profil");
 define("_NOUS_CONTACTER","Nous contacter");
 define("_CGU","Conditions générales d'utilisation");
 define("_MENTIONS_LEGALES","Mentions légales");
+define("_PAGE_CGU","CGU");
 
-//accueil admin
-define("_ALERTE","Alerte");
+//accueil admin/gestionnaire
+define("_QSN","Qui sommes-nous ?");
+define("_ALERTE","ALERTE");
 define("_CAPT_TEMP","Alerte capteur température");
 define("_CAPT_CARD","Alerte capteur rythme cardiaque");
 define("_CAPT_SON","Alerte capteur sonore");
-define("_GESTION","Gestion des droits d'accès");
-define("_CS_CANDIDAT","Créer/supprimer un compte candidat");
-define("_CS_GESTION","Créer/supprimer un compte gestionnaire");
-define("_MODIFIER_MDP","Modifier un mot de passe");
-define("_GERER_CAPTEUR","Gérer les capteurs");
-define("_MOD_CAPT","Modifier les seuils des capteurs");
-define("_AJ_CAPT","Ajouter un capteur");
-define("_ENL_CAPT","Enlever un capteur");
-define("_DONNEES_CANDIDATS","Données des candidats");
-define("_GERER_ACTI","Gérer les actionneurs");
-define("_MOD_ACTI","Modifier les seuils des actionneurs");
-define("_AJ_ACTI","Ajouter un Actionneur");
-define("_ENL_ACTI","Enlever un Actionneur");
-define("_FAQ","Gérer la page FAQ");
+define("_GERER_UTILIS","GERER LES UTILISATEURS");
+define("_GES_CAPT","GESTION DES CAPTEURS");
+define("_RES_CAND","RESULTATS DES CANDIDATS");
+define("_GES_ACTI","GESTION DES ACTIONNEURS");
+define("_MOD_FIXE","MODIFIER LES DONNEES FIXES");
+define("_FAQ","GERER LA FAQ");
+
+//actionneur
+define("_ACT","Page des actionneurs");
+define("_CAPT","Page des capteurs");
+define("_ADD_CAPT","Ajouter un capteur");
+define("_ADD_ACT","Ajouter un actionneur");
+define("_ID","ID");
+define("_TYPE","Type");
+define("_ACTION","Action");
+define("_ACT_LUM","Actionneur lumineux");
+define("_ACT_SON",'Actionneur sonore');
+define("_CAPT_NB","Capteur n°");
+define("_ACTI_NB","Actionneur n°");
+define("_DERN_MODIF","Derniere modification le");
+define("_PAR","par");
+define("_TEMPS","Temps (minute)");
+define("_FREQ_EMISSION","Fréquence d'émission :");
+define("_EMIS_ALEATOIRE","Emission aléatoire");
+define("_EMIS_RYTHME","Emission rythmée");
+define("_LUM","Lumineux");
+define("_SON","Sonore");
+define("_SUP_CAPT","Supprimer un capteur");
+define("_SUP_ACTI","Supprimer un actionneur");
+define("_MODIF_ACT","Modification des actionneurs");
+define("_MODIF_CAPT","Modification des capteurs");
+
+//backoffice
+define("_MODIF_CGU","Modifier les conditions générales d'utilisation");
+define("_MODIF_MENTION","Modifier les mentions légales");
+define("_MODIF_FIXE","Modifier les données fixes");
+define("_MODIF_TEL","Modifier le numéro de téléphone");
+define("_MODIF_QSN","Modifier Qui sommes-nous ?");
+define("_DONNE_MODIF","Quelles données souhaitez-vous modifier ?");
+
+//faq
+define("_ADD_QUESTION","Ajouter une question");
+define("_MODIF_QUESTION","Modifier une question");
+define("_SUP_QUESTION","Supprimer une question");
+define("_SAISIR_QUESTION","Saisir une question");
+define("_SAISIR_REPONSE","Saisir une reponse");
+define("_MOD_QUESTION","Veuillez modifier la question");
+define("_MOD_REPONSE","Veuillez modifier la reponse");
+define("_QUEST","Question");
+define("_REP","Reponse");
+
+//profil
+define("_NEW_EMAIL","Nouvelle adresse mail");
+define("_MOD_MDP","Modifier le mot de passe");
+define("_ANC_MDP","Ancien mot de passe");
+define("_NEW_MDP","Nouveau mot de passe");
+define("_CONF_MDP","Confirmer votre nouveau mot de passe");
+define("_NEW_TEL","Nouveau numéro de téléphone");
+define("_TEL","Numéro de téléphone");
+
+//resultat
+define("_MOY_UTILI","La moyenne de tous les utilisateurs est de ");
+define("_NOM","Nom");
+define("_PRENOM","Prenom");
+define("_DONNE_UTILI","Données des utilisateurs");
+define("_RESULTAT","Résultat");
+define("_DATE","Date");
+define("_VOS_RES","Vos résultats");
+define("_VALEUR","Valeur");
+define("_UNITE","Unité");
+
+//user
+define("_ADD_USER","Ajouter un utilisateur");
+define("_SUP_USER","Supprimer un utilisateur");
+define("_MOD_USER","Modifier un utilisateur");
+define("_GESTIONNAIRE","Gestionnaire");
+define("_ADMINISTRATEUR","Administrateur");
+define("_CANDIDAT","Candidat");
+define("_DATE_NAISSANCE","Date de naissance");
+define("_TAILLE","Taille");
+define("_POIDS","Poids");
+define("_AUTORISATION","Vous n'avez pas l'autorisation");
+define("_USER","Utilisateur");
 
 //deconnexion
-define("_LOGOUT","Déconnexion");
 define("_QUITTE","Vous avez été correctement déconnecté");
 
 //authentification
@@ -50,20 +129,8 @@ define("_IDENTIF","Identification");
 define("_NOM_UTILISA","Nom d'utilisateur :");
 define("_MDP","Mot de passe :");
 define("_MDP_OUBLIE","Mot de passe oublié?");
-define("_SOUVENIR","Se souvenir de mon mot de passe");
 
-//cgu
-define("_PAGE_CGU","CGU");
-
-//mentions legales
-define("_PAGE_MENTION","Mentions légales");
-
-//nous contacter
-define("_PAGE_CONTACT","Nous contacter");
-
-//alerte temperature
-//alerte sonore
-//alerte cardiaque
+//alerte
 define("_PAGE_ALERT_TEMP","Alerte température");
 define("_PAGE_ALERT_SON","Alerte capteur sonore");
 define("_PAGE_ALERT_CARD","Alerte capteur cardiaque");
@@ -76,21 +143,7 @@ define("_MAX","Maximum : ");
 define("_MOY","Moyenne : ");
 define("_INTERVALLE","Intervalle adapté : ");
 
-//gestion acces candidat et gestionnaire
-define("_CREER_CANDIDAT","Créer un compte candidat");
-define("_CREER_GESTIONNAIRE","Créer un compte gestionnaire");
-define("_SUP_CANDIDAT","Supprimer un compte candidat");
-define("_SUP_GESTIONNAIRE","Supprimer un compte gestionnaire");
-define("_SAISIR_MDP","Saisir votre mot de passe pour valider");
-define("_SAISIR_CANDIDAT","Saisir l'adresse mail du candidat");
-define("_SAISIR_GESTIONNAIRE","Saisir l'adresse mail du gestionnaire");
-define("_SAISIR_CAND","Saisir le nom d'utilisateur du nouveau candidat");
-define("_SAISIR_GEST","Saisir le nom d'utilisateur du nouveau gestionnaire");
-define("_SUP_CAND","Saisir le nom d'utilisateur du candidat à supprimer");
-define("_SUP_GEST","Saisir le nom d'utilisateur du gestionnaire à supprimer");
-
 //changements
-define("_MODIFIER_MDP_PERSONNEL","Modifier le mot de passe");
-define("_NOUVEAUMDP","Nouveau mot de passe :");
-define("_CMDP","Confirmer mot de passe :");
-?>
+define("_MODIFIER_MDP_PERSONNEL","Modify password");
+define("_NOUVEAUMDP","New password :");
+define("_CMDP","Confirm password :");

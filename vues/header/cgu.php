@@ -1,5 +1,5 @@
 <div id="vide"></div>
-<h1>Conditions Génerales d'utilisation</h1>
+<h1><?php echo _CGU ?></h1>
 
 <div class="blocCGU">
     <p>

@@ -4,7 +4,7 @@
  */
 ?>
 <div id="contenuAccueil">
-    <h1 class="addFAQ">Ajouter un utilisateur</h1>
+    <h1 class="addFAQ"><?php echo _ADD_USER ?></h1>
     <div id="blocAjout">
         <form class="formAdd" method="POST" action="">
             <table id="addTable">
@@ -13,51 +13,51 @@
                     <td><input type="text" name="login" value="" required/></td>
                 </tr>
                 <tr>
-                    <td><label for="nom">Nom</label></td>
+                    <td><label for="nom"><?php echo _NOM ?></label></td>
                     <td><input type="text" name="nom" value="" required/></td>
                 </tr>
                 <tr>
-                    <td><label for="prenom">Prenom</label></td>
+                    <td><label for="prenom"><?php echo _PRENOM ?></label></td>
                     <td><input type="text" name="prenom" value="" required/></td>
                 </tr>
                 <tr>
-                    <td><label for="type">Type</label></td>
+                    <td><label for="type"><?php echo _TYPE ?></label></td>
                     <td><select name="type">
                            <?php if($_SESSION['type'] == 'admin'){ ?>
-                                <option value="gestionnaire">Gestionnaire</option>
-                                <option value="candidat">Candidat</option>
-                                <option value="admin">Administrateur</option>
+                                <option value="gestionnaire"><?php echo _GESTIONNAIRE ?></option>
+                                <option value="candidat"><?php echo _CANDIDAT ?></option>
+                                <option value="admin"><?php echo _ADMINISTRATEUR ?></option>
                             <?php } else { ?>
-                                <option value="candidat">Candidat</option>
+                                <option value="candidat"><?php echo _CANDIDAT ?></option>
                             <?php } ?>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td><label for="date">Date de naissance</label></td>
+                    <td><label for="date"><?php echo _DATE_NAISSANCE ?></label></td>
                     <td><input type="date" name="date" value="" required/></td>
                 </tr>
                 <tr>
-                    <td><label for="telephone">Telephone</label></td>
+                    <td><label for="telephone"><?php echo _TEL ?></label></td>
                     <td><input type="tel" name="telephone" value="" required/></td>
                 </tr>
                 <tr>
-                    <td><label for="taille">Taille</label></td>
+                    <td><label for="taille"><?php echo _TAILLE ?></label></td>
                     <td><input type="number" name="taille" value="" required/></td>
                 </tr>
                 <tr>
-                    <td><label for="poids">Poids</label></td>
+                    <td><label for="poids"><?php echo _POIDS ?></label></td>
                     <td><input type="number" name="poids" value="" required/></td>
                 </tr>
                 <tr>
-                    <td><label for="email">Adresse mail</label></td>
+                    <td><label for="email"><?php echo _QSN ?></label></td>
                     <td><input id="email" type="email" name="email" value="" required/></td>
                 </tr>
             </table>
             <div class="blocBTN">
-                <input type="submit" value="Ajouter">
+                <input type="submit" value="<?php echo _CONFIRM ?>">
                 <a class="styleBTN addBTN"
-                   href="index.php?cible=gestionnaire&fonction=user">Annuler</a>
+                   href="index.php?cible=gestionnaire&fonction=user"><?php echo _ANNULER ?></a>
             </div>
         </form>
     </div>
