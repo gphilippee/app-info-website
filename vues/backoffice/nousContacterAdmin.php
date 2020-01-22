@@ -7,7 +7,7 @@
             <form method="POST" action="">
                 <div class="input">
                     <input type="email" name="contenuMail" required>
-                    <input type="submit" value="Modifier l'adresse mail">
+                    <input type="submit" value="<?php echo _MODIF_MAIL?>">
                 </div>
             </form>
         </div>
