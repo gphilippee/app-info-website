@@ -11,7 +11,7 @@ require("controleurs/fonctions.php");
 // Appel des fonctions liées à l'affichage
 require("vues/fonctions.php");
 
-if(!isset($_COOKIE['connecter']){
+if(!isset($_COOKIE['connecter'])){
     setcookie("connecter", "false", time()+3600);  /* expire dans 1 heure */
 }
    
