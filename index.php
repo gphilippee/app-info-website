@@ -11,6 +11,10 @@ require("controleurs/fonctions.php");
 // Appel des fonctions liées à l'affichage
 require("vues/fonctions.php");
 
+if(!isset($_COOKIE['connecter']){
+    setcookie("connecter", "false", time()+3600);  /* expire dans 1 heure */
+}
+   
 // On identifie le contrôleur à appeler dont le nom est contenu dans cible passé en GET
 if(isset($_GET['cible']) && !empty($_GET['cible'])) {
     $url = htmlspecialchars($_GET['cible']);
