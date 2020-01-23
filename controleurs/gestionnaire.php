@@ -48,6 +48,7 @@ switch ($function) {
     case 'donneesUtilisateursAnonymes' :
         $title = "Données des Utilisateurs Anonymes";
         $donneesUtilisateurs = recupereDonneesUtilisateurs($bdd);
+        $moyenneResultats = recuperMoyenne($bdd);
         $vue = "resultat/donnees_des_candidats_anonymes";
         $css = "user/CSSuser";
         break;

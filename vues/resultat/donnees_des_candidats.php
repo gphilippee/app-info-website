@@ -24,6 +24,9 @@
             </table>
         </div>
     </div>
+    <div id="moyenne">
+        <p>Le moyenne de tous les utilisateurs est de: <?php echo $moyenneResultats[0][0];?></p>
+    </div>
 </div>
 </div>
 

@@ -11,7 +11,7 @@ require("modele/requetes.mesures.php");
  * @param string $table
  * @return array
  */
-function recupereTous(PDO $bdd,  $table)
+function recupereTous(PDO $bdd, $table)
 {
     $query = 'SELECT * FROM ' . $table;
     return $bdd->query($query)->fetchAll();

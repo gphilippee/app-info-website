@@ -25,6 +25,7 @@ switch ($function) {
         $donneesUtilisateurs = recupereDonneesUtilisateurs($bdd);
         $vue = "resultat/donnees_des_candidats";
         $css = "user/CSSuser";
+        $moyenneResultats = recuperMoyenne($bdd);
         break;
 
     case 'modifDonneesFixes':
