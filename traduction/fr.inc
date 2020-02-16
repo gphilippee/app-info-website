@@ -100,7 +100,7 @@ define("_TEL","Numéro de téléphone");
 //resultat
 define("_MOY_UTILI","La moyenne de tous les utilisateurs est de ");
 define("_NOM","Nom");
-define("_PRENOM","Prenom");
+define("_PRENOM","Prénom");
 define("_DONNE_UTILI","Données des utilisateurs");
 define("_RESULTAT","Résultat");
 define("_DATE","Date");
@@ -145,6 +145,10 @@ define("_MOY","Moyenne : ");
 define("_INTERVALLE","Intervalle adapté : ");
 
 //changements
-define("_MODIFIER_MDP_PERSONNEL","Modify password");
-define("_NOUVEAUMDP","New password :");
-define("_CMDP","Confirm password :");
+define("_MODIFIER_MDP_PERSONNEL","Modifier le mot de passe");
+define("_NOUVEAUMDP","Nouveau mot de passe :");
+define("_CMDP","Confirmer mot de passe :");
+
+//test
+define("_GES_TEST","Lancer un test");
+define("_GO_TEST","Lancer le test");

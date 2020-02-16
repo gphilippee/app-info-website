@@ -145,6 +145,9 @@ define("_MOY","Average : ");
 define("_INTERVALLE","Adapted interval : ");
 
 //changements
-define("_MODIFIER_MDP_PERSONNEL","Modifier le mot de passe");
-define("_NOUVEAUMDP","Nouveau mot de passe :");
-define("_CMDP","Confirmer mot de passe :");
+define("_MODIFIER_MDP_PERSONNEL","Modify password");
+define("_NOUVEAUMDP","New password :");
+define("_CMDP","Confirm password :");
+//test
+define("_GES_TEST","Start a test");
+define("_GO_TEST","Start the test");

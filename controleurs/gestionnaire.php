@@ -241,6 +241,12 @@ switch ($function) {
         }
         break;
 
+    case 'test':
+        $vue = "test/lancerTest";
+        $css = "test/CSSTest";
+        $title = "Lancer un test";
+        $candidats = recupereDonneesCandidat($bdd);
+        break;
     default:
         // si aucune fonction ne correspond au paramètre function passé en GET
         $vue = "erreur404";

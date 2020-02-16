@@ -11,6 +11,15 @@ INNER JOIN capteur_actionneur ON Capteur_Actionneur_idCapteur = idCapteur ORDER 
     return $bdd->query($query)->fetchAll();
 }
 
+function recupereDonneesCandidat(PDO $bdd)
+{
+    $query = 'SELECT id, nom, prenom FROM utilisateur WHERE type = :type';
+    $donnees = $bdd->prepare($query);
+    $donnees->bindValue(":type", 'candidat');
+    $donnees->execute();
+    return $donnees->fetchAll();
+}
+
 /**
  * Ajoute un nouveau utilisateur dans la base de données
  * @param array $utilisateur

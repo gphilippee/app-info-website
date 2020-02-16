@@ -19,12 +19,12 @@
         <h3 class="titre"><a href="index.php?cible=gestionnaire&fonction=capteur"><span
                         class="ruban"><?php echo _GES_CAPT ?></span>
         </h3>
-
+        <h3 class="titre"><a href="index.php?cible=gestionnaire&fonction=actionneur"><span
+                        class="ruban"><?php echo _GES_ACTI ?></span></a>
+        </h3>
         <h3 class="titre"><a href="index.php?cible=admin&fonction=donneesUtilisateurs"><span
                         class="ruban"><?php echo _RES_CAND ?></span></a>
         </h3>
-        <h3 class="titre"><a href="index.php?cible=gestionnaire&fonction=actionneur"><span
-                        class="ruban"><?php echo _GES_ACTI ?></span></a></h3>
 
         <h3 class="titre"><a href="index.php?cible=admin&fonction=modifDonneesFixes"><span
                         class="ruban"><?php echo _MOD_FIXE ?></span></a>
